@@ -1,3 +1,9 @@
+During the COVID-19 Quarantine I've decided to revamp my entire personal portfolio [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio) with React.
+
+The previous version of my portfolio (link above) was written in pure HTML, CSS and vanilla JS.
+
+The updated (version 2) of my portfolio is now written in HTML, SASS and React framework.
+
 This repository contains the code for my personal portfolio.
 
 (insert website link here later)
