@@ -1,0 +1,23 @@
+
+.app {
+
+    $main-green: #43C6AC;
+    $bg-white: #F4F7FA;
+    $bg-blue: #3F4D67;
+    $default-black: #000;
+    $default-white: #FFF;
+
+    h1 {
+        color: $bg-blue;
+    }
+
+    h2 {
+        color: yellowgreen;
+    }
+
+    ::selection {
+        color: $default-black;
+        background: rgba(67, 198, 172, 0.678);
+    }
+
+}
