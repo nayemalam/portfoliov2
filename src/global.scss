@@ -1,9 +1,10 @@
 @import 
 './sass/utilities/variables',
 './sass/utilities/mixins',
+'./sass/themes/app',
 './sass/components/navigation/sidebar/sidebar',
 './sass/components/navigation/navbar/navbar',
-'./sass/components/navigation/sidebar/mobilemenu/hamburger',
+'./sass/components/navigation/sidebar/hamburger/hamburger',
+'./sass/components/navigation/sidebar/drawer/drawer',
 './sass/components/navigation/sidebar/mobilemenu/mobilemenu',
-'./sass/pages/home',
-'./sass/themes/app';
+'./sass/pages/home';

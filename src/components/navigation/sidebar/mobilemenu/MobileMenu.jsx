@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Hamburger from '../hamburger/Hamburger';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFire } from '@fortawesome/free-solid-svg-icons'; 
+import Drawer from '../drawer/Drawer';
 
 class MobileMenu extends Component {
     render () {
@@ -9,11 +11,11 @@ class MobileMenu extends Component {
                 <div className='topbar'>        
                     <figure>
                         <a style={{color: '#000', textDecoration: 'none'}} href="">
-                            <figcaption>nayem alam</figcaption>
+                            <figcaption>nayem alam <FontAwesomeIcon icon={faFire}/></figcaption>
                         </a>
                     </figure>
 
-                    <Hamburger></Hamburger>
+                    <Drawer></Drawer>
                 </div>
             </div>
             

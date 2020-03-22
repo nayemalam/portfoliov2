@@ -8,6 +8,7 @@ class Hamburger extends Component {
 
     render() {
         console.log(this.state.isOpen)
+
         return (
             <div className='hamburger'>
                 <div className={this.state.isOpen ? 'menu-toggler open' : 'menu-toggler'}
@@ -18,6 +19,7 @@ class Hamburger extends Component {
                     <div className='bar half end'></div>
                 </div>
             </div>
+            
         )
     }
 }

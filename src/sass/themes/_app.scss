@@ -6,33 +6,29 @@
     margin: 0;
     scroll-behavior: smooth;
 
-    h1 {
-        color: $bg-blue;
-    }
-
-    h2 {
-        color: tomato;
-    }
-
     .upperCaseFirstAll {
-        text-transform: capitalize;
+        text-transform: capitalize !important;
     }
 
     .upperCaseAll {
-        text-transform: uppercase;
+        text-transform: uppercase !important;
     }
 
     .lowerCaseAll {
-        text-transform: lowercase;
+        text-transform: lowercase !important;
     }
 
     .centerItem {
-        margin: 0 auto;
+        margin: 0 auto !important;
+    }
+
+    .hide {
+        display: none !important;
     }
 
     ::selection {
         color: $default-black;
-        background: rgba(67, 198, 172, 0.678);
+        background: $highlight-green;
     }
 
 }
