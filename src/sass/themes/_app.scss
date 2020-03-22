@@ -1,0 +1,38 @@
+
+.app {
+
+    font-family: $font;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    h1 {
+        color: $bg-blue;
+    }
+
+    h2 {
+        color: tomato;
+    }
+
+    .upperCaseFirstAll {
+        text-transform: capitalize;
+    }
+
+    .upperCaseAll {
+        text-transform: uppercase;
+    }
+
+    .lowerCaseAll {
+        text-transform: lowercase;
+    }
+
+    .centerItem {
+        margin: 0 auto;
+    }
+
+    ::selection {
+        color: $default-black;
+        background: rgba(67, 198, 172, 0.678);
+    }
+
+}

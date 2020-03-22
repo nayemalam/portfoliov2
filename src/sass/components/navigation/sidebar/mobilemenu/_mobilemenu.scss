@@ -1,0 +1,35 @@
+.mobilemenu {
+
+    @include mobile-up {
+        .topbar {
+            display: flex;
+            padding: 1em; 
+            margin-right: 20px;
+            background: #fff;
+            -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+        }
+
+        figure {
+            margin: 0 auto 0 0 !important;
+        }
+        figcaption {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    @include desktop-up {
+        figure {
+            display: none;
+        }
+    }
+    
+}

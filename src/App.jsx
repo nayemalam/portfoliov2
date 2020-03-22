@@ -4,20 +4,20 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 /* page imports */
 import Home from './pages/home/Home';
-import NavBar from './components/navbar/NavBar'
+import SideBar from './components/navigation/sidebar/SideBar';
+import NavBar from './components/navigation/navbar/NavBar';
 
 /* internal css */
 import './global.scss'
 
-const App = () => (
-  <div className='app'>
-    <BrowserRouter>
-      <Switch>
-      <Route exact path='/' component={Home}/>
-      <Route exact path='/nav' component={NavBar}/>
-      </Switch>
-    </BrowserRouter>
-  </div>
-)
+function App ()  {
+  return (
+    <div className='app'>
+      <NavBar></NavBar>
+      {/* <SideBar></SideBar> */}
+      {/* <Home></Home> */}
+    </div>
+  );
+}
 
 export default App
