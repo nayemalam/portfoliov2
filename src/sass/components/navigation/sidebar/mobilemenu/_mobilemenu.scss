@@ -26,10 +26,10 @@
         }
     }
 
-    @include desktop-up {
-        figure {
-            display: none;
-        }
+    @include desktop-and-tablet-portrait-up {
+       figure {
+           display: none;
+       }
     }
     
 }

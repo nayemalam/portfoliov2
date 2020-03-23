@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 
 class Hamburger extends Component {
-    // mobile menu functionality using states
-    state = {
-        isOpen: false
-    }
 
     render() {
-        console.log(this.state.isOpen)
+        // this.props.openMenu gets the buttonToggle state from SideDrawer.jsx
+        console.log("Mobile menu open? " + this.props.openMenu)
 
         return (
             <div className='hamburger'>
-                <div className={this.state.isOpen ? 'menu-toggler open' : 'menu-toggler'}
-                onClick={ ()=> this.setState({isOpen: !this.state.isOpen})}
+                <div className={this.props.openMenu ? 'menu-toggler open' : 'menu-toggler'}
+                onClick={ ()=> this.props.openMenu}
                 >
                     <div className='bar half start'></div>
                     <div className='bar'></div>

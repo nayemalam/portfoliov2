@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons'; 
-import Drawer from '../drawer/Drawer';
+import SideDrawer from '../sidedrawer/SideDrawer';
 
 class MobileMenu extends Component {
     render () {
@@ -10,12 +10,12 @@ class MobileMenu extends Component {
             <div className='mobilemenu'>
                 <div className='topbar'>        
                     <figure>
-                        <a style={{color: '#000', textDecoration: 'none'}} href="">
+                        <a style={{color: '#000', textDecoration: 'none'}} href="/">
                             <figcaption>nayem alam <FontAwesomeIcon icon={faFire}/></figcaption>
                         </a>
                     </figure>
 
-                    <Drawer></Drawer>
+                    <SideDrawer></SideDrawer>
                 </div>
             </div>
             
