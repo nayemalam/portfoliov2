@@ -1,10 +1,13 @@
 @import 
+// theme
 './sass/utilities/variables',
 './sass/utilities/mixins',
 './sass/themes/app',
-'./sass/components/navigation/sidebar/sidebar',
-'./sass/components/navigation/navbar/navbar',
-'./sass/components/navigation/sidebar/hamburger/hamburger',
-'./sass/components/navigation/sidebar/sidedrawer/sidedrawer',
-'./sass/components/navigation/sidebar/mobilemenu/mobilemenu',
+// nav items
+'./sass/components/navigationbar/navigationbar',
+'./sass/components/navigationbar/sidedrawer/sidedrawer',
+'./sass/components/navigationbar/sidedrawer/hamburger/hamburger',
+'./sass/components/navigationbar/sidedrawer/mainmenu/mainmenu',
+'./sass/components/navigationbar/sidedrawer/mobilemenu/mobilemenu',
+// pages
 './sass/pages/home';

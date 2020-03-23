@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* page imports */
-import NavBar from './components/navigation/navbar/NavBar';
+import NavigationBar from './components/navigationbar/NavigationBar';
 
 /* internal css */
 import './global.scss'
@@ -10,9 +10,7 @@ import './global.scss'
 function App ()  {
   return (
     <div className='app'>
-      <NavBar></NavBar>
-      {/* <SideBar></SideBar> */}
-      {/* <Home></Home> */}
+      <NavigationBar></NavigationBar>
     </div>
   );
 }

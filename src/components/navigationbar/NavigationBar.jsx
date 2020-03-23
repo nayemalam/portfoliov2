@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import SideBar from '../sidebar/SideBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import SideDrawer from './sidedrawer/SideDrawer';
 
-class NavBar extends Component {
+class NavigationBar extends Component {
   render () {
     return (
-      <div className='navbar'>
+      <div className='navigationbar'>
         <CssBaseline>
-          <SideBar></SideBar>
+          <SideDrawer></SideDrawer>
         </CssBaseline>
       </div>
     )
   }
 }
 
-export default NavBar;
+export default NavigationBar;
   
