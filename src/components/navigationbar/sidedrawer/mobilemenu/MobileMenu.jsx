@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons'; 
 import { SwipeableDrawer, Button } from '@material-ui/core';
-import Hamburger from '../hamburger/Hamburger';
+import Hamburger from './hamburger/Hamburger';
 
 class MobileMenu extends Component {
 

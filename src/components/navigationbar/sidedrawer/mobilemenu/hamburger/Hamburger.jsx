@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Hamburger extends Component {
 
     render() {
-        // this.props.openMenu gets the buttonToggle state from SideDrawer.jsx
+        // this.props.openMenu gets the toggleDrawer state from MobileMenu.jsx
         console.log("Mobile menu open? " + this.props.openMenu)
 
         return (

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 class Header extends Component {
   render() {
@@ -8,6 +7,25 @@ class Header extends Component {
         <h1>Header 1</h1>
         <h2>Header 2</h2>
         <h3>Header 3</h3>
+        <p className='justifyText paragraphColor'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
+            facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
+            gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
+            donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
+            adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
+            Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
+            imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
+            arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
+            donec massa sapien faucibus et molestie ac.
+            </p>
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+       
       </div>
     )
   }

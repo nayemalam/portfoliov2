@@ -5,9 +5,12 @@
 './sass/themes/app',
 // nav items
 './sass/components/navigationbar/navigationbar',
-'./sass/components/navigationbar/sidedrawer/sidedrawer',
-'./sass/components/navigationbar/sidedrawer/hamburger/hamburger',
-'./sass/components/navigationbar/sidedrawer/mainmenu/mainmenu',
-'./sass/components/navigationbar/sidedrawer/mobilemenu/mobilemenu',
+'./sass/components/navigationbar/sidedrawer',
+'./sass/components/navigationbar/hamburger',
+'./sass/components/navigationbar/mainmenu',
+'./sass/components/navigationbar/mobilemenu',
+// container items
+'./sass/components/container',
 // pages
-'./sass/pages/home';
+'./sass/pages/home',
+'./sass/pages/about';
