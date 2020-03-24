@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons'; 
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import { Button } from '@material-ui/core';
+import { SwipeableDrawer, Button } from '@material-ui/core';
 import Hamburger from '../hamburger/Hamburger';
 
 class MobileMenu extends Component {
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            isOpen: false,
-        }
-        this.toggleDrawer = this.toggleDrawer.bind(this);  
-    }
-
-    toggleDrawer() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    };
 
     render () {
 
@@ -32,17 +17,17 @@ class MobileMenu extends Component {
                         </a>
                     </figure>
 
-                    <Button onClick={this.toggleDrawer}>
+                    <Button onClick={this.props.toggleDrawer}>
                         {/* passing state openMenu to Hamburger */}
-                        <Hamburger openMenu={this.state.isOpen}></Hamburger>
+                        <Hamburger openMenu={this.props.isOpen}></Hamburger>
                     </Button>
 
                     <SwipeableDrawer
                         variant='temporary'
                         anchor='left'
-                        open={this.state.isOpen}
-                        onClose={this.toggleDrawer}
-                        onOpen={this.toggleDrawer}
+                        open={this.props.isOpen}
+                        onClose={this.props.toggleDrawer}
+                        onOpen={this.props.toggleDrawer}
                     >
                         {this.props.NavItems}
                     </SwipeableDrawer>
