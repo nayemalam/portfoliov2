@@ -14,24 +14,7 @@ import { Link } from 'react-router-dom';
 
 class SideDrawer extends Component {
 
-    constructor (props) {
-        super(props)
-
-        this.state = {
-            isOpen: false,
-        }
-        this.toggleDrawer = this.toggleDrawer.bind(this);  
-    }
-
-    toggleDrawer() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    };
-
-    render () {
-        
-
+    render () {        
         const drawer = (
             <div
             style={{width: '250px'}}
@@ -45,7 +28,7 @@ class SideDrawer extends Component {
                     ))}
                 </List>
                 <Divider />
-                <List onClick={this.toggleDrawer}>
+                <List>
                     <MenuItem component={Link} to='/'>
                         <ListItemIcon><InboxIcon/></ListItemIcon>
                         <ListItemText>Home</ListItemText>
@@ -62,7 +45,7 @@ class SideDrawer extends Component {
             <div className='sidedrawer'>
                 <Hidden smUp implementation="css">
                     {/* passing prop NavItems to MobileMenu */}
-                    <MobileMenu NavItems={drawer} toggleDrawer={this.toggleDrawer} isOpen={this.state.isOpen} ></MobileMenu>
+                    <MobileMenu NavItems={drawer}></MobileMenu>
                 </Hidden>
 
                 <Hidden xsDown implementation="css">

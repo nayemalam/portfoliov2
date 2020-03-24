@@ -6,6 +6,21 @@ import Hamburger from '../hamburger/Hamburger';
 
 class MobileMenu extends Component {
 
+    constructor (props) {
+        super(props)
+
+        this.state = {
+            isOpen: false,
+        }
+        this.toggleDrawer = this.toggleDrawer.bind(this);  
+    }
+
+    toggleDrawer() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    };
+
     render () {
 
         return (
@@ -17,19 +32,21 @@ class MobileMenu extends Component {
                         </a>
                     </figure>
 
-                    <Button onClick={this.props.toggleDrawer}>
+                    <Button onClick={this.toggleDrawer}>
                         {/* passing state openMenu to Hamburger */}
-                        <Hamburger openMenu={this.props.isOpen}></Hamburger>
+                        <Hamburger openMenu={this.state.isOpen}></Hamburger>
                     </Button>
 
                     <SwipeableDrawer
                         variant='temporary'
                         anchor='left'
-                        open={this.props.isOpen}
-                        onClose={this.props.toggleDrawer}
-                        onOpen={this.props.toggleDrawer}
+                        open={this.state.isOpen}
+                        onClose={this.toggleDrawer}
+                        onOpen={this.toggleDrawer}
                     >
-                        {this.props.NavItems}
+                        <div onClick={this.toggleDrawer}>
+                         {this.props.NavItems}
+                        </div>
                     </SwipeableDrawer>
                 </div>
             </div>
