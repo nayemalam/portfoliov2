@@ -1,11 +1,13 @@
 import React, { Component} from 'react';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Avatar from '@material-ui/core/Avatar';
-import personalPic from '../../../../../images/NayemAlam.jpg';
-import Paper from '@material-ui/core/Paper';
-import Menu from '@material-ui/core/Menu';
-import { Button } from '@material-ui/core';
+import {
+    Avatar,
+    Paper,
+    Menu,
+    Button
 
+} from '@material-ui/core';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import personalPic from '../../../../../images/NayemAlam.jpg';
 
 class MobileAvatar extends Component {
 

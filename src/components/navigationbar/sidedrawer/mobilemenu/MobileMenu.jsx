@@ -5,7 +5,6 @@ import { SwipeableDrawer, Button } from '@material-ui/core';
 import Hamburger from './hamburger/Hamburger';
 import MobileAvatar from './mobileavatar/MobileAvatar';
 
-
 class MobileMenu extends Component {
 
     constructor (props) {
@@ -31,7 +30,6 @@ class MobileMenu extends Component {
         })
     }
 
-
     render () {
 
         return (
@@ -56,11 +54,15 @@ class MobileMenu extends Component {
                         onOpen={this.toggleDrawer}
                     >
                         <div style={{paddingTop: '90px', paddingLeft: '16px'}}>
-                            <MobileAvatar isSocialOpen={this.state.isSocialOpen} toggleSocialDrawer={this.toggleSocialDrawer} socialLinks={this.props.socialLinks}></MobileAvatar>
+                            <MobileAvatar 
+                                isSocialOpen={this.state.isSocialOpen} 
+                                toggleSocialDrawer={this.toggleSocialDrawer} 
+                                socialLinks={this.props.socialLinks}>
+                            </MobileAvatar>
                         </div>
 
                         <div onClick={this.toggleDrawer}>
-                         {this.props.NavItems}
+                            {this.props.NavItems}
                         </div>
                     </SwipeableDrawer>
                 </div>
