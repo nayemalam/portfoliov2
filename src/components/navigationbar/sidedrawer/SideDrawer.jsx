@@ -5,11 +5,14 @@ import {
     ListItem,
     ListItemIcon,
     ListItemText,
+    MenuList,
     MenuItem,
-    Hidden,
+    Hidden
 } from '@material-ui/core';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons'; 
 import MobileMenu from './mobilemenu/MobileMenu';
 import MainMenu from './mainmenu/MainMenu';
 import { Link } from 'react-router-dom';
@@ -47,11 +50,37 @@ class SideDrawer extends Component {
             </div>
         );
 
+        const socialLinks = (
+            <MenuList>
+                <a
+                style={{color: '#000',textDecoration: 'none'}}
+                href="https://github.com/nayemalam"
+                >
+                    <MenuItem>
+                        <FontAwesomeIcon icon={faGithub} size='2x' style={{paddingRight: '5px'}}/>
+                        Github
+                    </MenuItem>
+                </a>
+                <MenuItem>
+                    <FontAwesomeIcon icon={faLinkedin} size='2x' style={{color: '#0e76a8', paddingRight: '5px'}}/>
+                    LinkedIn
+                </MenuItem>
+                <MenuItem>
+                    <FontAwesomeIcon icon={faInstagram} size='2x' style={{color: '#fb3958', paddingRight: '5px'}}/>
+                    Instagram
+                </MenuItem>
+                <MenuItem>
+                    <FontAwesomeIcon icon={faMedium} size='2x' style={{color: '#000', paddingRight: '5px'}}/>
+                    Medium
+                </MenuItem>
+            </MenuList>
+        )
+
         return (
             <div className='sidedrawer'>
                 <Hidden smUp implementation="css">
                     {/* passing prop NavItems to MobileMenu */}
-                    <MobileMenu NavItems={drawer}></MobileMenu>
+                    <MobileMenu NavItems={drawer} socialLinks={socialLinks}></MobileMenu>
                 </Hidden>
 
                 <Hidden xsDown implementation="css">

@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons'; 
 import { SwipeableDrawer, Button } from '@material-ui/core';
 import Hamburger from './hamburger/Hamburger';
+import MobileAvatar from './mobileavatar/MobileAvatar';
+
 
 class MobileMenu extends Component {
 
@@ -11,8 +13,10 @@ class MobileMenu extends Component {
 
         this.state = {
             isOpen: false,
+            isSocialOpen: false
         }
         this.toggleDrawer = this.toggleDrawer.bind(this);  
+        this.toggleSocialDrawer = this.toggleSocialDrawer.bind(this);
     }
 
     toggleDrawer() {
@@ -20,6 +24,13 @@ class MobileMenu extends Component {
             isOpen: !this.state.isOpen
         })
     };
+
+    toggleSocialDrawer() {
+        this.setState({
+            isSocialOpen: !this.state.isSocialOpen
+        })
+    }
+
 
     render () {
 
@@ -44,6 +55,10 @@ class MobileMenu extends Component {
                         onClose={this.toggleDrawer}
                         onOpen={this.toggleDrawer}
                     >
+                        <div style={{paddingTop: '90px', paddingLeft: '16px'}}>
+                            <MobileAvatar isSocialOpen={this.state.isSocialOpen} toggleSocialDrawer={this.toggleSocialDrawer} socialLinks={this.props.socialLinks}></MobileAvatar>
+                        </div>
+
                         <div onClick={this.toggleDrawer}>
                          {this.props.NavItems}
                         </div>
