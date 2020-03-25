@@ -17,7 +17,9 @@ class MobileAvatar extends Component {
                 <Avatar alt="Nayem Alam" src={personalPic} style={{width: '100px', height: '100px'}}/>
                 <h3>Nayem Alam</h3>
                 <p style={{marginTop: '-20px'}}>
-                    nayem.alam@mail.mcgill.ca
+                    <a href='mailto:nayem.alam@mail.mcgill.ca' style={{color: 'rgba(0, 0, 0, 0.87)', textDecoration: 'none'}}>
+                        nayem.alam@mail.mcgill.ca
+                    </a>
                     <Button
                         aria-haspopup="true"
                         onClick={this.props.toggleSocialDrawer}

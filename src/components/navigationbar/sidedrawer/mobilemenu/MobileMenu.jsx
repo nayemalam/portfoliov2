@@ -20,7 +20,8 @@ class MobileMenu extends Component {
 
     toggleDrawer() {
         this.setState({
-            isOpen: !this.state.isOpen
+            isOpen: !this.state.isOpen,
+            isSocialOpen: false
         })
     };
 
