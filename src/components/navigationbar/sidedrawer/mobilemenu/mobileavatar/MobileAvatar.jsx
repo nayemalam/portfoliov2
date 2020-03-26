@@ -4,10 +4,9 @@ import {
     Paper,
     Menu,
     Button
-
 } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import personalPic from '../../../../../images/NayemAlam.jpg';
+import personalPic from '../../../../../images/avatar.jpg';
 
 class MobileAvatar extends Component {
 
@@ -17,7 +16,7 @@ class MobileAvatar extends Component {
                 <Avatar alt="Nayem Alam" src={personalPic} style={{width: '100px', height: '100px'}}/>
                 <h3>Nayem Alam</h3>
                 <p style={{marginTop: '-20px'}}>
-                    <a href='mailto:nayem.alam@mail.mcgill.ca' style={{color: 'rgba(0, 0, 0, 0.87)', textDecoration: 'none'}}>
+                    <a href='mailto:nayem.alam@mail.mcgill.ca' className='linkWithNoDecoration'>
                         nayem.alam@mail.mcgill.ca
                     </a>
                     <Button

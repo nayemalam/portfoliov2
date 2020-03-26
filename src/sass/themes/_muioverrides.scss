@@ -1,5 +1,19 @@
 // Material UI Overrides
 
+// all text
 .MuiTypography-body1, .MuiMenuItem-root {
     font-family: $font !important;
+}
+
+// navbar links
+.MuiPaper-root {
+    a.linkWithNoDecoration {
+        color: $dimBlack !important;
+        text-decoration: none !important;
+    }
+}
+
+// floating button
+.MuiFab-root {
+    background-color: $mainGreen !important;
 }

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 class About extends Component {
   render() {
-    console.log("on about page")
-      
     return (
       <div className='about container'>
         <h1>ABOUT PAGE</h1>

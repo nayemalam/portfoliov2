@@ -54,13 +54,11 @@ class MobileMenu extends Component {
                         onClose={this.toggleDrawer}
                         onOpen={this.toggleDrawer}
                     >
-                        <div style={{paddingTop: '90px', paddingLeft: '16px'}}>
-                            <MobileAvatar 
-                                isSocialOpen={this.state.isSocialOpen} 
-                                toggleSocialDrawer={this.toggleSocialDrawer} 
-                                socialLinks={this.props.socialLinks}>
-                            </MobileAvatar>
-                        </div>
+                        <MobileAvatar 
+                            isSocialOpen={this.state.isSocialOpen} 
+                            toggleSocialDrawer={this.toggleSocialDrawer} 
+                            socialLinks={this.props.socialLinks}>
+                        </MobileAvatar>
 
                         <div onClick={this.toggleDrawer}>
                             {this.props.NavItems}
