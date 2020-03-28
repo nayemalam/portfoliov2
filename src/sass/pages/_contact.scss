@@ -1,0 +1,22 @@
+.contact {
+
+
+
+    // Form class
+    .form {
+    //    border: 1px solid $bgGrey;
+    //    border-radius: 15px;
+    //    padding: 10px;
+
+        @include desktop-and-tablet-portrait-up {
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-right: 50px;    
+        }
+
+        @include mobile-up {
+            margin-top: 50px;
+        }
+   
+    }
+}

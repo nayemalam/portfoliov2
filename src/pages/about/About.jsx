@@ -4,6 +4,8 @@ class About extends Component {
   render() {
     return (
       <div className='about container'>
+        <h2 className='titleWithBackground'>Hello World</h2>
+
         <h1>ABOUT PAGE</h1>
         <h2>ABOUT PAGE</h2>
         <h3>ABOUT PAGE</h3>

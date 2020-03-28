@@ -1,11 +1,11 @@
 // Material UI Overrides
 
-// all text
-.MuiTypography-body1, .MuiMenuItem-root {
+// === all text ===
+.MuiTypography-body1, .MuiMenuItem-root, .MuiFormLabel-root, .MuiInputBase-root {
     font-family: $font !important;
 }
 
-// navbar links
+// === navbar links ===
 .MuiPaper-root {
     a.linkWithNoDecoration {
         color: $dimBlack !important;
@@ -13,7 +13,34 @@
     }
 }
 
-// floating button
+// === floating button ===
 .MuiFab-root {
     background-color: $mainGreen !important;
+}
+
+// === contact form ===
+.MuiFormLabel-asterisk, .MuiInputLabel-asterisk {
+    display: none !important;
+}
+
+.MuiInput-underline:after {
+    border-bottom: 2px solid $mainGreen !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+    color: $mainGreen !important;
+}
+
+.MuiInputBase-root.Mui-focused fieldset {
+    border-color: $mainGreen !important;
+}
+
+// === button ===
+// primary option
+.MuiButton-containedPrimary {
+    background-color: $mainGreen !important;
+}
+
+.MuiButton-containedPrimary:hover {
+    color: $defaultBlack !important;
 }

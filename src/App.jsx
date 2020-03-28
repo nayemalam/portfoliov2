@@ -7,6 +7,7 @@ import NavigationBar from './components/navigationbar/NavigationBar';
 /* page imports */
 import Home from './pages/home/Home';
 import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
 
 /* internal css */
 import './global.scss'
@@ -20,6 +21,7 @@ function App ()  {
         <Switch>
           <Route exact path ='/' component={Home}></Route>
           <Route exact path ='/about' component={About}></Route>
+          <Route exact path='/contact' component={Contact}></Route>
         </Switch>
 
         {/* <FloatingButton></FloatingButton> */}

@@ -17,7 +17,7 @@ body {
 
     @include mobile-up {
         background-color: $defaultWhite !important;
-        margin: 75px 15px 0 15px !important;
+        margin: 75px 20px 0 20px !important;
 
     }
 }
@@ -44,6 +44,10 @@ body {
         margin: 0 auto !important;
     }
 
+    .centerText {
+        text-align: center;
+    }
+
     .hide {
         display: none !important;
     }
@@ -56,9 +60,38 @@ body {
         text-align: justify;
     }
 
+    .titleWithBackground {
+        text-align: center;
+        color: $defaultWhite;
+        border: 1px solid $mainGreen;
+        background-color: $mainGreen;
+        padding: 5px;
+        border-left: none;
+        width: 200px;
+        margin-left: -15px;
+        // box-shadow: 4px 5px 2px #4b4b4b;
+    }
+
+    .bottomRight {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
+
     ::selection {
         color: $defaultBlack;
         background: $highlightGreen;
+    }
+
+    @include mobile-up {
+        .titleWithBackground {
+            text-align: center;
+            color: $defaultWhite;
+            padding: 5px;
+            border-left: none;
+            width: 200px;
+            margin-left: -20px;
+        }
     }
 
 }
