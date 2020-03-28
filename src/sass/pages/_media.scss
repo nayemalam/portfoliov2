@@ -1,0 +1,8 @@
+.media {
+
+    @include desktop-and-tablet-portrait-up {
+        .mediaItems {
+            margin-top: 50px;
+        }
+    }
+}
