@@ -2,7 +2,14 @@
 
     @include desktop-and-tablet-portrait-up {
         .mediaItems {
-            margin-top: 50px;
+            margin-top: 30px;
+            margin-bottom: 100px;
+        }
+    }
+
+    @include mobile-up {
+        img {
+            margin-top: 30px;
         }
     }
 }

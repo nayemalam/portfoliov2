@@ -1,3 +1,53 @@
 .home {
-    text-align: center;
+    padding-top: 25px;
+
+    .readMore {
+        display: flexbox;
+        text-align: center;
+        padding-top: 3em;
+    }
+
+    .readMore a {
+        text-decoration: none;
+    }
+    .btn {
+        position: relative;
+        display: block;
+        color: black;
+        font-size: 14px;
+        border: 2px solid black;
+        padding: 14px 40px;
+        text-transform: uppercase;
+        transition: 1s all ease;
+    }
+
+     // === SOCIALS COMPONENT ===
+     .socials {
+        position: absolute;
+        bottom: 10px;
+        width: 95%;
+        text-align: center;
+    }
+
+    // === READMORE COMPONENT ===
+    .readmore {
+        display: flexbox;
+        text-align: center;
+        padding-top: 5em;
+
+        a {
+            text-decoration: none;
+        }
+
+        .rm_btn {
+            position: relative;
+            display: block;
+            color: black;
+            font-size: 14px;
+            border: 2px solid black;
+            padding: 14px 40px;
+            text-transform: uppercase;
+            transition: 1s all ease;
+        }
+    }
 }

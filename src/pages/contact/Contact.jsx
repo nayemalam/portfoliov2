@@ -6,7 +6,7 @@ class Contact extends Component {
     render () {
         return (
             <div className='contact container'>
-                <h2 className='titleWithBackground'>let's connect</h2>
+                <h2 className='customHeader upperCaseAll centerText'>let's connect</h2>
                 <Form></Form>
                 {/* <div className='bottomRight' style={{marginTop: '50px'}}>
                     <h4>You can also reach me at:</h4>

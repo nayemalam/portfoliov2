@@ -4,11 +4,12 @@ class About extends Component {
   render() {
     return (
       <div className='about container'>
-        <h2 className='titleWithBackground'>hello world</h2>
-
-        <h1>ABOUT PAGE</h1>
-        <h2>ABOUT PAGE</h2>
-        <h3>ABOUT PAGE</h3>
+        <h2 className='customHeader upperCaseAll centerText'>hello world</h2>
+        <div style={{textAlign: 'center'}}>
+          <h1>ABOUT PAGE</h1>
+          <h2>ABOUT PAGE</h2>
+          <h3>ABOUT PAGE</h3>
+        </div>
       </div>
     )
   }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header/Header';
+import Socials from './socials/Socials';
+import ReadMore from './readmore/ReadMore';
 
 class Home extends Component {
   
@@ -7,6 +9,8 @@ class Home extends Component {
     return (
       <div className='home container'>
         <Header></Header>
+        <ReadMore></ReadMore>
+        <Socials></Socials>
       </div>
     )
   }

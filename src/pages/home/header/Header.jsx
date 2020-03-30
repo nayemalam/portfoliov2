@@ -4,28 +4,12 @@ class Header extends Component {
   render() {
     return (
       <div className='home'>
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <h3>Header 3</h3>
-        <p className='justifyText paragraphColor'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-            facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-            gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-            donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-            adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-            Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-            imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-            arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-            donec massa sapien faucibus et molestie ac.
-            </p>
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <h3>Header 3</h3>
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <h3>Header 3</h3>
-       
+        <h1 className='customHeader centerText' style={{fontSize: '45px'}}>Hi, I'm Nayem.</h1>
+        <p className='customHeader centerText justifyText' style={{margin: '0 50px 0 50px'}}>
+        Slam poet, designer, developer, engineer. These are all titles I've been given. I like 
+        to think of myself as a learner, from cooking to up and coming programming frameworks. 
+        Continue reading and see what title you want to give me.
+        </p>
       </div>
     )
   }

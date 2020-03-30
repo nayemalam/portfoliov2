@@ -60,16 +60,44 @@ body {
         text-align: justify;
     }
 
+    .customHeader {
+        font-family: 'Josefin Sans', sans-serif !important;
+        font-size: 30px;
+    }
+
+    .customHr {
+        border: 1px solid rgba(64,66,74,0.65);
+        margin-top: 16px;
+    }
+
+    .underline {
+        border-bottom: 2px solid $mainGreen;
+        display: inline-block;
+        line-height: 0.85;
+        text-shadow:
+        2px 2px white,
+        2px -2px white,
+        -2px 2px white,
+        -2px -2px white;
+    }
+
+    .customLink {
+        background-color: $highlightLink;
+    }
+
+    .customLink:hover {
+        background-color: #fff;
+    }
+
     .titleWithBackground {
         text-align: center;
-        color: $defaultWhite;
+        color: $defaultBlack;
         border: 1px solid $mainGreen;
-        background-color: $mainGreen;
+        background-color: $highlightLink;
         padding: 5px;
         border-left: none;
         width: 200px;
         margin-left: -15px;
-        // box-shadow: 4px 5px 2px #4b4b4b;
     }
 
     .bottomRight {
@@ -86,7 +114,7 @@ body {
     @include mobile-up {
         .titleWithBackground {
             text-align: center;
-            color: $defaultWhite;
+            color: $defaultBlack;
             padding: 5px;
             border-left: none;
             width: 200px;
