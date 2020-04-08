@@ -8,7 +8,7 @@ class About extends Component {
         <div style={{textAlign: 'center'}}>
           <h1>ABOUT PAGE</h1>
           <h2>ABOUT PAGE</h2>
-          <h3>ABOUT PAGE</h3>
+          
         </div>
       </div>
     )
