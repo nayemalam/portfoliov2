@@ -8,12 +8,12 @@ import {
     MenuItem,
     Hidden
 } from '@material-ui/core';
-import HomeIcon from '@material-ui/icons/Home';
-import InfoIcon from '@material-ui/icons/Info';
-import AccountTreeIcon from '@material-ui/icons/AccountTree';
-import PermMediaIcon from '@material-ui/icons/PermMedia';
-import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
-import TelegramIcon from '@material-ui/icons/Telegram';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import PermMediaOutlinedIcon from '@material-ui/icons/PermMediaOutlined';
+import RecordVoiceOverOutlinedIcon from '@material-ui/icons/RecordVoiceOverOutlined';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import CodeIcon from '@material-ui/icons/Code';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons'; 
 import MobileMenu from './mobilemenu/MobileMenu';
@@ -34,30 +34,30 @@ class SideDrawer extends Component {
                 <Divider/>
                 <List>
                     <MenuItem component={Link} to='/'>
-                        <ListItemIcon><HomeIcon/></ListItemIcon>
+                        <ListItemIcon><HomeOutlinedIcon/></ListItemIcon>
                         <ListItemText>Home</ListItemText>
                     </MenuItem>
                     <MenuItem component={Link} to='/about'>
-                        <ListItemIcon><InfoIcon/></ListItemIcon>
+                        <ListItemIcon><PermIdentityIcon/></ListItemIcon>
                         <ListItemText>About</ListItemText>
                     </MenuItem>
                     <MenuItem component={Link} to='/portfolio'>
-                        <ListItemIcon><AccountTreeIcon/></ListItemIcon>
+                        <ListItemIcon><CodeIcon/></ListItemIcon>
                         <ListItemText>Portfolio</ListItemText>
                     </MenuItem>
                     <MenuItem component={Link} to='/media'>
-                        <ListItemIcon><PermMediaIcon/></ListItemIcon>
+                        <ListItemIcon><PermMediaOutlinedIcon/></ListItemIcon>
                         <ListItemText>Media</ListItemText>
                     </MenuItem>
                     <MenuItem component={Link} to='/speaking'>
-                        <ListItemIcon><RecordVoiceOverIcon/></ListItemIcon>
+                        <ListItemIcon><RecordVoiceOverOutlinedIcon/></ListItemIcon>
                         <ListItemText>Speaking</ListItemText>
                     </MenuItem>
                 </List>
                 <Divider />
                 <List>
                     <MenuItem component={Link} to='/contact'>
-                        <ListItemIcon><TelegramIcon/></ListItemIcon>
+                        <ListItemIcon><EmailOutlinedIcon/></ListItemIcon>
                         <ListItemText>Contact</ListItemText>
                     </MenuItem>
                 </List>
