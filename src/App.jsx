@@ -1,6 +1,6 @@
 /* external imports */
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 // component imports
 // import FloatingButton from './components/floatingbutton/FloatingButton';
 import NavigationBar from './components/navigationbar/NavigationBar';
@@ -18,7 +18,7 @@ import './global.scss'
 function App ()  {
   return (
     <div className='app'>
-      <Router>
+      <HashRouter>
         <NavigationBar></NavigationBar>
         
         <Switch>
@@ -31,7 +31,7 @@ function App ()  {
         </Switch>
 
         {/* <FloatingButton></FloatingButton> */}
-      </Router>
+      </HashRouter>
     </div>
   );
 }
