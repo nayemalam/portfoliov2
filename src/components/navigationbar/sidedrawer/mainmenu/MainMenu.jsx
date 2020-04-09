@@ -7,23 +7,9 @@ class MainMenu extends Component {
 
     render () {
 
-        // const dateTimeStamp = preval`
-        // module.exports = new Date().toLocaleString();
-        // `
-
-    
-        const options = {
-            year: 'numeric',
-            month: 'numeric',
-            day: 'numeric',
-            hour: 'numeric',
-            minute: 'numeric',
-            second: 'numeric'
-        }
-
-        const date = new Date();
-        const dateTimeStamp = new Intl.DateTimeFormat('en-US',options).format(date)
-        console.log(dateTimeStamp)
+        const dateTimeStamp = preval`
+        module.exports = new Date().toLocaleString();
+        `
 
         return (
             <div className='mainmenu'>
@@ -33,7 +19,6 @@ class MainMenu extends Component {
                 >
                     <MainAvatar></MainAvatar>
                     {this.props.NavItems}
-                    {/* TODO: following should be dynamic */}
                     <p className='date'>Last updated: {dateTimeStamp} </p>
                 </Drawer>
             </div>
