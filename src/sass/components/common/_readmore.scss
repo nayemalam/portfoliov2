@@ -1,0 +1,21 @@
+.readmore {
+    
+    display: flexbox;
+    text-align: center;
+    padding-top: 5em;
+
+    a {
+        text-decoration: none;
+    }
+
+    .rm_btn {
+        position: relative;
+        display: block;
+        color: black;
+        font-size: 14px;
+        border: 2px solid black;
+        padding: 14px 40px;
+        text-transform: uppercase;
+        transition: 1s all ease;
+    }
+}
