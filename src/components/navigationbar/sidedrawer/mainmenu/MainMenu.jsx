@@ -8,7 +8,7 @@ class MainMenu extends Component {
     render () {
 
         const dateTimeStamp = preval`
-        module.exports = new Date().toLocaleString();
+        module.exports = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
         `
 
         return (
