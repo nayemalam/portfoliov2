@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import MenuItem from '@material-ui/core/MenuItem';
+import axios from 'axios';
 
 class Form extends Component {
 
@@ -12,15 +13,17 @@ class Form extends Component {
         this.state = {
             name: '',
             email: '',
+            subject: '',
             message: '',
-            selected: ''
+            sent: false,
+            buttonText: 'Send Message'
         }
 
         this.onNameChange = this.onNameChange.bind(this);
         this.onEmailChange = this.onEmailChange.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.onSelectChange = this.onSelectChange.bind(this);
+        this.onSubjectChange = this.onSubjectChange.bind(this);
         this.resetForm = this.resetForm.bind(this);
     }
 
@@ -42,9 +45,9 @@ class Form extends Component {
         })
     };
 
-    onSelectChange(event) {
+    onSubjectChange(event) {
         this.setState({
-            selected: event.target.value
+            subject: event.target.value
         })
     }
 
@@ -52,31 +55,37 @@ class Form extends Component {
         this.setState({
             name: '', 
             email: '',
-            message: ''
+            subject: '',
+            message: '',
+            buttonText: 'Message Sent'
         })
     };
       
     handleSubmit(event) {
         event.preventDefault();
 
-        fetch('http://localhost:3002/send', {
-            method: 'POST',
-            body: JSON.stringify(this.state),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-        }).then(
-            (response) => (response.json())
-        ).then((response) => {
-            if (response.status === 'success') {
-                alert('Message Sent.');
-                this.resetForm()
-            } else if (response.status === 'fail') {
-                alert('Message failed to send.')
-            }
+        this.setState({
+            buttonText: '...sending'
+        })
+
+        let data = {
+            name: this.state.name,
+            email: this.state.email,
+            subject: this.state.subject,
+            message: this.state.message
+        }
+
+        axios.post('API_URI', data)
+        .then( res => {
+            this.setState({
+                sent: true
+            }, this.resetForm())
+        })
+        .catch( () => {
+            console.log('Message not sent.')
         })
     }
+    
 
     render () {
 
@@ -107,34 +116,34 @@ class Form extends Component {
             <div className='form'> 
                 <form onSubmit={this.handleSubmit.bind(this)} method="POST">
                     <div style={{display: 'flex'}}>
-                    <TextField
-                        // style={{display: 'block',width: '50%'}}
-                        label="Name"
-                        placeholder="Your Name"
-                        helperText="Required"
-                        fullWidth
-                        required
-                        style={{margin: '0 auto', marginRight: '40px'}}
-                        value={this.state.name} onChange={this.onNameChange}
-                    />
-                    <TextField
-                        // style={{display: 'block', width: '50%'}}
-                        type="email"
-                        label="Email"
-                        placeholder="Email Address"
-                        helperText="Required"
-                        margin="normal"
-                        fullWidth
-                        required
-                        style={{margin: '0 auto'}}
-                        value={this.state.email} onChange={this.onEmailChange}
-                    />
+                        <TextField
+                            // style={{display: 'block',width: '50%'}}
+                            label="Name"
+                            placeholder="Your Name"
+                            helperText="Required"
+                            fullWidth
+                            required
+                            style={{margin: '0 auto', marginRight: '40px'}}
+                            value={this.state.name} onChange={this.onNameChange}
+                        />
+                        <TextField
+                            // style={{display: 'block', width: '50%'}}
+                            type="email"
+                            label="Email"
+                            placeholder="Email Address"
+                            helperText="Required"
+                            margin="normal"
+                            fullWidth
+                            required
+                            style={{margin: '0 auto'}}
+                            value={this.state.email} onChange={this.onEmailChange}
+                        />
                     </div>
                     <TextField
                         select
                         label="Subject"
-                        value={this.state.selected}
-                        onChange={this.onSelectChange}
+                        value={this.state.subject}
+                        onChange={this.onSubjectChange}
                         fullWidth
                         helperText="Please select an option"
                     >
@@ -156,29 +165,15 @@ class Form extends Component {
                         required
                         value={this.state.message} onChange={this.onMessageChange}
                     />
-                <Button
-                    type='submit'
-                    style={{marginTop: '15px'}}
-                    variant="contained"
-                    color="primary"
-                    endIcon={<TelegramIcon />}
-                >
-                    Send
-                </Button>
-               
-                    {/* <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange} />
-                    </div> */}
-                    {/* <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Message</label>
-                        <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange} />
-                    </div> */}
-                    {/* <button type="submit" className="btn btn-primary">Submit</button> */}
+                    <Button
+                        type='submit'
+                        style={{marginTop: '15px'}}
+                        variant="contained"
+                        color="primary"
+                        endIcon={<TelegramIcon />}
+                    >
+                        {this.state.buttonText}
+                    </Button>
                 </form>
 
             </div>

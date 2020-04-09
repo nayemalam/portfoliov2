@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import MainAvatar from './mainavatar/MainAvatar';
-import preval from 'preval.macro';
+import DateTimeStamp from '../../../datetimestamp/DateTimeStamp';
 
 class MainMenu extends Component {
 
-    render () {
-
-        const dateTimeStamp = preval`
-        module.exports = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
-        `
+    render () {        
 
         return (
             <div className='mainmenu'>
@@ -19,7 +15,7 @@ class MainMenu extends Component {
                 >
                     <MainAvatar></MainAvatar>
                     {this.props.NavItems}
-                    <p className='date'>Last updated: {dateTimeStamp} </p>
+                    <DateTimeStamp></DateTimeStamp>
                 </Drawer>
             </div>
         )
