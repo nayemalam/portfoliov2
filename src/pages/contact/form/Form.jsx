@@ -75,7 +75,11 @@ class Form extends Component {
             message: this.state.message
         }
 
-        axios.post('API_URI', data)
+        axios({
+            method: 'POST',
+            url: 'https://formspree.io/xlewlyll',
+            data: data
+        })
         .then( res => {
             this.setState({
                 sent: true
@@ -114,7 +118,7 @@ class Form extends Component {
   
         return (
             <div className='form'> 
-                <form onSubmit={this.handleSubmit.bind(this)} method="POST">
+                <form onSubmit={this.handleSubmit}>
                     <div style={{display: 'flex'}}>
                         <TextField
                             // style={{display: 'block',width: '50%'}}
