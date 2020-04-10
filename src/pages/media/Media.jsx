@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 class Media extends Component {
 
@@ -105,7 +106,10 @@ class Media extends Component {
                     <Grid container spacing={4}>
                         {mediaItems.map((media, id) => (
                             <Grid key={id} item xs={12} sm={4} style={{textAlign: 'center'}}>
-                                <a target='_blank' rel='noopener noreferrer' href={media.website}><img width='225' alt={media.alt} src={media.logo}/></a>
+                                <a target='_blank' rel='noopener noreferrer' href={media.website}>
+                                    <LazyLoadImage width='225' alt={media.alt} src={media.logo}/>
+                                    {/* <img width='225' alt={media.alt} src={media.logo}/> */}
+                                </a>
                             </Grid>
                         ))}
                     </Grid>

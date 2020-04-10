@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import MenuItem from '@material-ui/core/MenuItem';
-import * as emailjs from 'emailjs-com'
+import * as emailjs from 'emailjs-com';
 
 class Form extends Component {
 
@@ -179,7 +179,6 @@ class Form extends Component {
                     </Button>
                 </form>
                 <p>{this.state.validateSent}</p>
-
             </div>
         )
     }

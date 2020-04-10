@@ -11,6 +11,7 @@ import Portfolio from './pages/portfolio/Portfolio';
 import Media from './pages/media/Media';
 import Speaking from './pages/speaking/Speaking';
 import Contact from './pages/contact/Contact';
+import Error404 from './pages/error404/Error404';
 
 /* internal css */
 import './global.scss'
@@ -28,6 +29,7 @@ function App ()  {
           <Route exact path='/media' component={Media}></Route>
           <Route exact path='/speaking' component={Speaking}></Route>
           <Route exact path='/contact' component={Contact}></Route>
+          <Route component={Error404} />
         </Switch>
 
         {/* <FloatingButton></FloatingButton> */}
