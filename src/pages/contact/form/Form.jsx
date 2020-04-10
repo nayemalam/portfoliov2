@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import MenuItem from '@material-ui/core/MenuItem';
 import axios from 'axios';
+import * as emailjs from 'emailjs-com'
 
 class Form extends Component {
 
@@ -16,7 +17,7 @@ class Form extends Component {
             subject: '',
             message: '',
             sent: false,
-            buttonText: 'Send Message'
+            validateSent: ''
         }
 
         this.onNameChange = this.onNameChange.bind(this);
@@ -57,7 +58,7 @@ class Form extends Component {
             email: '',
             subject: '',
             message: '',
-            buttonText: 'Message Sent'
+            validateSent: 'Message sent. Thank you for messaging, I will get back to you as soon as possible.'
         })
     };
       
@@ -65,28 +66,32 @@ class Form extends Component {
         event.preventDefault();
 
         this.setState({
-            buttonText: '...sending'
+            validateSent: '...sending'
         })
 
-        let data = {
+        let dataToCollect = {
             name: this.state.name,
             email: this.state.email,
             subject: this.state.subject,
             message: this.state.message
         }
 
-        axios({
-            method: 'POST',
-            url: 'https://formspree.io/xlewlyll',
-            data: data
-        })
-        .then( res => {
+        var serviceId = "default_service";
+        var templateId = "template_x9oW3YEf";
+        var userId = "user_VuP4bJkYyytZMKYXvaczH"
+
+        emailjs.send(serviceId, templateId, dataToCollect, userId)
+        .then((response) => {
             this.setState({
                 sent: true
             }, this.resetForm())
+            console.log('Success!', response.status, response.text);
         })
-        .catch( () => {
-            console.log('Message not sent.')
+        .catch( (err) => {
+            this.setState({
+                validateSent: 'Oops an error occurred. Please contact me directly at: nayem.alam@mail.mcgill.ca'
+            })
+            console.log("Message not sent.", err)
         })
     }
     
@@ -95,24 +100,19 @@ class Form extends Component {
 
         const subjectOptions = [
             {
-                value: 1,
-                label: "Hire me to speak"
+                value: "Hire me to speak"
             },
             {
-                value: 2,
-                label: "Need a website"
+                value: "Need a website"
             },
             {
-                value: 3,
-                label: "Let's work on a project together"
+                value: "Let's work on a project together"
             },
             {
-                value: 4,
-                label: "Down to grab coffee?"
+                value: "Down to grab coffee?"
             },
             {
-                value: 5,
-                label: "Other, see message below"
+                value: "Other, see message below"
             }
         ];
   
@@ -153,7 +153,7 @@ class Form extends Component {
                     >
                         {subjectOptions.map(option => (
                             <MenuItem key={option.value} value={option.value}>
-                                {option.label}
+                                {option.value}
                             </MenuItem>
                         ))}
                        
@@ -176,9 +176,10 @@ class Form extends Component {
                         color="primary"
                         endIcon={<TelegramIcon />}
                     >
-                        {this.state.buttonText}
+                        Send
                     </Button>
                 </form>
+                <p>{this.state.validateSent}</p>
 
             </div>
         )
