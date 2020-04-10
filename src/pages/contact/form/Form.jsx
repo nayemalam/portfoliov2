@@ -3,7 +3,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import MenuItem from '@material-ui/core/MenuItem';
-import axios from 'axios';
 import * as emailjs from 'emailjs-com'
 
 class Form extends Component {
