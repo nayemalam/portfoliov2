@@ -1,0 +1,33 @@
+.typewriter {
+
+    font-size: 30px;
+    color: #363732;
+    font-family: $titleFont !important;
+
+    .dynamicText {
+        position: relative;
+
+        &:after {
+            content: '|';
+            position: absolute;
+            left: calc(100%);
+        }
+
+        & {
+            &:after {
+                animation: cursorFade 1s infinite ease-in-out;
+            }
+        }
+    }
+      
+    @keyframes cursorFade {
+
+        0%, 100% {
+            opacity: 1;
+        }
+    
+        50% {
+            opacity: 0;
+        }
+    }
+}
