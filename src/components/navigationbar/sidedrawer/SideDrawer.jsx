@@ -18,10 +18,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons'; 
 import MobileMenu from './mobilemenu/MobileMenu';
 import MainMenu from './mainmenu/MainMenu';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 
 // internal css
-import style from '../../../global.scss';
+import style from '../../../styles/global.scss';
 
 class SideDrawer extends Component {
 
@@ -95,12 +95,12 @@ class SideDrawer extends Component {
 
         return (
             <div className='sidedrawer'>
-                <Hidden smUp implementation="css">
+                <Hidden smUp>
                     {/* passing prop NavItems and socialLinks to MobileMenu */}
                     <MobileMenu NavItems={drawer} socialLinks={socialLinks}></MobileMenu>
                 </Hidden>
 
-                <Hidden xsDown implementation="css">
+                <Hidden xsDown>
                     {/* passing prop NavItems to MainMenu */}
                     <MainMenu NavItems={drawer}></MainMenu>
                 </Hidden>

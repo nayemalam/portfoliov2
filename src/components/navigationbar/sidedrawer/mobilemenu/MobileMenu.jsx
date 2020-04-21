@@ -60,7 +60,8 @@ class MobileMenu extends Component {
                             socialLinks={this.props.socialLinks}>
                         </MobileAvatar>
 
-                        <div onClick={this.toggleDrawer}>
+                        <div onClick={this.toggleDrawer}
+                        role='presentation'>
                             {this.props.NavItems}
                         </div>
                     </SwipeableDrawer>

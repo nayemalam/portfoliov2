@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import MainAvatar from './mainavatar/MainAvatar';
-import DateTimeStamp from '../../../datetimestamp/DateTimeStamp';
+// import DateTimeStamp from '../../../datetimestamp/DateTimeStamp';
 
 class MainMenu extends Component {
 
@@ -15,7 +15,7 @@ class MainMenu extends Component {
                 >
                     <MainAvatar></MainAvatar>
                     {this.props.NavItems}
-                    <DateTimeStamp></DateTimeStamp>
+                    {/* <DateTimeStamp></DateTimeStamp> */}
                 </Drawer>
             </div>
         )

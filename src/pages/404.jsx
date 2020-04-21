@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import EyeRolling from '../../images/common/404.gif'
+import { Link } from 'gatsby';
+import EyeRolling from '../images/common/404.gif'
 
 class Error404 extends Component {
     render () {

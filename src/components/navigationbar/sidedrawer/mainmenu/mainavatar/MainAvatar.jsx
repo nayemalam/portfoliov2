@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 import Avatar from '@material-ui/core/Avatar';
 import personalPic from '../../../../../images/avatar.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
