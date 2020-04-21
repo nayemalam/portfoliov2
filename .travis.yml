@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm run build
+
+deploy:
+  provider: firebase
+  token:
+    secure: aYPs1fWLjVYtFVc+BpC1kk4aAKjtvpyvFEymYLKSLH7Xq33dVQfssuaCEM1fYzB4eD7IjFGncfEDji82r3f8CYMkrkZelA/k3/1Kw692NuiIo8LcrdIu7SsXPxJwkefBqsBpVS9O59RaqL35GZshFs2MkM9/1ErTwrA/MRBxRVPh4yk1Gkch6VrpwTziPAGK+3o5N97mgwGBEz8U1l0PnLQAXOqYd7Pvq1D4HHxBF13onQQAmGeLU2dI/fPCGmi8HDG2fhanB/A7TGMnO8cifFh6CFB79dAHLOCpd602xboyrSyyXrJcxdv/MoNmoSIbcpSGzV6B1Au25SIRA0VHc2Sp7HIY2RKbJdAUIf+V6VFDyhKcbtcp33BnsozzGDiI+3cjfq/eEcEJAPhEYTvIe/X5tv8yOnv1xaS+RIOzZ5XmodWA/66jT7cs27ytEgxVH+e9T72/RR/ASscVqhZyVYpUotEWUo0XwFp6WutcsbTjXRdBv/0fFbsa9+fGKe2oW7u12+OUa/cI5EV3PdLKY7hUJ/YzeSbG7AztvDDj1cuOQZ/iT750U2WKDk2xA5vU2wzIZoe+RN9LbmtBJg0bQCIhfihS0pDszTvXWE6SrL3kvzxcLPBrvvhqA9/tWwrQT3WVC2C87yvOVGnVgAEgqKd6huGZXIakNMEl45Gm1PE=
+  on:
+    branch: port-to-gatsby
+after_success:
+  - "firebase deploy --token=${FIREBASE_TOKEN}"
