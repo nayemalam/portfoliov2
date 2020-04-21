@@ -1,4 +1,4 @@
-# CircleCI Firebase Deployment Config
+# CircleCI Firebase Deployment Config File
 version: 2
 jobs:
   build:
