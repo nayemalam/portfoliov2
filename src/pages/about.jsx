@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DateTimeStamp from '../components/datetimestamp/DateTimeStamp';
 
 class About extends Component {
   render() {
@@ -21,6 +22,7 @@ class About extends Component {
           <h1>ABOUT PAGE</h1>
           <h2>ABOUT PAGE</h2>
           <h3>ABOUT PAGEx3</h3>
+          <DateTimeStamp></DateTimeStamp>
         </div>
       </div>
     )
