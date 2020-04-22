@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Nayem Alam`,
     description: `Personal portfolio to document my goals, objectives and learning experiences.`,
+    keywords: `full stack, electrical engineer, portfolio, developer, slam poet, designer`,
     author: `@nayemalam`,
   },
   plugins: [
@@ -32,6 +33,16 @@ module.exports = {
       resolve: `gatsby-plugin-layout`, // This plugin adds the following component across all pages
       options: {
         component: require.resolve(`./src/components/layout.js`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Quicksand`,
+          `Josefin Sans\:500`,
+        ],
+        display: "swap",
       },
     },
   ],

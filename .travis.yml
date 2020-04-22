@@ -7,6 +7,8 @@ cache:
 script:
   - echo "Starting to build ..."
   - echo "Installing deps ..."
+  - echo "Cleaning and rebuilding ..."
+  - npm run clean
   - npm run build
 install:
   - npm install -g firebase-tools
