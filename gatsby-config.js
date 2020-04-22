@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`, // This plugin adds the following component across all pages
       options: {
-        component: require.resolve(`./src/components/layout.js`),
+        component: require.resolve(`./src/components/layout`),
       },
     },
   ],

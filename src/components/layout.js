@@ -9,7 +9,7 @@ function Layout ({children}) {
 
   return (
     <div className='layout'>
-        <NavigationBar></NavigationBar>
+        <NavigationBar />
         {children}
         {/* <FloatingButton></FloatingButton> */}
     </div>
