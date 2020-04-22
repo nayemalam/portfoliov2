@@ -13,7 +13,6 @@
     "@material-ui/icons": "^4.9.1",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
-    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-layout": "^1.2.3",
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-offline": "^3.1.4",
@@ -40,14 +39,15 @@
     "gatsby"
   ],
   "license": "MIT",
-  "scripts": {
+  "scripts": { 
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"No tests are required for the moment ...\" && exit 1"
+    "test": "echo \"No tests are required for the moment ...\" && exit 1",
+    "custom": "gatsby clean && gatsby develop"
   },
   "repository": {
     "type": "git",
