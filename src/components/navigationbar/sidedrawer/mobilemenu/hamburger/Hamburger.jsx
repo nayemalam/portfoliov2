@@ -4,7 +4,7 @@ class Hamburger extends Component {
 
     render() {
         // this.props.openMenu gets the toggleDrawer state from MobileMenu.jsx
-        console.log("mobile menu open? " + this.props.openMenu)
+        // console.log("mobile menu open? " + this.props.openMenu)
 
         return (
             <div className='hamburger'>
