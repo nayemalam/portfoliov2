@@ -36,22 +36,18 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: ['Quicksand', 'Josefin Sans']
-        }
-      }
+        fonts: [
+          {
+            family: `Quicksand`,
+          },
+          {
+            family: `Josefin Sans`,
+            variants: [`500`],
+          },
+        ],
+      },
     }
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       `Quicksand`,
-    //       `Josefin Sans\:300,400,400i,700`,
-    //     ],
-    //     display: 'swap'
-    //   }
-    // }
   ],
 }
