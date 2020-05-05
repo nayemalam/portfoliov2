@@ -1,7 +1,5 @@
 /* external imports */
 import React from 'react';
-import 'typeface-quicksand';
-import 'typeface-josefin-sans';
 /* component imports */
 import NavigationBar from './navigationbar/NavigationBar';
 /* internal css */
