@@ -35,19 +35,5 @@ module.exports = {
         component: require.resolve(`./src/components/layout.js`),
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Quicksand`,
-          },
-          {
-            family: `Josefin Sans`,
-            variants: [`500`],
-          },
-        ],
-      },
-    }
   ],
 }
