@@ -8,6 +8,7 @@ class Home extends Component {
     return (
       <div className='home container'>
         <PageTitle title='Nayem Alam | Engineer, Slam Poet & Developer' />
+        
         <Header />
       </div>
     )

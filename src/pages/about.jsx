@@ -6,7 +6,8 @@ class About extends Component {
   render() {
     return (
       <div className='about container'>
-        <PageTitle title='Who Am I | Nayem Alam' />
+        <PageTitle title='Who Am I? | Nayem Alam' />
+        
         <h2 className='customHeader upperCaseAll centerText'>hello world</h2>
         <div style={{textAlign: 'center'}}>
           <h1>MOVEMENTS</h1>

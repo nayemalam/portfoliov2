@@ -102,6 +102,7 @@ class Media extends Component {
     return (
       <div className='media container'>
         <PageTitle title='Honorable Mentions | Nayem Alam' />
+        
         <h2 className='customHeader upperCaseAll centerText'>beyond grateful</h2>
         <div className='mediaItems'>
             <Grid container spacing={4}>
