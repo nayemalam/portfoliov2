@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import PageTitle from '../components/pagetitle/PageTitle';
 
 class Media extends Component {
@@ -109,7 +108,7 @@ class Media extends Component {
               {mediaItems.map((media, id) => (
                 <Grid key={id} item xs={12} sm={4} style={{textAlign: 'center'}}>
                   <a target='_blank' rel='noopener noreferrer' href={media.website}>
-                    <LazyLoadImage className='hvr-bounce-in mediaItem' width='225' alt={media.alt} src={media.logo} />
+                    <img className='hvr-bounce-in mediaItem' width='225' alt={media.alt} src={media.logo} />
                   </a>
                 </Grid>
               ))}
