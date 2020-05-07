@@ -68,25 +68,25 @@ class SideDrawer extends Component {
             <MenuList>
                 <a className='linkWithNoDecoration' href="https://github.com/nayemalam">
                     <MenuItem>
-                        <FontAwesomeIcon icon={faGithub} size='2x' style={{paddingRight: '5px'}}/>
+                        <FontAwesomeIcon icon={faGithub} size='2x' style={{paddingRight: '5px'}} />
                         Github
                     </MenuItem>
                 </a>
                 <a className='linkWithNoDecoration' href="https://www.linkedin.com/in/nayemalam/">
                     <MenuItem>
-                        <FontAwesomeIcon icon={faLinkedin} size='2x' style={{color: '#0e76a8', paddingRight: '5px'}}/>
+                        <FontAwesomeIcon icon={faLinkedin} size='2x' style={{color: '#0e76a8', paddingRight: '5px'}} />
                         LinkedIn
                     </MenuItem>
                 </a>
                 <a className='linkWithNoDecoration' href="https://www.instagram.com/nayem_wizdom/">
                     <MenuItem>
-                        <FontAwesomeIcon icon={faInstagram} size='2x' style={{color: '#fb3958', paddingRight: '5px'}}/>
+                        <FontAwesomeIcon icon={faInstagram} size='2x' style={{color: '#fb3958', paddingRight: '5px'}} />
                         Instagram
                     </MenuItem>
                 </a>
                 <a className='linkWithNoDecoration' href="https://medium.com/@nayemalam">
                     <MenuItem>
-                        <FontAwesomeIcon icon={faMedium} size='2x' style={{color: '#000', paddingRight: '5px'}}/>
+                        <FontAwesomeIcon icon={faMedium} size='2x' style={{color: '#000', paddingRight: '5px'}} />
                         Medium
                     </MenuItem>
                 </a>
@@ -97,12 +97,12 @@ class SideDrawer extends Component {
             <div className='sidedrawer'>
                 <Hidden smUp>
                     {/* passing prop NavItems and socialLinks to MobileMenu */}
-                    <MobileMenu NavItems={drawer} socialLinks={socialLinks}></MobileMenu>
+                    <MobileMenu NavItems={drawer} socialLinks={socialLinks} />
                 </Hidden>
 
                 <Hidden xsDown>
                     {/* passing prop NavItems to MainMenu */}
-                    <MainMenu NavItems={drawer}></MainMenu>
+                    <MainMenu NavItems={drawer} />
                 </Hidden>
             </div>
         );

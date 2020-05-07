@@ -7,7 +7,7 @@ class NavigationBar extends Component {
     return (
       <div className='navigationbar'>
         <CssBaseline>
-          <SideDrawer></SideDrawer>
+          <SideDrawer />
         </CssBaseline>
       </div>
     )

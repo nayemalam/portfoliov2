@@ -13,9 +13,9 @@ class MainMenu extends Component {
                     variant="permanent"
                     open
                 >
-                    <MainAvatar></MainAvatar>
+                    <MainAvatar />
                     {this.props.NavItems}
-                    <DateTimeStamp></DateTimeStamp>
+                    <DateTimeStamp />
                 </Drawer>
             </div>
         )

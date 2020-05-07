@@ -13,7 +13,7 @@ class Error404 extends Component {
                     <p>Uh oh ... The page you are trying to access does not exist.</p>
                     <p>Let's get you back home.</p>
                     <Link to='/' style={{textDecoration: 'none'}}>
-                    <Button variant='contained' color='primary'>Go Home</Button>
+                        <Button variant='contained' color='primary'>Go Home</Button>
                     </Link>
                 </div>
             </div>

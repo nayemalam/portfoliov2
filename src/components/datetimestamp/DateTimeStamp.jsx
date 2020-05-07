@@ -7,7 +7,7 @@ class DateTimeStamp extends Component {
         // module.exports = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
 
         const dateTimeStamp = preval`
-        module.exports = new Date().toLocaleString('en-US', {timeZone: 'America/New_York'});
+        module.exports = new Date().toLocaleString('en-US', {timeZone: 'America/Toronto'});
         `
 
         return (

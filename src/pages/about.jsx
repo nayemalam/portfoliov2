@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import DateTimeStamp from '../components/datetimestamp/DateTimeStamp';
+import PageTitle from '../components/pagetitle/PageTitle';
 
 class About extends Component {
   render() {
     return (
       <div className='about container'>
+        <PageTitle title='Who Am I | Nayem Alam' />
         <h2 className='customHeader upperCaseAll centerText'>hello world</h2>
         <div style={{textAlign: 'center'}}>
           <h1>MOVEMENTS</h1>
@@ -22,7 +24,7 @@ class About extends Component {
           <h1>ABOUT PAGE</h1>
           <h2>ABOUT PAGE</h2>
           <h3>ABOUT PAGEx3</h3>
-          <DateTimeStamp></DateTimeStamp>
+          <DateTimeStamp />
         </div>
       </div>
     )

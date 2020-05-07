@@ -13,7 +13,7 @@ class MobileAvatar extends Component {
     render () {
         return (
             <div className='mobileavatar'>
-                <Avatar alt="Nayem Alam" src={personalPic} style={{width: '100px', height: '100px'}}/>
+                <Avatar alt="Nayem Alam" src={personalPic} style={{width: '100px', height: '100px'}} />
                 <h3>Nayem Alam</h3>
                 <p style={{marginTop: '-20px'}}>
                     <a href='mailto:nayem.alam@mail.mcgill.ca' className='linkWithNoDecoration'>
@@ -26,7 +26,7 @@ class MobileAvatar extends Component {
                             this.anchorEl = node;
                         }}
                         >
-                        <MoreVertIcon/>
+                        <MoreVertIcon />
                     </Button>
                     <Menu
                         anchorEl={this.anchorEl}

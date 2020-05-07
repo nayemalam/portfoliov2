@@ -44,7 +44,7 @@ class MobileMenu extends Component {
 
                     <Button onClick={this.toggleDrawer}>
                         {/* passing state openMenu to Hamburger */}
-                        <Hamburger openMenu={this.state.isOpen}></Hamburger>
+                        <Hamburger openMenu={this.state.isOpen} />
                     </Button>
 
                     <SwipeableDrawer
