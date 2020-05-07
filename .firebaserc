@@ -1,6 +1,5 @@
 {
   "projects": {
-    "default": "nayemalam-portfolio",
-    "staging": "nayemalam-portfolio"
+    "default": "nayemalam-portfolio"
   }
 }
