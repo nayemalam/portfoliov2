@@ -1,5 +1,6 @@
 /* external imports */
 import React from 'react';
+import { Helmet } from 'react-helmet';
 /* component imports */
 import NavigationBar from './navigationbar/NavigationBar';
 /* internal css */
@@ -7,11 +8,18 @@ import '../styles/global.scss';
 
 function Layout ({children}) {
 
-  return (
+  return ( 
     <div className='layout'>
-        <NavigationBar />
-        {children}
-        {/* <FloatingButton></FloatingButton> */}
+      {/* head elements */}
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=fallback" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:500&display=fallback" rel="stylesheet"/>
+      </Helmet>
+
+      {/* site elements */}
+      <NavigationBar />
+      {children}
+      {/* <FloatingButton></FloatingButton> */}
     </div>
   );
 }

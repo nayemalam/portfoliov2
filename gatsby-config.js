@@ -1,9 +1,27 @@
 module.exports = {
   siteMetadata: {
     title: `Nayem Alam`,
-    description: `Personal portfolio to document my goals, objectives and learning experiences.`,
+    description: `Personal portfolio to document my life, goals, objectives and learning experiences.`,
     keywords: `full stack, electrical engineer, portfolio, developer, slam poet, designer`,
     author: `@nayemalam`,
+    social: [
+      {
+        name: `GitHub`,
+        url: `http://github.com/nayemalam/`
+      },
+      {
+        name: `LinkedIn`,
+        url: `https://www.linkedin.com/in/nayemalam/`
+      },
+      {
+        name: `Instagram`,
+        url: `https://www.instagram.com/nayem_wizdom/`
+      },
+      {
+        name: `Medium`,
+        url: `https://medium.com/@nayemalam`
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
