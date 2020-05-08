@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Nayem Alam`,
+    email: `nayem.alam@mail.mcgill.ca`,
     description: `Personal portfolio to document my life, goals, objectives and learning experiences.`,
     keywords: `full stack, electrical engineer, portfolio, developer, slam poet, designer`,
     author: `@nayemalam`,

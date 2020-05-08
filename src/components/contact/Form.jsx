@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import MenuItem from '@material-ui/core/MenuItem';
-// import * as emailjs from 'emailjs-com';
 
 class Form extends Component {
 
@@ -57,7 +57,7 @@ class Form extends Component {
             email: '',
             subject: '',
             message: '',
-            validateSent: 'Message sent. Thank you for messaging, I will get back to you as soon as possible.'
+            validateSent: 'Message sent ✔. Thank you for messaging, I will get back to you as soon as possible.'
         })
     };
       
@@ -75,23 +75,22 @@ class Form extends Component {
             message: this.state.message
         }
 
-        // var serviceId = "default_service";
-        // var templateId = "template_x9oW3YEf";
-        // var userId = "user_VuP4bJkYyytZMKYXvaczH"
-
-        // emailjs.send(serviceId, templateId, dataToCollect, userId)
-        // .then((response) => {
-        //     this.setState({
-        //         sent: true
-        //     }, this.resetForm())
-        //     console.log('Success!', response.status, response.text);
-        // })
-        // .catch( (err) => {
-        //     this.setState({
-        //         validateSent: 'Oops an error occurred. Please contact me directly at: nayem.alam@mail.mcgill.ca'
-        //     })
-        //     console.log("Message not sent.", err)
-        // })
+        Axios.post(
+            'https://us-central1-nayemalam-portfolio.cloudfunctions.net/submit',
+            dataToCollect
+        )
+        .then(response => {
+            this.setState({
+                sent: true
+            }, this.resetForm())
+            console.log('Success!', response.status, response.statusText)
+        })
+        .catch(error => {
+            this.setState({
+                validateSent: 'Oops an error occurred. Please contact me directly at: nayem.alam@mail.mcgill.ca'
+            })
+            console.log('Message not sent.', error)
+        })
     }
     
 

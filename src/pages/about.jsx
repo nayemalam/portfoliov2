@@ -10,7 +10,7 @@ class About extends Component {
         
         <h2 className='customHeader upperCaseAll centerText'>hello world</h2>
         <div style={{textAlign: 'center'}}>
-          <h1>MOVEMENTS</h1>
+          <h1>Made a change</h1>
           <h2>ABOUT PAGE</h2>
           <h3>ABOUT PAGEx3</h3>
           <h1>ABOUT PAGE</h1>
