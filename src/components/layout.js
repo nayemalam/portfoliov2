@@ -12,8 +12,8 @@ function Layout ({children}) {
     <div className='layout'>
       {/* head elements */}
       <Helmet>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:500&display=swap" rel="stylesheet"/>
+        <link rel='preload' href='https://fonts.googleapis.com/css?family=Quicksand&display=swap' as='style' />
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Josefin+Sans:500&display=swap' />
       </Helmet>
 
       {/* site elements */}
