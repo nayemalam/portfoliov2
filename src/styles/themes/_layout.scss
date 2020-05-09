@@ -107,6 +107,11 @@ body {
         right: 16px;
     }
 
+    .finePrint {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
     ::selection {
         color: $defaultBlack;
         background: $highlightGreen;

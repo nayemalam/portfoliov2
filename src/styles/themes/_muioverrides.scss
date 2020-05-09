@@ -1,7 +1,11 @@
 // Material UI Overrides
 
 // === all text ===
-.MuiTypography-body1, .MuiMenuItem-root, .MuiFormLabel-root, .MuiInputBase-root {
+.MuiTypography-body1,
+.MuiMenuItem-root, 
+.MuiFormLabel-root,
+.MuiInputBase-root, 
+.MuiTypography-caption {
     font-family: $font !important;
 }
 
@@ -43,4 +47,9 @@
 
 .MuiButton-containedPrimary:hover {
     color: $defaultBlack !important;
+}
+
+// === portfolio content ===
+.MuiTypography-h6 {
+    font-family: $titleFont !important;
 }
