@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import LinkSharpIcon from '@material-ui/icons/LinkSharp';
 import LinkOffSharpIcon from '@material-ui/icons/LinkOffSharp';
-import PageTitle from '../components/pagetitle/PageTitle';
+import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import CustomCard from '../components/portfolio/CustomCard';
 
 class Portfolio extends Component {
+    
     render() {
 
         const portfolioItems = [
@@ -70,7 +71,7 @@ class Portfolio extends Component {
 
         return (
             <div className='portfolio container'>
-                <PageTitle title='Portfolio | Nayem Alam' />
+                <HTMLTitle title='Portfolio | Nayem Alam' />
                 
                 <h1>Everything I love doing is right here.
                     <span style={{display: 'block'}} className='finePrint'>(also peep the speaking page <span role='img' aria-label='eye emoji'>👀</span>)</span>

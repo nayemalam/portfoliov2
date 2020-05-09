@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import PageTitle from '../components/pagetitle/PageTitle';
+import HTMLTitle from '../components/htmltitle/HTMLTitle';
 
 class Media extends Component {
 
@@ -101,7 +101,7 @@ class Media extends Component {
 
     return (
       <div className='media container'>
-        <PageTitle title='Honorable Mentions | Nayem Alam' />
+        <HTMLTitle title='Honorable Mentions | Nayem Alam' />
         
         <h2 className='customHeader upperCaseAll centerText'>beyond grateful</h2>
         <div className='mediaItems'>

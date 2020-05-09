@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-class PageTitle extends Component {
+class HTMLTitle extends Component {
     render() {
         return (
             <Helmet>
@@ -11,4 +11,4 @@ class PageTitle extends Component {
     }
 }
 
-export default PageTitle;
+export default HTMLTitle;
