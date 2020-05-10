@@ -65,8 +65,87 @@ class Portfolio extends Component {
                 'date': 'December 21, 2018',
                 'link': 'https://joysofsolotravel.com/',
                 'LinkIcon': <LinkSharpIcon />
-            }
-
+            },
+            {
+                'image': require('../images/work/mcgillchemecar.png'),
+                'title': 'McGill Chem-E Car',
+                'description': 'I was a part of this club as a Web Master and built this website.',
+                'date': 'October 18, 2018',
+                'link': 'http://mcgillchemecar.com/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/supranootropics.png'),
+                'title': 'SupraNootropics',
+                'description': 'A student started a startup in McGill providing supplements for stress-relief - client.',
+                'date': 'September 7, 2018',
+                'link': 'https://supranootropics.com/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/nauvelty.png'),
+                'title': 'Nauvelty Clothing Brand',
+                'description': 'One of my failed startups. I sourced 8 clothes and shipped out 3, clothing quality was dull and team dispatched. Discontinued.',
+                'date': 'January 5, 2018',
+                'link': '#',
+                'LinkIcon': <LinkOffSharpIcon />
+            },
+            {
+                'image': require('../images/work/nobemcgill.png'),
+                'title': 'NOBE McGill',
+                'description': 'I\'ve been a part of this club for 3 years and still continuing. I built this website as a web dev.',
+                'date': 'February 28, 2018',
+                'link': 'https://nobemcgill.org/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/istrive.png'),
+                'title': 'IStrive',
+                'description': 'Personal trainer reached out to me to build his brand and his movement - client.',
+                'date': 'January 2, 2019',
+                'link': 'https://istrive.ca/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/react-portfolio-template.png'),
+                'title': 'React Portfolio Template',
+                'description': 'This is a free template made with React with fixed material sidebar.',
+                'date': 'March 29, 2019',
+                'link': 'https://github.com/nayemalam/ReactPortfolioTemplate/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/xplore.png'),
+                'title': 'Xplore | HackDartmouth',
+                'description': 'Xplore is a cross-platform communication tool built to help people connect with one another regardless of barriers such as language.',
+                'date': 'April 6, 2019',
+                'link': 'https://github.com/nayemalam/Xplore/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/francochrome.png'),
+                'title': 'FrancoChrome | ConUHacks',
+                'description': 'A french language learning tool that allows Chrome users to learn a new word everytime they open a new tab - Chrome Extension.',
+                'date': 'January 25, 2019',
+                'link': 'https://github.com/nayemalam/FrancoChrome/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/pendopharm.png'),
+                'title': 'Pendopharm: G.I. Solutions',
+                'description': 'Worked with an amazing brand manager who asked me to revamp their website - client.',
+                'date': 'January 25, 2019',
+                'link': 'http://pendopharm-gi.com/',
+                'LinkIcon': <LinkSharpIcon />
+            },
+            {
+                'image': require('../images/work/midroni.png'),
+                'title': 'Cooper Midroni',
+                'description': 'Built a personal website for my good friend Cooper.',
+                'date': 'January 11, 2020',
+                'link': 'midroni.com/',
+                'LinkIcon': <LinkSharpIcon />
+            },
         ];
 
         return (
@@ -74,7 +153,7 @@ class Portfolio extends Component {
                 <HTMLTitle title='Portfolio | Nayem Alam' />
                 
                 <h1>Everything I love doing is right here.
-                    <span style={{display: 'block'}} className='finePrint'>(also peep the speaking page <span role='img' aria-label='eye emoji'>👀</span>)</span>
+                    <span style={{display: 'block'}} className='finePrint'>(... and speaking of course <span role='img' aria-label='eye emoji'>👀</span>)</span>
                 </h1>
                 
                 <Grid container spacing={4}>
