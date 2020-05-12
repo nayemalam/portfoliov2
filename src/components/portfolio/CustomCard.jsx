@@ -8,6 +8,14 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Badge from '@material-ui/core/Badge';
+import {
+    blue,
+    red,
+    grey,
+    orange,
+    indigo
+} from '@material-ui/core/colors';
+
 
 class CustomCard extends Component {
     constructor(props) {
@@ -26,6 +34,29 @@ class CustomCard extends Component {
     }
 
     render() {
+
+        function changeBackgroundColor (tag) {
+            let bgColor = grey[400];
+
+            if (tag === 'HTML')  {
+                bgColor = red[400];
+            }
+
+            if (tag === 'JS') {
+                bgColor = orange[400];
+            }
+
+            if (tag === 'CSS') {
+                bgColor = blue[400];
+            }
+
+            if (tag === 'Java') {
+                bgColor = indigo[400];
+            }
+
+            return bgColor;
+        }
+
         return (
             <div className='customcard'>
                 <Card style={{height: '361.61px'}}>
@@ -51,6 +82,14 @@ class CustomCard extends Component {
                             </Typography>
                         </CardContent>
                     </CardActionArea>
+
+                    <div className='tags'>
+                        {this.props.tags.map((tag,id) => (
+                            <Typography key={id} className='tag' style={{background: changeBackgroundColor(tag)}}>
+                                {tag}
+                            </Typography>
+                        ))}
+                    </div>
 
                     <CardActions className='cardActions'>
                         <Typography 

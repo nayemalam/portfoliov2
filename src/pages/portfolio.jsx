@@ -11,13 +11,9 @@ class Portfolio extends Component {
         super(props)
 
         this.state = {
-            tag: 'all'
+            filters: 'all'
         }
     }
-
-    // sortItems (items) {
-    //     return items.sort((a,b) => a.date.substr(a.date.length - 4) < b.date.substr(b.date.length - 4) ? -1: 1)
-    // }
 
     render() {
 
@@ -29,7 +25,8 @@ class Portfolio extends Component {
                 'date': 'July 23, 2019',
                 'link': 'https://github.com/nayemalam/fuzzyMatching',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','personal']
+                'filters': ['all','personal'],
+                'tags': ['Java', 'JS', 'HTML', 'CSS']
             },
             {
                 'image': require('../images/work/mcgillcoop.png'),
@@ -38,7 +35,8 @@ class Portfolio extends Component {
                 'date': 'February 5, 2019',
                 'link': 'https://github.com/nayemalam/McGillCoop',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','academic','sites']
+                'filters': ['all','academic','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/webscraper.png'),
@@ -47,7 +45,8 @@ class Portfolio extends Component {
                 'date': 'August 14, 2018',
                 'link': 'https://github.com/nayemalam/Hackerfest',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','hackathons']
+                'filters': ['all','hackathons'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/speakupmtl.png'),
@@ -56,7 +55,8 @@ class Portfolio extends Component {
                 'date': 'February 26, 2014',
                 'link': 'https://speakupmtl.com/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','personal','sites']
+                'filters': ['all','personal','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/argyle.png'),
@@ -65,7 +65,8 @@ class Portfolio extends Component {
                 'date': 'September 23, 2018',
                 'link': 'https://argyle.tech/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/medlife.png'),
@@ -74,7 +75,8 @@ class Portfolio extends Component {
                 'date': 'August 26, 2018',
                 'link': 'https://medlifeconcordia.com',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/joysofsolotravel.png'),
@@ -83,7 +85,8 @@ class Portfolio extends Component {
                 'date': 'December 21, 2018',
                 'link': 'https://joysofsolotravel.com/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/mcgillchemecar.png'),
@@ -92,7 +95,8 @@ class Portfolio extends Component {
                 'date': 'October 18, 2018',
                 'link': 'http://mcgillchemecar.com/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/supranootropics.png'),
@@ -101,7 +105,8 @@ class Portfolio extends Component {
                 'date': 'September 7, 2018',
                 'link': 'https://supranootropics.com/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/nauvelty.png'),
@@ -110,7 +115,8 @@ class Portfolio extends Component {
                 'date': 'January 5, 2018',
                 'link': '',
                 'LinkIcon': <LinkOffSharpIcon />,
-                'tags': ['all','personal','sites']
+                'filters': ['all','personal','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/nobemcgill.png'),
@@ -119,7 +125,8 @@ class Portfolio extends Component {
                 'date': 'February 28, 2018',
                 'link': 'https://nobemcgill.org/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/istrive.png'),
@@ -128,7 +135,8 @@ class Portfolio extends Component {
                 'date': 'January 2, 2019',
                 'link': 'https://istrive.ca/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/react-portfolio-template.png'),
@@ -137,7 +145,8 @@ class Portfolio extends Component {
                 'date': 'March 29, 2019',
                 'link': 'https://github.com/nayemalam/ReactPortfolioTemplate/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','personal','academic']
+                'filters': ['all','personal','academic'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/xplore.png'),
@@ -146,7 +155,8 @@ class Portfolio extends Component {
                 'date': 'April 6, 2019',
                 'link': 'https://github.com/nayemalam/Xplore/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','hackathons']
+                'filters': ['all','hackathons'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/francochrome.png'),
@@ -155,7 +165,8 @@ class Portfolio extends Component {
                 'date': 'January 25, 2019',
                 'link': 'https://github.com/nayemalam/FrancoChrome/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','hackathons','sites']
+                'filters': ['all','hackathons','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/pendopharm.png'),
@@ -164,7 +175,8 @@ class Portfolio extends Component {
                 'date': 'January 25, 2019',
                 'link': 'http://pendopharm-gi.com/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/midroni.png'),
@@ -173,7 +185,8 @@ class Portfolio extends Component {
                 'date': 'January 11, 2020',
                 'link': 'midroni.com/',
                 'LinkIcon': <LinkSharpIcon />,
-                'tags': ['all','sites']
+                'filters': ['all','sites'],
+                'tags': ['Java', 'JS', 'HTML']
             },
             {
                 'image': require('../images/work/supranootropics-pillbottle.jpg'),
@@ -182,11 +195,19 @@ class Portfolio extends Component {
                 'date': 'January 6, 2019',
                 'link': '',
                 'LinkIcon': <LinkOffSharpIcon />,
-                'tags': ['all','']
+                'filters': ['all',''],
+                'tags': ['Java', 'JS', 'HTML']
             }
         ];
 
-        const filters = ['all', 'sites', 'academic', 'hackathons', 'personal'];
+        const allFilters = ['all', 'sites', 'academic', 'hackathons', 'personal'];
+
+        const portfolioItemsSorted = portfolioItems
+        .sort(function(a, b) {
+            let dateA = new Date(a.date);
+            let dateB = new Date(b.date);
+            return dateB - dateA;
+        });
 
         return (
             <div className='portfolio container'>
@@ -196,13 +217,13 @@ class Portfolio extends Component {
                     <span style={{display: 'block'}} className='finePrint'>(... and speaking of course <span role='img' aria-label='eye emoji'>👀</span>)</span>
                 </h1>
                 
-                {filters.map((filteredItem, id) => (
-                    <Button key={id} onClick={() => this.setState({tag: filteredItem})}>
+                {allFilters.map((filteredItem, id) => (
+                    <Button key={id} onClick={() => this.setState({filters: filteredItem})}>
                         {filteredItem}
                     </Button>
                 ))}
 
-                {portfolioItems.filter(item => item.tags.includes(this.state.tag))
+                {portfolioItemsSorted.filter(item => item.filters.includes(this.state.filters))
                 .map((filteredItem, id) => (
                     <li key={id}>
                         {filteredItem.date}
@@ -219,6 +240,7 @@ class Portfolio extends Component {
                                 date={item.date}
                                 link={item.link}
                                 LinkIcon={item.LinkIcon}
+                                tags={item.tags}
                             />
                         </Grid>
                     ))}
