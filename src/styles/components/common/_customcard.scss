@@ -4,6 +4,10 @@
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.12);
     position: relative;
 
+    .card {
+        height: 362px;
+    }
+
     .featuredImage {
         padding-top: 56.25%;
         position: relative;
@@ -40,39 +44,13 @@
         color: $defaultBlack;
     }
 
-    .tags {
-        position: absolute;
-        bottom: 36px;
-        left: 16px;
-        margin: 0 16px 8px -5px;
-        color: #fff;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-        font-weight: bold;
-        display: grid;
-    }
-
-    .tag {
-        font-size: 10px;
-        grid-row: 1;
-        grid-column: 0;
-        margin-left: 5px;
-        border-radius: 3px;
-        padding: 0 5px 0 5px;
-    }
-
-    // for now until i figure out the spacing issue ...
-    @include mobile-up {
-        .tags {
-            display: none;
-        }
-
-        .tag {
-            display: none;
+    @include custom-mobile-viewports {
+        .card {
+            height: 385px;
         }
     }
 
 }
-
 
 .customcard:hover {
     transform: translateY(-3px);
