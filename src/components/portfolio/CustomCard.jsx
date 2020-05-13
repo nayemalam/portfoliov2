@@ -73,7 +73,7 @@ class CustomCard extends Component {
                                 onClick={this.incrementCounter}
                                 title='For you to interact with :)'
                             >
-                                <Badge color="secondary" badgeContent={this.state.count} max={20}>
+                                <Badge color="secondary" badgeContent={this.state.count} max={5}>
                                     <FavoriteIcon />
                                 </Badge>
                             </IconButton>

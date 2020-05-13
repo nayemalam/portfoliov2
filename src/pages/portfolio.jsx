@@ -15,6 +15,12 @@ class Portfolio extends Component {
         }
     }
 
+    changeFilter (item) {
+        this.setState({
+            filters: item
+        })
+    }
+
     render() {
 
         const portfolioItems = [
@@ -183,7 +189,7 @@ class Portfolio extends Component {
                 'title': 'Cooper Midroni',
                 'description': 'Built a personal website for my good friend Cooper.',
                 'date': 'January 11, 2020',
-                'link': 'midroni.com/',
+                'link': 'https://midroni.com/',
                 'LinkIcon': <LinkSharpIcon />,
                 'filters': ['all','sites'],
                 'tags': ['Java', 'JS', 'HTML']
@@ -218,20 +224,26 @@ class Portfolio extends Component {
                 </h1>
                 
                 {allFilters.map((filteredItem, id) => (
-                    <Button key={id} onClick={() => this.setState({filters: filteredItem})}>
+                    <Button 
+                        className='filterButton'
+                        key={id} 
+                        onClick={() => this.changeFilter(filteredItem)}
+                    >
                         {filteredItem}
                     </Button>
                 ))}
 
-                {portfolioItemsSorted.filter(item => item.filters.includes(this.state.filters))
+                {/* {portfolioItemsSorted.filter(item => item.filters.includes(this.state.filters))
                 .map((filteredItem, id) => (
                     <li key={id}>
                         {filteredItem.date}
                     </li>
-                ))}
+                ))} */}
 
                 <Grid container spacing={4}>
-                    {portfolioItems.map((item, id) => (
+                    {portfolioItemsSorted
+                    .filter(filteredItem => filteredItem.filters.includes(this.state.filters))
+                    .map((item, id) => (
                         <Grid key={id} item xs={12} sm={6} md={4} lg={4} xl={3}>
                             <CustomCard 
                                 image={item.image}
