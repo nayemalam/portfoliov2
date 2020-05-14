@@ -5,7 +5,8 @@ import portfolioItems from '../data/PortfolioItems';
 import CustomCard from '../components/portfolio/CustomCard';
 import FilterButtons from '../components/portfolio/FilterButtons';
 import { sortByDateASC, sortByDateDESC, filterArrayByString } from '../components/helpers';
-import { Button } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
 
 class Portfolio extends Component {
     constructor(props) {
@@ -13,11 +14,13 @@ class Portfolio extends Component {
 
         this.state = {
             filters: 'all',
-            portfolioItems
+            portfolioItems,
+            option: ''
         }
 
-        this.sortDESC = this.sortDESC.bind(this);
-        this.sortASC = this.sortASC.bind(this);
+        // this.sortDESC = this.sortDESC.bind(this);
+        // this.sortASC = this.sortASC.bind(this);
+        this.updateItems = this.updateItems.bind(this);
     }
 
     // binding within call since we need Child to change state
@@ -27,15 +30,21 @@ class Portfolio extends Component {
         })
     }
 
-    sortDESC () {
-        this.setState({
-            portfolioItems: sortByDateDESC(this.state.portfolioItems)
-        })
-    }
+    updateItems (event) {
+        if (event.target.value === 'Recent') {
+            this.setState({
+                portfolioItems: sortByDateDESC(this.state.portfolioItems)
+            })
+        }
 
-    sortASC () {
+        if (event.target.value === 'Earliest') {
+            this.setState({
+                portfolioItems: sortByDateASC(this.state.portfolioItems)
+            })
+        }
+        
         this.setState({
-            portfolioItems: sortByDateASC(this.state.portfolioItems)
+            option: event.target.value
         })
     }
 
@@ -51,8 +60,21 @@ class Portfolio extends Component {
 
                 <FilterButtons changeFilter={this.changeFilter.bind(this)} />
 
-                <Button onClick={this.sortDESC}>Sort by recent</Button>
-                <Button onClick={this.sortASC}>Sort by earliest</Button>
+                <TextField
+                    select
+                    label="Sort by"
+                    value={this.state.option}
+                    onChange={this.updateItems}
+                    style={{width: '100px'}}
+                >
+                    <MenuItem value='Recent'>
+                        Recent
+                    </MenuItem>
+                    <MenuItem value='Earliest'>
+                        Earliest
+                    </MenuItem>
+
+                </TextField>
 
                 <Grid container spacing={4}>
                     {filterArrayByString(this.state.portfolioItems, this.state.filters)

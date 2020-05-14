@@ -1,11 +1,21 @@
 .filterbuttons {
 
+    text-align: center;
+    display: flex;
+
     .filterButton {
         background-color: inherit;
+        border-radius: 0px;
+        flex-grow: 1;
     }
 
     .filterButton:focus {
         background-color: $mainGreen;
     }
+}
 
+@include mobile-up {
+    .filterbuttons {
+        display: inherit;
+    }
 }
