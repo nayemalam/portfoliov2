@@ -1,0 +1,9 @@
+.filterbuttons {
+    .filterButton {
+        background-color: inherit;
+    }
+
+    .filterButton:focus {
+        background-color: $mainGreen;
+    }
+}

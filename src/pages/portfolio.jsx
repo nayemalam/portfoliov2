@@ -4,7 +4,8 @@ import LinkSharpIcon from '@material-ui/icons/LinkSharp';
 import LinkOffSharpIcon from '@material-ui/icons/LinkOffSharp';
 import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import CustomCard from '../components/portfolio/CustomCard';
-import Button from '@material-ui/core/Button';
+import FilterButtons from '../components/portfolio/FilterButtons';
+import { filterAndSortArrayByString } from '../components/helpers';
 
 class Portfolio extends Component {
     constructor(props) {
@@ -205,15 +206,9 @@ class Portfolio extends Component {
                 'tags': ['Java', 'JS', 'HTML']
             }
         ];
-
-        const allFilters = ['all', 'sites', 'academic', 'hackathons', 'personal'];
-
-        const portfolioItemsSorted = portfolioItems
-        .sort(function(a, b) {
-            let dateA = new Date(a.date);
-            let dateB = new Date(b.date);
-            return dateB - dateA;
-        });
+        
+        // checking to see if Child can change Parent's state <-- and it can!
+        console.log(this.state.filters)
 
         return (
             <div className='portfolio container'>
@@ -222,18 +217,10 @@ class Portfolio extends Component {
                 <h1>Everything I love doing is right here.
                     <span style={{display: 'block'}} className='finePrint'>(... and speaking of course <span role='img' aria-label='eye emoji'>👀</span>)</span>
                 </h1>
-                
-                {allFilters.map((filteredItem, id) => (
-                    <Button 
-                        className='filterButton'
-                        key={id} 
-                        onClick={() => this.changeFilter(filteredItem)}
-                    >
-                        {filteredItem}
-                    </Button>
-                ))}
 
-                {/* {portfolioItemsSorted.filter(item => item.filters.includes(this.state.filters))
+                <FilterButtons changeFilter={this.changeFilter.bind(this)} />
+
+                {/* {filterAndSortArrayByString(portfolioItems, this.state.filters)
                 .map((filteredItem, id) => (
                     <li key={id}>
                         {filteredItem.date}
@@ -241,8 +228,7 @@ class Portfolio extends Component {
                 ))} */}
 
                 <Grid container spacing={4}>
-                    {portfolioItemsSorted
-                    .filter(filteredItem => filteredItem.filters.includes(this.state.filters))
+                    {filterAndSortArrayByString(portfolioItems, this.state.filters)
                     .map((item, id) => (
                         <Grid key={id} item xs={12} sm={6} md={4} lg={4} xl={3}>
                             <CustomCard 
