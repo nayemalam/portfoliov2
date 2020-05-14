@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 
 const allFilters = ['all', 'sites', 'academic', 'hackathons', 'personal'];
 
-
 class FilterButtons extends Component {
     render() {
         return (

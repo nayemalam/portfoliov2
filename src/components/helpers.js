@@ -1,3 +1,13 @@
+const sortByDateASC = function (array) {
+    array.sort((a, b) => { 
+        let dateA = new Date(a.date);
+        let dateB = new Date(b.date);
+
+        return dateA - dateB
+    })
+    return array
+}
+
 const sortByDateDESC = function (array) {
     array.sort((a, b) => { 
         let dateA = new Date(a.date);
@@ -8,14 +18,15 @@ const sortByDateDESC = function (array) {
     return array
 }
  
-const filterAndSortArrayByString = function (array, filteredString) {
-    const sortedArray = sortByDateDESC(array)
-    const filteredArray = sortedArray.filter(item => item.filters.includes(filteredString))
+const filterArrayByString = function (array, filteredString) {
+    // const sortedArray = sortByDateDESC(array)
+    const filteredArray = array.filter(item => item.filters.includes(filteredString))
 
     return filteredArray
 }
 
 module.exports = {
+    sortByDateASC: sortByDateASC,
     sortByDateDESC: sortByDateDESC,
-    filterAndSortArrayByString: filterAndSortArrayByString
+    filterArrayByString: filterArrayByString
 }
