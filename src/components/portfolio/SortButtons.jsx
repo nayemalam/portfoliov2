@@ -10,7 +10,7 @@ class SortButtons extends Component {
                     select
                     label="Sort by"
                     value={this.props.option}
-                    onChange={this.props.updateItems}
+                    onChange={this.props.sortItems}
                     style={{width: '100px'}}
                 >
                     <MenuItem value='Recent'>

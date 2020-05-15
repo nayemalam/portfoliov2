@@ -14,19 +14,21 @@ class Portfolio extends Component {
         this.state = {
             filters: 'all',
             portfolioItems,
-            option: ''
+            option: '',
+            activeIndex: 0
         }
-        this.updateItems = this.updateItems.bind(this);
+        this.sortItems = this.sortItems.bind(this);
     }
 
     // binding within call since we need Child to change state
-    changeFilter (item) {
+    changeFilter (item, id) {
         this.setState({
-            filters: item
+            filters: item,
+            activeIndex: id
         })
     }
 
-    updateItems (event) {
+    sortItems (event) {
         if (event.target.value === 'Recent') {
             this.setState({
                 portfolioItems: sortByDateDESC(this.state.portfolioItems)
@@ -54,9 +56,9 @@ class Portfolio extends Component {
                     <span style={{display: 'block'}} className='finePrint'>(... and speaking of course <span role='img' aria-label='eye emoji'>👀</span>)</span>
                 </h1>
 
-                <FilterButtons changeFilter={this.changeFilter.bind(this)} />
+                <FilterButtons changeFilter={this.changeFilter.bind(this)} activeIndex={this.state.activeIndex} />
 
-                <SortButtons option={this.state.option} updateItems={this.updateItems} />
+                <SortButtons option={this.state.option} sortItems={this.sortItems} />
 
                 <Grid container spacing={4}>
                     {filteredArray
