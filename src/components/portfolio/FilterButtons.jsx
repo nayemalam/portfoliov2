@@ -5,7 +5,7 @@ const allFilters = ['all', 'sites', 'academic', 'hackathons', 'personal'];
 
 class FilterButtons extends Component {
     render() {
-
+        
         return (
             <div className='filterbuttons'>
                 {allFilters.map((filteredItem, id) => (
@@ -14,7 +14,8 @@ class FilterButtons extends Component {
                         key={id} 
                         value={id}
                         onClick={() => this.props.changeFilter(filteredItem, id)}
-                        style={{backgroundColor: (id === this.props.activeIndex) ? '#43C6AC' : 'inherit'}}
+                        style={{backgroundColor: (id === this.props.activeIndex) ? '#43C6AC' : 'inherit',
+                                boxShadow: (id === this.props.activeIndex) ? '0px 13px 5px -11px rgba(0,0,0,0.38)' : 'none'}}
                     >
                         {filteredItem}
                     </Button>
