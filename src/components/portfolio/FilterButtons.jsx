@@ -16,7 +16,6 @@ class FilterButtons extends Component {
                         {filteredItem}
                     </Button>
                 ))}
-                
             </div>
         )
     }

@@ -6,22 +6,22 @@ const portfolioItems = [
     {
         'image': require('../images/work/fuzzymatching.png'),
         'title': 'Fuzzy Matching',
-        'description': 'Implemented multiple string similarity algorithms. Allowing you to compare the accuracy between two strings and assigns a similarity score.',
+        'description': 'Implemented multiple string similarity algorithms. This algorithm compares the accuracy between two strings and assigns a similarity score.',
         'date': 'July 23, 2019',
         'link': 'https://github.com/nayemalam/fuzzyMatching',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','personal'],
-        'tags': ['Java', 'JS', 'HTML', 'CSS']
+        'tags': ['Java']
     },
     {
         'image': require('../images/work/mcgillcoop.png'),
         'title': 'McGill Coop Program',
-        'description': 'Class project requiring us to build a version of what our McGill Coop program should look like. Tech: Java Spring + Vue.js.',
+        'description': 'Class project requiring us to build a version of what our McGill Coop program should look like.',
         'date': 'February 5, 2019',
         'link': 'https://github.com/nayemalam/McGillCoop',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','academic','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Java Spring', 'Vue.js', 'HTML', 'CSS', 'Heroku']
     },
     {
         'image': require('../images/work/webscraper.png'),
@@ -31,7 +31,7 @@ const portfolioItems = [
         'link': 'https://github.com/nayemalam/Hackerfest',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','hackathons'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Python']
     },
     {
         'image': require('../images/work/speakupmtl.png'),
@@ -41,37 +41,37 @@ const portfolioItems = [
         'link': 'https://speakupmtl.com/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','personal','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress']
     },
     {
         'image': require('../images/work/argyle.png'),
         'title': 'Argyle Tech',
-        'description': 'A student wanting to build an AI that will perform gene screening to figure out any inherent diseases that you might have or prone to - client.',
+        'description': 'A student wanting to build an AI that will perform gene screening to figure out any inherent diseases that you might have or prone to.',
         'date': 'September 23, 2018',
         'link': 'https://argyle.tech/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress', 'MailChimp', 'Client']
     },
     {
         'image': require('../images/work/medlife.png'),
         'title': 'Medlife Concordia',
-        'description': 'President and founder of Medlife Concordia reached out to me to build their website for more traction - client.',
+        'description': 'President and founder of Medlife Concordia reached out to me to build their website for more traction.',
         'date': 'August 26, 2018',
         'link': 'https://medlifeconcordia.com',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress', 'Client']
     },
     {
         'image': require('../images/work/joysofsolotravel.png'),
         'title': 'Joys of Solo Travel',
-        'description': 'An ambitious student and his startup documenting trips about the satisfaction of solo travelling - client.',
+        'description': 'An ambitious student and his startup documenting trips about the satisfaction of solo travelling.',
         'date': 'December 21, 2018',
         'link': 'https://joysofsolotravel.com/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress', 'WooCommerce', 'Client']
     },
     {
         'image': require('../images/work/mcgillchemecar.png'),
@@ -81,17 +81,17 @@ const portfolioItems = [
         'link': 'http://mcgillchemecar.com/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress']
     },
     {
         'image': require('../images/work/supranootropics.png'),
         'title': 'SupraNootropics',
-        'description': 'A student started a startup in McGill providing supplements for stress-relief - client.',
+        'description': 'A student started a startup in McGill providing supplements for stress-relief.',
         'date': 'September 7, 2018',
         'link': 'https://supranootropics.com/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress', 'Client']
     },
     {
         'image': require('../images/work/nauvelty.png'),
@@ -101,37 +101,37 @@ const portfolioItems = [
         'link': '',
         'LinkIcon': <LinkOffSharpIcon />,
         'filters': ['all','personal','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Shopify']
     },
     {
         'image': require('../images/work/nobemcgill.png'),
         'title': 'NOBE McGill',
-        'description': 'I\'ve been a part of this club for 3 years and still continuing. I built this website as a web dev.',
+        'description': 'I\'ve been a part of this club during my entire 4 years of undergrad. I built this website as the web dev at that time.',
         'date': 'February 28, 2018',
         'link': 'https://nobemcgill.org/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress']
     },
     {
         'image': require('../images/work/istrive.png'),
         'title': 'IStrive',
-        'description': 'Personal trainer reached out to me to build his brand and his movement - client.',
+        'description': 'Personal trainer reached out to me to build his brand and his movement.',
         'date': 'January 2, 2019',
         'link': 'https://istrive.ca/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress', 'MailChimp', 'Client']
     },
     {
         'image': require('../images/work/react-portfolio-template.png'),
         'title': 'React Portfolio Template',
-        'description': 'This is a free template made with React with fixed material sidebar.',
+        'description': 'This is a free template made with React with fixed material sidebar. Feel free to clone and use it :)',
         'date': 'March 29, 2019',
         'link': 'https://github.com/nayemalam/ReactPortfolioTemplate/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','personal','academic'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['React.js', 'HTML', 'CSS']
     },
     {
         'image': require('../images/work/xplore.png'),
@@ -141,27 +141,27 @@ const portfolioItems = [
         'link': 'https://github.com/nayemalam/Xplore/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','hackathons'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Android Studio', 'React Native']
     },
     {
         'image': require('../images/work/francochrome.png'),
         'title': 'FrancoChrome | ConUHacks',
-        'description': 'A french language learning tool that allows Chrome users to learn a new word everytime they open a new tab - Chrome Extension.',
+        'description': 'A french language learning tool that allows Chrome users to learn a new word everytime they open a new tab.',
         'date': 'January 25, 2019',
         'link': 'https://github.com/nayemalam/FrancoChrome/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','hackathons','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Vanilla JS', 'HTML', 'CSS']
     },
     {
         'image': require('../images/work/pendopharm.png'),
         'title': 'Pendopharm: G.I. Solutions',
-        'description': 'Worked with an amazing brand manager who asked me to revamp their website - client.',
+        'description': 'Worked with an amazing brand manager who asked me to revamp their website.',
         'date': 'January 25, 2019',
         'link': 'http://pendopharm-gi.com/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress', 'Client']
     },
     {
         'image': require('../images/work/midroni.png'),
@@ -171,7 +171,7 @@ const portfolioItems = [
         'link': 'https://midroni.com/',
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
-        'tags': ['Java', 'JS', 'HTML']
+        'tags': ['Wordpress']
     },
     {
         'image': require('../images/work/supranootropics-pillbottle.jpg'),
@@ -180,8 +180,28 @@ const portfolioItems = [
         'date': 'January 6, 2019',
         'link': '',
         'LinkIcon': <LinkOffSharpIcon />,
-        'filters': ['all',''],
-        'tags': ['Java', 'JS', 'HTML']
+        'filters': ['all','personal'],
+        'tags': ['Graphics']
+    },
+    {
+        'image': require('../images/work/caloriecounter.png'),
+        'title': 'Calorie Counter',
+        'description': 'Calculate your daily calorie intake under 30 seconds.',
+        'date': 'July 29, 2019',
+        'link': 'https://nayemalam.github.io/CalorieCounter/',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','personal'],
+        'tags': ['Vanilla JS','HTML','CSS']
+    },
+    {
+        'image': require('../images/work/colorgame.png'),
+        'title': 'Color Game',
+        'description': 'Guess the color based on RGB. Test your RGB value skills. Game starts with "Hard" mode.',
+        'date': 'July 10, 2019',
+        'link': 'https://nayemalam.github.io/ColorGame/',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','personal'],
+        'tags': ['Vanilla JS','HTML','CSS']
     }
 ];
 

@@ -5,8 +5,7 @@ import portfolioItems from '../data/PortfolioItems';
 import CustomCard from '../components/portfolio/CustomCard';
 import FilterButtons from '../components/portfolio/FilterButtons';
 import { sortByDateASC, sortByDateDESC, filterArrayByString } from '../components/helpers';
-import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
+import SortButtons from '../components/portfolio/SortButtons';
 
 class Portfolio extends Component {
     constructor(props) {
@@ -17,9 +16,6 @@ class Portfolio extends Component {
             portfolioItems,
             option: ''
         }
-
-        // this.sortDESC = this.sortDESC.bind(this);
-        // this.sortASC = this.sortASC.bind(this);
         this.updateItems = this.updateItems.bind(this);
     }
 
@@ -36,19 +32,19 @@ class Portfolio extends Component {
                 portfolioItems: sortByDateDESC(this.state.portfolioItems)
             })
         }
-
         if (event.target.value === 'Earliest') {
             this.setState({
                 portfolioItems: sortByDateASC(this.state.portfolioItems)
             })
         }
-        
         this.setState({
             option: event.target.value
         })
     }
 
     render() {
+
+        const filteredArray = filterArrayByString(this.state.portfolioItems, this.state.filters);
 
         return (
             <div className='portfolio container'>
@@ -60,24 +56,10 @@ class Portfolio extends Component {
 
                 <FilterButtons changeFilter={this.changeFilter.bind(this)} />
 
-                <TextField
-                    select
-                    label="Sort by"
-                    value={this.state.option}
-                    onChange={this.updateItems}
-                    style={{width: '100px'}}
-                >
-                    <MenuItem value='Recent'>
-                        Recent
-                    </MenuItem>
-                    <MenuItem value='Earliest'>
-                        Earliest
-                    </MenuItem>
-
-                </TextField>
+                <SortButtons option={this.state.option} updateItems={this.updateItems} />
 
                 <Grid container spacing={4}>
-                    {filterArrayByString(this.state.portfolioItems, this.state.filters)
+                    {filteredArray
                     .map((item, id) => (
                         <Grid key={id} item xs={12} sm={6} md={4} lg={4} xl={3}>
                             <CustomCard 

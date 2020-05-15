@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from "@material-ui/core/CardActions";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
+import {
+    Card,
+    CardMedia,
+    CardContent,
+    CardActionArea,
+    CardActions,
+    Typography,
+    IconButton,
+    Badge
+} from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import Badge from '@material-ui/core/Badge';
 import Tags from './Tags';
 
 class CustomCard extends Component {
