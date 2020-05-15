@@ -17,4 +17,8 @@
         border-radius: 10px;
     }
 
+    @include mobile-up {
+        margin-bottom: 20px;
+    }
+
 }

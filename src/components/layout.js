@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import NavigationBar from './navigationbar/NavigationBar';
 /* internal css */
 import '../styles/global.scss';
-import FloatingHamburger from './navigationbar/sidedrawer/mobilemenu/hamburger/FloatingHamburger';
 
 function Layout ({children}) {
 
@@ -20,7 +19,6 @@ function Layout ({children}) {
       {/* site elements */}
       <NavigationBar />
       {children}
-      <FloatingHamburger />
     </div>
   );
 }

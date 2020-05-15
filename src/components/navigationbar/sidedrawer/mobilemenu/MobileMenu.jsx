@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFire } from '@fortawesome/free-solid-svg-icons'; 
-import { SwipeableDrawer, Button } from '@material-ui/core';
-import Hamburger from './hamburger/Hamburger';
+import { SwipeableDrawer } from '@material-ui/core';
+import FloatingHamburger from './hamburger/FloatingHamburger';
 import MobileAvatar from './mobileavatar/MobileAvatar';
+import Fab from '@material-ui/core/Fab';
 
 class MobileMenu extends Component {
 
@@ -35,17 +34,12 @@ class MobileMenu extends Component {
 
         return (
             <div className='mobilemenu'>
-                <div className='topbar'>        
-                    <figure>
-                        <a style={{color: '#000', textDecoration: 'none'}} href="/">
-                            <figcaption>nayem alam <FontAwesomeIcon icon={faFire}/></figcaption>
-                        </a>
-                    </figure>
-
-                    <Button onClick={this.toggleDrawer}>
-                        {/* passing state openMenu to Hamburger */}
-                        <Hamburger openMenu={this.state.isOpen} />
-                    </Button>
+                <div className='floatingbar'>        
+            
+                    <Fab className='customfab' onClick={this.toggleDrawer}>
+                        {/* passing state isOpen to Hamburger */}
+                        <FloatingHamburger isOpen={this.state.isOpen} />
+                    </Fab>
 
                     <SwipeableDrawer
                         variant='temporary'
