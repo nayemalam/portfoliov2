@@ -4,16 +4,17 @@ node_js:
 cache:
   directories:
   - node_modules
-script:
-  - echo "Starting to build ..."
-  - echo "Installing deps ..."
-  - echo "Cleaning and rebuilding ..."
-  - npm run clean
-  - npm run build
-install:
-  - npm install -g firebase-tools
+before_script:
+  - "npm i -g gatsby"
+  - "npm i"
+  - "npm install -g firebase-tools"
   - cd functions
   - npm install
   - cd ..
+script:
+  - echo "Starting to build ..."
+  - echo "Installing deps ..."
+  - echo "rebuilding ..."
+  - npm run build
 after_success:
   - firebase deploy --token "$FIREBASE_TOKEN"
