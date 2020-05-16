@@ -3,6 +3,13 @@
     font-size: 30px;
     color: #363732;
     font-family: $titleFont !important;
+    font-size: 50px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
 
     .dynamicText {
         position: relative;
@@ -29,5 +36,14 @@
         50% {
             opacity: 0;
         }
+    }
+}
+
+@include mobile-up {
+    .typewriter {
+        font-size: 30px;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%,-50%);
     }
 }

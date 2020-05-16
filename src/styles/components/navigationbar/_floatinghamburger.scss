@@ -4,27 +4,29 @@
 
         display: inherit;
         
-        .topchapeau {
+        .leftchapeau {
             font-size: 25px;
             font-family: $titleFont;
             font-weight: bold;
             transition: transform 250ms ease-out;
+            margin-right: 3px;
         }
 
-        .topchapeau.open {
+        .leftchapeau.open {
             transition: transform 250ms ease-out;
-            transform: translate(12px, 0);
+            transform: translate(16px, 0);
         }
-        .bottomchapeau.open {
+        .rightchapeau.open {
             transition: transform 250ms ease-out;
-            transform: translate(-12px, 0);
+            transform: translate(-16px, 0);
         }
     
-        .bottomchapeau {
+        .rightchapeau {
             font-size: 25px;
             font-family: $titleFont;
             font-weight: bold;
             transition: transform 250ms ease-out;
+            margin-left: 3px;
         }
 
     }

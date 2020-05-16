@@ -4,8 +4,8 @@ class FloatingHamburger extends Component {
     render() {
         return (
             <div className='floatinghamburger'>
-                <div className={this.props.isOpen ? 'topchapeau open' : 'topchapeau'}> &lt; </div>
-                <div className={this.props.isOpen ? 'bottomchapeau open' : 'bottomchapeau'}> &gt; </div>
+                <div className={this.props.isOpen ? 'leftchapeau open' : 'leftchapeau'}> &lt; </div>
+                <div className={this.props.isOpen ? 'rightchapeau open' : 'rightchapeau'}> &gt; </div>
             </div>
         )
     }

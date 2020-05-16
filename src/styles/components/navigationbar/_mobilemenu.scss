@@ -4,14 +4,14 @@
 
         .floatingbar {
             position: fixed;
-            bottom: 40px;
-            right: 20px;
+            bottom: 65px;
+            right: 24px;
             z-index: 2000;
 
             .customfab {
-                background-color: #20232a !important;
-                border: 2px solid $defaultWhite;
-                box-shadow: 0 0 0 2px $mainGreen;
+                background-color: $customDarkBlue !important;
+                // border: 2px transparent $defaultWhite;
+                box-shadow: 0 0 0 2px $highlightGreen;
                 color: $defaultWhite;
                 text-align: center;
             }
