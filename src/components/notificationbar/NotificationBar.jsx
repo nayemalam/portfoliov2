@@ -29,10 +29,9 @@ class NotificationBar extends Component {
             <div className='notificationbar'>
                 <Collapse in={this.state.isOpen}>
                     <Alert
+                        severity='info'
                         action={
                             <IconButton
-                                aria-label="close"
-                                color="inherit"
                                 size="small"
                                 onClick={this.closeNotif}
                             >
