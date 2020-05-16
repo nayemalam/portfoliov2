@@ -1,8 +1,9 @@
 language: node_js
 node_js:
-  - "stable"
+  - 11
 cache:
-  npm: false
+  directories:
+  - node_modules
 script:
   - echo "Starting to build ..."
   - echo "Installing deps ..."
