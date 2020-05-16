@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Alert  from '@material-ui/lab/Alert';
+import { Alert }  from '@material-ui/lab';
 import { 
     IconButton,
     Collapse
