@@ -69,9 +69,12 @@ class TypeWriter extends Component {
 
         return (
             <div className='typewriter'>
-                <span>Hi there, I'm Nayem.</span>
+                <span className='staticText'>Hi, I'm Nayem <span role='img' aria-label='rocket emoji'>🚀</span></span>
                 <br/>
                 <span className='dynamicText'>I like to&nbsp;{this.state.text}</span>
+                <br/>
+                <br/>
+                <span>While I enjoy putting myself in several distinct areas, my main interests lie within the intersections of engineering, speaking, writing and building some pretty cool sh*t.</span>
             </div>
         )    
     }

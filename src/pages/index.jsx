@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import TypeWriter from '../components/home/TypeWriter';
 import NotificationBar from '../components/notificationbar/NotificationBar';
+import MoreInfoButtons from '../components/home/MoreInfoButtons';
+import Socials from '../components/home/Socials';
 
 class Home extends Component {
 
@@ -15,6 +17,9 @@ class Home extends Component {
 
         <NotificationBar />
         <TypeWriter words={featuredWords} />
+        {/* <Content /> */}
+        <MoreInfoButtons />
+        <Socials />
       </div>
     )
   }

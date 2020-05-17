@@ -1,6 +1,6 @@
 .home {
-    padding-top: 25px;
-    // background-image: url('../../images/common/abstract_elements.png');
-    // background-size: cover;
-    // background-color: rgb(243, 243, 243);
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
