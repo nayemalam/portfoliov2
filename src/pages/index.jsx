@@ -17,7 +17,6 @@ class Home extends Component {
 
         <NotificationBar />
         <TypeWriter words={featuredWords} />
-        {/* <Content /> */}
         <MoreInfoButtons />
         <Socials />
       </div>

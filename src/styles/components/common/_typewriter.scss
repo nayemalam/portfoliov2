@@ -5,10 +5,8 @@
     font-size: 30px;
     text-align: center;
     position: relative;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%,-50%);
     width: 100%;
+    margin-top: 10%;
 
     .dynamicText {
         position: relative;
@@ -44,13 +42,10 @@
 
 @include mobile-up {
     .typewriter {
-        font-size: 30px;
-        left: 50%;
-        top: 30%;
-        transform: translate(-50%,-50%);
+        font-size: 20px;
 
         .staticText {
-            font-size: 40px;
+            font-size: 30px;
         }
         
     }

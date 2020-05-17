@@ -48,7 +48,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"No tests are required for the moment ...\" && exit 1",
-    "custom": "gatsby clean && gatsby develop"
+    "custom": "gatsby clean && gatsby develop",
+    "mobile": "gatsby develop -H 0.0.0.0"
   },
   "repository": {
     "type": "git",

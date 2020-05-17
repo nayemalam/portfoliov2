@@ -1,10 +1,9 @@
 .moreinfobuttons {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 15px;
     
     .btn {
         font-family: $titleFont !important;
-        // border: 1px solid black;
         margin: 20px;
         padding: 5px;
         font-weight: bold;
@@ -37,13 +36,13 @@
 }
 
 @include mobile-up {
-    .moreinfobuttons {
-        display: contents;
+    // .moreinfobuttons {
+    //     display: contents;
 
-        .btn {
-            width: fit-content;
-            margin: 15px auto;
-        }
-    }
+    //     .btn {
+    //         width: fit-content;
+    //         margin: 15px auto;
+    //     }
+    // }
 
 }

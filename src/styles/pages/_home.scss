@@ -1,6 +1,12 @@
 .home {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // height: inherit;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
+}
+
+@include mobile-up {
+
+   
 }

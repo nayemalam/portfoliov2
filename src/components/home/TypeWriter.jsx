@@ -46,14 +46,14 @@ class TypeWriter extends Component {
         }
 
         if(!isDeleting && (text === currentWord)) {
-            typeSpeed = 1000;
+            typeSpeed = 500;
 
             this.setState({
                 isWaiting: true,
                 isDeleting: true
             })
         } else if (isDeleting && text === '') {
-            typeSpeed = 400;
+            typeSpeed = 300;
 
             this.setState({
                 isDeleting: false,
@@ -69,7 +69,7 @@ class TypeWriter extends Component {
 
         return (
             <div className='typewriter'>
-                <span className='staticText'>Hi, I'm Nayem <span role='img' aria-label='rocket emoji'>🚀</span></span>
+                <span className='staticText'>Hi, I'm Nayem <span role='img' aria-label='rocket emoji' className='hvr-grow'>🚀</span></span>
                 <br/>
                 <span className='dynamicText'>I like to&nbsp;{this.state.text}</span>
                 <br/>
