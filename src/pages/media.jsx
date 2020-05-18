@@ -9,7 +9,7 @@ class Media extends Component {
     render () {
       
       const headerText = 'Beyond Grateful';
-      const descText = 'Thanks to all ma homies, this is just a testing description ...';
+      const descText = 'I am thankful for all the amazing opportunities I\'ve had this far, I keep this page as a repo of all the places I\'ve been mentioned in.';
       
     return (
       <div className='media container'>

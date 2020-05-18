@@ -6,8 +6,8 @@ import HeaderDesc from '../components/headerdesc/HeaderDesc';
 class Contact extends Component {
     render() {
         
-        const headerText = 'Let\'s Connect!';
-        const descText = 'Thanks to all ma homies, this is just a testing description ...';
+        const headerText = 'Let\'s Connect';
+        const descText = 'One of the things I enjoy doing the most is genuinely meeting new people. If you\'d like to grab coffee for a casual talk, or just talk business, don\'t hesitate to reach out!';
 
         return (
             <div className='contact container'>

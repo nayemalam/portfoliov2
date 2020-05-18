@@ -74,7 +74,7 @@ class TypeWriter extends Component {
                 <span className='dynamicText'>I like to&nbsp;{this.state.text}</span>
                 <br/>
                 <br/>
-                <span>While I enjoy putting myself in several distinct areas, my main interests lie within the intersections of engineering, speaking, writing and building some pretty cool sh*t.</span>
+                <span>While I enjoy putting myself in several distinct areas, my main interests lie within the intersections of engineering, speaking, writing and building some pretty cool things.</span>
             </div>
         )    
     }

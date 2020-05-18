@@ -48,8 +48,8 @@ class Portfolio extends Component {
     render() {
 
         const filteredArray = filterArrayByString(this.state.portfolioItems, this.state.filters);
-        const headerText = 'Everything I love doing is right here.'
-        const descText = "(... and speaking of course 👀)"
+        const headerText = 'Coffee Nights & Curiosity';
+        const descText = "One of my hobbies is to learn new tech frameworks and how to practically apply it. I love building some pretty cool sh*t and enjoy working with many people on their vision and ideas. I focus on developing my personal skills while also learning new skills simultaneously.";
 
         return (
             <div className='portfolio container'>

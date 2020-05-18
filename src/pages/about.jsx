@@ -6,8 +6,8 @@ import HeaderDesc from '../components/headerdesc/HeaderDesc';
 class About extends Component {
   render() {
 
-    const headerText = 'Welcome to my world';
-    const descText = 'This is a place...';
+    const headerText = 'Hello World';
+    const descText = '';
     return (
       <div className='about container'>
         <HTMLTitle title='Who Am I? | Nayem Alam' />
