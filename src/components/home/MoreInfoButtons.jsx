@@ -10,7 +10,7 @@ class MoreInfoButtons extends Component {
         
         return (
             <div className='moreinfobuttons'>
-                <Link to='about' style={{textDecoration: 'none'}}>
+                <Link to='/about' style={{textDecoration: 'none'}}>
                     <Button className='btn mui-design'>READ MORE &nbsp; <FingerprintIcon fontSize='small' /></Button>
                 </Link>
                 <a href={resume} target="_blank" rel='noopener noreferrer' style={{textDecoration: 'none'}}>

@@ -6,6 +6,7 @@ import CustomCard from '../components/portfolio/CustomCard';
 import FilterButtons from '../components/portfolio/FilterButtons';
 import { sortByDateASC, sortByDateDESC, filterArrayByString } from '../components/helpers';
 import SortButtons from '../components/portfolio/SortButtons';
+import HeaderDesc from '../components/headerdesc/HeaderDesc';
 
 class Portfolio extends Component {
     constructor(props) {
@@ -47,19 +48,16 @@ class Portfolio extends Component {
     render() {
 
         const filteredArray = filterArrayByString(this.state.portfolioItems, this.state.filters);
+        const headerText = 'Everything I love doing is right here.'
+        const descText = "(... and speaking of course 👀)"
 
         return (
             <div className='portfolio container'>
                 <HTMLTitle title='Portfolio | Nayem Alam' />
                 
-                <h1>Everything I love doing is right here.
-                    <span style={{display: 'block'}} className='finePrint'>(... and speaking of course <span role='img' aria-label='eye emoji'>👀</span>)</span>
-                </h1>
-
+                <HeaderDesc header={headerText} desc={descText} />
                 <FilterButtons changeFilter={this.changeFilter.bind(this)} activeIndex={this.state.activeIndex} />
-
                 <SortButtons option={this.state.option} sortItems={this.sortItems} />
-
                 <Grid container spacing={4}>
                     {filteredArray
                     .map((item, id) => (

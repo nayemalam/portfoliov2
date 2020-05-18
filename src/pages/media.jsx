@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import mediaItems from '../data/MediaItems';
+import HeaderDesc from '../components/headerdesc/HeaderDesc';
 
 class Media extends Component {
 
     render () {
-
+      
+      const headerText = 'Beyond Grateful';
+      const descText = 'Thanks to all ma homies, this is just a testing description ...';
+      
     return (
       <div className='media container'>
         <HTMLTitle title='Honorable Mentions | Nayem Alam' />
         
-        <h2 className='customHeader upperCaseAll centerText'>beyond grateful</h2>
+        <HeaderDesc header={headerText} desc={descText} />
         <div className='mediaItems'>
             <Grid container spacing={4}>
               {mediaItems.map((media, id) => (
