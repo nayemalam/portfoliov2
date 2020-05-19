@@ -9,16 +9,16 @@
             font-family: $titleFont;
             font-weight: bold;
             transition: transform 250ms ease-out;
-            margin-right: 3px;
+            margin-right: 2px;
         }
 
         .leftchapeau.open {
             transition: transform 250ms ease-out;
-            transform: translate(16px, 0);
+            transform: translate(15px, 0);
         }
         .rightchapeau.open {
             transition: transform 250ms ease-out;
-            transform: translate(-16px, 0);
+            transform: translate(-15px, 0);
         }
     
         .rightchapeau {
@@ -26,7 +26,7 @@
             font-family: $titleFont;
             font-weight: bold;
             transition: transform 250ms ease-out;
-            margin-left: 3px;
+            margin-right: -1px;
         }
 
     }
