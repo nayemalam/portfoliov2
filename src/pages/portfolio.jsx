@@ -7,6 +7,7 @@ import FilterButtons from '../components/portfolio/FilterButtons';
 import { sortByDateASC, sortByDateDESC, filterArrayByString } from '../components/helpers';
 import SortButtons from '../components/portfolio/SortButtons';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import EditPage from '../components/editpage/EditPage';
 
 class Portfolio extends Component {
     constructor(props) {
@@ -74,6 +75,8 @@ class Portfolio extends Component {
                         </Grid>
                     ))}
                 </Grid>
+
+                <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/portfolio.html'} />
             </div>
         )
     }

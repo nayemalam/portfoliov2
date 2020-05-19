@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import DateTimeStamp from '../components/datetimestamp/DateTimeStamp';
 import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import Description from '../components/about/Description';
+import WorkExperience from '../components/about/WorkExperience';
+import Education from '../components/about/Education';
+import Awards from '../components/about/Awards';
+import EditPage from '../components/editpage/EditPage';
 
 class About extends Component {
   render() {
@@ -15,8 +18,11 @@ class About extends Component {
         
         <HeaderDesc header={headerText} desc={descText} />
         <Description />
-        <DateTimeStamp />
-
+        <WorkExperience />
+        <Education />
+        <Awards />
+        <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/about.html'} />
+       
       </div>
     )
   }

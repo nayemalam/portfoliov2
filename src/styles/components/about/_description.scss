@@ -1,5 +1,12 @@
 .description {
 
+    color: $paragraphColor;
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .info {
         font-size: 16px;
         line-height: 1.8;
@@ -8,4 +15,20 @@
     .hidden {
         display: none;
     }
+
+    .toggleButton {
+        color: $paragraphColor;
+        padding: 0;
+        margin-left: -6px;
+        margin-top: -2px;
+    }
+
+    @include mobile-up {
+        .toggleButton {
+            // padding: 0;
+            // margin-left: -6px;
+            margin-top: -4px;
+        }
+    }
+
 }

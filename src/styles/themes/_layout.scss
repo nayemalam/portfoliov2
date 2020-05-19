@@ -93,12 +93,15 @@ body {
     .titleWithBackground {
         text-align: center;
         color: $defaultBlack;
-        border: 1px solid $mainGreen;
+        border: 1px solid transparent;
         background-color: $highlightLink;
         padding: 5px;
         border-left: none;
         width: 200px;
         margin-left: -15px;
+        margin-top: 50px;
+        letter-spacing: 2px;
+        // box-shadow: 3px 2px 2px 0px rgba(0,0,0,0.75);
     }
 
     .bottomRight {

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import EditPage from '../components/editpage/EditPage';
 
 export default class Speaking extends Component {
 
@@ -9,8 +11,10 @@ export default class Speaking extends Component {
 
         return (
             <div className='speaking container'>
+                <HTMLTitle title='Speaker | Nayem Alam' />
+
                 <HeaderDesc header={headerText} desc={descText} />
-                
+                <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/speaking.html'} />
             </div>
         )
     }

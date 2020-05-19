@@ -5,7 +5,7 @@ class HeaderDesc extends Component {
         return (
             <div className='headerdesc'>
                 <h1 className='customHeader'>{this.props.header}
-        <span style={{display: 'block'}} className='finePrint'>{this.props.desc}</span>
+        <span style={{display: 'block'}} className='finePrint paragraphColor'>{this.props.desc}</span>
                 </h1>
 
                 

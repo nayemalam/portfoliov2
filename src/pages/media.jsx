@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import mediaItems from '../data/MediaItems';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import EditPage from '../components/editpage/EditPage';
 
 class Media extends Component {
 
@@ -27,6 +28,7 @@ class Media extends Component {
               ))}
             </Grid>
         </div>
+        <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/media.html'} />
       </div>
     )
   }
