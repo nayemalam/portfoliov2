@@ -22,7 +22,6 @@ class About extends Component {
         <Education />
         <Awards />
         <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/about.html'} />
-       
       </div>
     )
   }

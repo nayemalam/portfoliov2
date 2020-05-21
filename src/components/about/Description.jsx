@@ -35,24 +35,25 @@ class Description extends Component {
                 <div className={this.state.isHidden ? 'info' : 'hidden'}>
                     <p>
                         When I’m not in school, I like to play basketball, workout and spend time with family. 
-                        I’m always excited to work on projects as I’ve been continuously working on <a href="http://speakupmtl.com/"><span class='customLink'>Speak Up</span></a> which is a 
+                        I’m always excited to work on projects as I’ve been continuously working on <a href="http://speakupmtl.com/"><span className='customLink'>Speak Up</span></a> which is a 
                         unique slam poetry competition to give our youth an outlet to express themselves. I also run a 
-                        side hustle, <a href="http://emreld.com/"><span class='customLink'>Emreld</span></a>, which is a web design agency 
-                        putting clients first to help jumpstart their business(es). Finally, I was once a content creator back in grades 
-                        7-9 making <a href="https://www.youtube.com/user/TechTutorialsz"><span class='customLink'>YouTube</span></a> videos!
+                        side hustle, <a href="http://emreld.com/"><span className='customLink'>Emreld</span></a>, which is a web design agency 
+                        putting clients first to help jumpstart their business(es). I enjoy clean, elegant styling, and I have lots of experience in the production of modern websites. 
+                        I love creating amazing aesthetically pleasing sites as per my clients’ needs. Finally, I was once a content creator back in grades 
+                        7 to 9 making <a href="https://www.youtube.com/user/TechTutorialsz"><span className='customLink'>YouTube</span></a> videos!
                     </p>
                     <p>
                         At school, I’ve devoted my extra-curricular time to being the head of marketing of 
-                        McGill’s <a href="https://www.mcgilleus.ca/juniorcounil"><span class='customLink'>Junior Council</span></a>. 
+                        McGill’s <a href="https://www.mcgilleus.ca/juniorcounil"><span className='customLink'>Junior Council</span></a>. 
                         The project manager, director of corporate relations and web designer for 
-                        the <a href="https://nobemcgill.org/"><span class='customLink'>National Organization of Business & Engineering</span></a> and 
-                        the web master for <a href="http://mcgillchemecar.com/"><span class='customLink'>McGill Chem-E Car</span></a>. 
-                        Finally, I've also worked closely with the <a href="https://www.mcgill.ca/engine/"><span class='customLink'>McGill EngInE</span></a> team 
-                        to curate the <a href="http://mcgilldesignconsultancy.com/"><span class='customLink'>McGill Design Consultancy</span></a>; our goal is to build a centralized place for all design-related questions and demands for the McGill community.
+                        the <a href="https://nobemcgill.org/"><span className='customLink'>National Organization of Business & Engineering</span></a> and 
+                        the web master for <a href="http://mcgillchemecar.com/"><span className='customLink'>McGill Chem-E Car</span></a>. 
+                        Finally, I've also worked closely with the <a href="https://www.mcgill.ca/engine/"><span className='customLink'>McGill EngInE</span></a> team 
+                        to curate the <a href="http://mcgilldesignconsultancy.com/"><span className='customLink'>McGill Design Consultancy</span></a>; our goal is to build a centralized place for all design-related questions and demands for the McGill community.
                     </p>
                 </div>
                 <p className='info'>
-                    Feel free to check out my projects, and connect with me on my other platforms. If you’d like to get to know me, the best way is by hitting me up! 🙂
+                    Feel free to check out my projects, and connect with me on my other platforms. If you’d like to get to know me, the best way is by hitting me up! <span role='img' aria-label='smiling emoji'>🙂</span>
                 </p>
             </div>
         )

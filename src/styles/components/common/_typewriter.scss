@@ -1,6 +1,6 @@
 .typewriter {
 
-    color: $customDarkGrey;
+    color: $defaultWhite;
     font-family: $titleFont !important;
     font-size: 30px;
     text-align: center;
@@ -43,6 +43,7 @@
 @include mobile-up {
     .typewriter {
         font-size: 20px;
+        color: $defaultBlack;
 
         .staticText {
             font-size: 30px;

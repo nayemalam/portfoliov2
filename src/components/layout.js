@@ -8,6 +8,15 @@ import '../styles/global.scss';
 
 function Layout ({children}) {
 
+  // trigger for landscape devices
+  const readDeviceOrientation = () => {
+    if (window.orientation === 90 || window.orientation === -90) {
+        alert('This site is not optimized for landscape mode. Please use portrait mode instead, thank you.');
+    } 
+  }
+
+  window.onorientationchange = readDeviceOrientation;
+
   return ( 
     <div className='layout'>
       {/* head elements */}

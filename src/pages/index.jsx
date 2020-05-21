@@ -12,9 +12,10 @@ class Home extends Component {
     console.log('%c 🚩If you notice any issues, please flag them to me, thanks!', 'color: teal; font-weight: bold; background-color: black;');
 
     return (
-      <div className='home container'>
+      <div className='home container parallax'>
         <HTMLTitle title='Nayem Alam | Engineer, Slam Poet & Developer' />
-
+        <div className="stars"></div>
+        <div className="stars2"></div>
         <NotificationBar />
         <TypeWriter words={featuredWords} />
         <MoreInfoButtons />

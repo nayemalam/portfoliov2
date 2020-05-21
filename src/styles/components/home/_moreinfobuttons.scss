@@ -15,7 +15,7 @@
 
     .mui-design {
         // border: 3px solid #4CAF50;
-        color: black;
+        color: $defaultWhite;
         text-transform: uppercase;
         height: auto;
         width: inherit;
@@ -36,6 +36,11 @@
 }
 
 @include mobile-up {
+    .moreinfobuttons {
+        .mui-design {
+            color: $defaultBlack;
+        }
+    }
     // .moreinfobuttons {
     //     display: contents;
 
