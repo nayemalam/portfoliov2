@@ -4,15 +4,11 @@
     // display: flex;
     // flex-direction: column;
     // justify-content: space-between;
-
-}
-
-.parallax {
     background: $customDarkBlue;
 }
 
 @include mobile-up {
-    .parallax {
+    .home {
         background: $defaultWhite;
     }
 }
