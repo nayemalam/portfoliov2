@@ -14,13 +14,11 @@
     }
 
     .mui-design {
-        // border: 3px solid #4CAF50;
         color: $defaultWhite;
-        text-transform: uppercase;
         height: auto;
         width: inherit;
         text-shadow: 2px 2px 5px rgba(102, 102, 102, 0.199);
-        box-shadow: 8px 8px rgba(102, 102, 102, 0.199);
+        box-shadow: 5px 5px rgba(102, 102, 102, 0.199);
         cursor: pointer;
         transition: transform 0.4s, box-shadow 0.4s;
     }

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Button } from '@material-ui/core';
-import FingerprintIcon from '@material-ui/icons/Fingerprint';
-import LaunchIcon from '@material-ui/icons/Launch';
 import { Link } from 'gatsby';
 import resume from '../../images/Nayem-Resume.pdf';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFingerprint, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
 class MoreInfoButtons extends Component {
     render() {
@@ -11,10 +12,10 @@ class MoreInfoButtons extends Component {
         return (
             <div className='moreinfobuttons'>
                 <Link to='/about' style={{textDecoration: 'none'}}>
-                    <Button className='btn mui-design'>READ MORE &nbsp; <FingerprintIcon fontSize='small' /></Button>
+                    <Button className='btn mui-design'>READ MORE &nbsp; <FontAwesomeIcon icon={faFingerprint} width='16'/></Button>
                 </Link>
                 <a href={resume} target="_blank" rel='noopener noreferrer' style={{textDecoration: 'none'}}>
-                    <Button className='btn mui-design'>VIEW RESUME &nbsp; <LaunchIcon fontSize='small' /></Button>
+                    <Button className='btn mui-design'>VIEW RESUME &nbsp; <FontAwesomeIcon icon={faFilePdf} width='16'/></Button>
                 </a>
             </div>
         )
