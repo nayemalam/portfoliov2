@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Button } from '@material-ui/core';
 import { Link } from 'gatsby';
 import resume from '../../images/Nayem-Resume.pdf';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFingerprint, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 

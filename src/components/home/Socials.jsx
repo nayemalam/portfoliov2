@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons'; 
 
