@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class TypeWriter extends Component {
+    _isMounted = false;
 
     constructor(props) {
         super(props)
@@ -16,7 +17,14 @@ class TypeWriter extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('load', this.type(), {once: true});
+        this._isMounted = true;
+        if (this._isMounted) {
+            window.onload = this.type()
+        }
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     type() {

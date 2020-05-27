@@ -1,0 +1,12 @@
+.togglebutton {
+    display: inline;
+    padding: 0;
+}
+
+@include mobile-up {
+    .togglebutton {
+        // padding: 0;
+        // margin-left: -6px;
+        margin-top: -4px;
+    }
+}

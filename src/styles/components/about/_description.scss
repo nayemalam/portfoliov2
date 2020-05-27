@@ -12,23 +12,11 @@
         line-height: 1.8;
     }
 
-    .hidden {
-        display: none;
-    }
-
-    .toggleButton {
+    // for the ToggleButton component
+    .btn {
+        padding: inherit;
         color: $paragraphColor;
-        padding: 0;
-        margin-left: -6px;
         margin-top: -2px;
+        margin-left: -6px;
     }
-
-    @include mobile-up {
-        .toggleButton {
-            // padding: 0;
-            // margin-left: -6px;
-            margin-top: -4px;
-        }
-    }
-
 }

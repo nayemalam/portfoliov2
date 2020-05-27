@@ -1,4 +1,6 @@
+import React from 'react';
 import { faCode, faCapsules, faTshirt } from '@fortawesome/free-solid-svg-icons';
+import ToggleButton from '../components/togglebutton/ToggleButton';
 
 const workItems = [
     {
@@ -7,7 +9,13 @@ const workItems = [
         'name': 'MoneyLion',
         'location': 'Kuala Lumpur, Malaysia',
         'role': 'AI Engineer (Intern)',
-        'desc': 'Read more button'
+        'desc': <ToggleButton 
+                    btnclass={'readmore-info'}
+                    txtclass={'info'}
+                    readLessText={'read less'} 
+                    readMoreText={'read more'} 
+                    text={<p>some text here 1</p>}>
+                </ToggleButton>
     },
     {
         'icon': faCapsules,
@@ -15,7 +23,13 @@ const workItems = [
         'name': 'Pharmascience',
         'location': 'Montréal, QC',
         'role': 'Sharepoint Analyst | Web Developer Intern',
-        'desc': 'Read more button'
+        'desc': <ToggleButton 
+                    btnclass={'readmore-info'}
+                    txtclass={'info'}
+                    readLessText={'read less'} 
+                    readMoreText={'read more'} 
+                    text={<p>some text here 2</p>}>
+                </ToggleButton>
     },
     {
         'icon': faTshirt,
@@ -23,7 +37,13 @@ const workItems = [
         'name': 'Banana Republic',
         'location': 'Montréal, QC',
         'role': 'Brand Ambassador / Sales Associate',
-        'desc': 'Read more button'
+        'desc': <ToggleButton 
+                    btnclass={'readmore-info'}
+                    txtclass={'info'}
+                    readLessText={'read less'} 
+                    readMoreText={'read more'} 
+                    text={<p>some text here 3</p>}>
+                </ToggleButton>
     }
 
 ];

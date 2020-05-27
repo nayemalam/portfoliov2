@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from '@material-ui/core';
 import { Link } from 'gatsby';
-import resume from '../../images/Nayem-Resume.pdf';
+import resume from '../../images/Nayem_Resume_2020.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFingerprint, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
