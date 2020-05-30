@@ -1,0 +1,25 @@
+.favquotes {
+    display: table;
+    text-align: center;
+    margin: 100px auto 0 auto;
+    font-style: italic;
+
+    h1 {
+        text-transform: lowercase;
+    }
+    
+    h1::before{
+        content: "\201C";
+        margin-right: 10px;
+    }
+      
+    h1::after{
+        content: "\201D";
+        margin-left: 10px;
+    }
+
+    span {
+        display: block;
+        text-align: right;
+    }
+}

@@ -1,0 +1,46 @@
+.awards {
+
+    table {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    tbody {
+        width: inherit;
+    }
+
+    .icon-bullet {
+        color: $mainGreen;
+    }
+    
+    tr {
+        font-size: 16px;
+        color: $listItemColor;
+        line-height: 25px;
+
+        &:hover {
+            background: $highlightGrey;
+
+            .icon-bullet {
+                color: black;
+            }
+        }
+
+        
+    }
+
+    
+
+    @include mobile-up {
+        table {
+            padding: 0;
+        }
+
+        tr {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+    }
+}

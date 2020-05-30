@@ -3,7 +3,7 @@ import { Button } from '@material-ui/core';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
-class ToggleButton extends Component {
+class ShowHideButton extends Component {
     constructor(props) {
         super(props)
 
@@ -22,7 +22,7 @@ class ToggleButton extends Component {
 
     render() {
         return (
-            <div className='togglebutton'>
+            <div className='showhidebutton'>
                 <Button 
                     className={this.props.btnclass}
                     onClick={this.toggleShow}>{this.state.isHidden ? <> {this.props.readLessText} <ArrowDropUpIcon /> </> : <> {this.props.readMoreText} <ArrowDropDownIcon /> </>}
@@ -36,4 +36,4 @@ class ToggleButton extends Component {
     }
 }
 
-export default ToggleButton;
+export default ShowHideButton;

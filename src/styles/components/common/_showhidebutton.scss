@@ -1,10 +1,10 @@
-.togglebutton {
+.showhidebutton {
     display: inline;
     padding: 0;
 }
 
 @include mobile-up {
-    .togglebutton {
+    .showhidebutton {
         // padding: 0;
         // margin-left: -6px;
         margin-top: -4px;

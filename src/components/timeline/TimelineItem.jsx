@@ -12,7 +12,7 @@ class TimelineItem extends Component {
                     <p className='timeline-name'>{this.props.name}</p>
                     <p className='timeline-location'>{this.props.location}</p>
                     <p className='timeline-role'>{this.props.role}</p>
-                    <div className='timeline-brief-desc'>{this.props.desc}</div>
+                    <span className='timeline-brief-desc'>{this.props.desc}</span>
                 </div>
             </li>
         )

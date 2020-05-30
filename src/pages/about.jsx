@@ -6,6 +6,8 @@ import WorkExperience from '../components/about/WorkExperience';
 import Education from '../components/about/Education';
 import Awards from '../components/about/Awards';
 import EditPage from '../components/editpage/EditPage';
+import UsefulData from '../components/about/UsefulData';
+import FavQuotes from '../components/about/FavQuotes';
 
 class About extends Component {
   render() {
@@ -21,6 +23,8 @@ class About extends Component {
         <WorkExperience />
         <Education />
         <Awards />
+        <FavQuotes />
+        <UsefulData />
         <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/about.html'} />
       </div>
     )

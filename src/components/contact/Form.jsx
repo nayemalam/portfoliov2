@@ -110,6 +110,9 @@ class Form extends Component {
                 value: "Down to grab coffee?"
             },
             {
+                value: "Volunteering opportunity"
+            },
+            {
                 value: "Other, see message below"
             }
         ];
