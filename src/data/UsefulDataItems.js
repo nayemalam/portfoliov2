@@ -11,6 +11,10 @@ const content = [
         'desc': ['Hello2']
     },
     {
+        'title': 'How I built this website',
+        'desc': ['React JS']
+    },
+    {
         'title': 'Pet Peeves',
         'desc': ['Hello3']
     }
