@@ -202,6 +202,26 @@ const portfolioItems = [
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','personal'],
         'tags': ['Vanilla JS','HTML','CSS']
+    },
+    {
+        'image': require('../images/work/face-detection.png'),
+        'title': 'Face Detection',
+        'description': 'Computer Vision | Train a model from 30 given images in order to detect faces.',
+        'date': 'December 4, 2018',
+        'link': 'https://github.com/nayemalam/ComputerVision/blob/master/Face%20Detection/FaceDetectionA4.ipynb',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','academic','personal'],
+        'tags': ['Python']
+    },
+    {
+        'image': require('../images/work/portfoliov1.png'),
+        'title': 'Previous Portfolio',
+        'description': 'The first complete portfolio I\'ve ever developed with vanilla JS and some open source libraries. Feel free to check out the codebase.',
+        'date': 'April 1, 2019',
+        'link': 'https://github.com/nayemalam/portfolio',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','personal'],
+        'tags': ['Vanilla JS', 'jQuery', 'HTML', 'CSS']
     }
 ];
 

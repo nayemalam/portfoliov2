@@ -11,11 +11,11 @@
 
         // &:hover {
         //     .timeline-icon {
-        //         background-color: black;
+        //         background-color: $defaultBlack;
         //     }
         //     .timeline-date {
-        //         background-color: black;
-        //         color: white;
+        //         background-color: $defaultBlack;
+        //         color: $defaultWhite;
         //     }
         // }
 
@@ -27,7 +27,7 @@
             border-radius: 15px;
             background: $mainGreen;
             cursor: pointer;
-            outline: 10px solid white;
+            outline: 10px solid $defaultWhite;
             display: flex;
             margin: 6px 0 8px -14px;
             position: absolute;
@@ -37,13 +37,13 @@
             .timeline-fa {
                 font-size: 14px;
                 margin: 6px auto;
-                color: white;
+                color: $defaultWhite;
             }
         }
 
         .timeline-date {
             transition: box-shadow 0.5s ease-in 0.1s;
-            color: black;
+            color: $defaultBlack;
             font-size: 12px;
             background-color: $highlightGreen;
             margin: 8px 0 5.5px 0;

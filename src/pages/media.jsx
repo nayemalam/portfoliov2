@@ -6,6 +6,7 @@ import mediaItems from '../data/MediaItems';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import EditPage from '../components/editpage/EditPage';
 import SortButtons from '../components/portfolio/SortButtons';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 class Media extends Component {
 
@@ -52,7 +53,7 @@ class Media extends Component {
               {this.state.mediaItems.map((media, id) => (
                 <Grid key={id} item xs={12} sm={4} style={{textAlign: 'center'}}>
                   <a target='_blank' rel='noopener noreferrer' href={media.website}>
-                    <img className='hvr-bounce-in mediaItem' width='225' alt={media.alt} src={media.logo} />
+                    <LazyLoadImage className='hvr-bounce-in mediaItem' width='225' alt={media.alt} src={media.logo} />
                   </a>
                 </Grid>
               ))}

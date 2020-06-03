@@ -77,6 +77,9 @@ class Tags extends Component {
             if (tag === 'Graphics') {
                 bgColor = red['A400'];
             }
+            if (tag === 'jQuery') {
+                bgColor = indigo[900];
+            }
             
             return bgColor;
         }

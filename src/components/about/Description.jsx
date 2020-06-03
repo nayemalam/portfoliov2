@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ShowHideButton from '../showhidebutton/ShowHideButton';
 
-
 class Description extends Component {
     render() {
         const text = 
@@ -31,7 +30,7 @@ class Description extends Component {
                 <div className='info'>
                     My name is Nayem Alam, I am a 23yo tech enthusiast with a passion for slam poetry and engineering.
                     I hold a B.Eng. in Electrical Engineering with a Minor in Software Engineering from McGill University. 
-                    I enjoy writing, playing ball, coding, travelling, meeting new people and of course, drinking coffee.
+                    My hobbies include writing, playing ball, coding, travelling, meeting new people and of course, drinking coffee.
                     <ShowHideButton text={text} btnclass={'btn'} txtclass={'info'} />
                 </div> 
                

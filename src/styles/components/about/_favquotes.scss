@@ -3,10 +3,6 @@
     text-align: center;
     margin: 100px auto;
     font-style: italic;
-
-    h1 {
-        text-transform: lowercase;
-    }
     
     h1::before{
         content: "\201C";

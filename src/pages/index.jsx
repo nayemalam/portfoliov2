@@ -14,7 +14,7 @@ class Home extends Component {
     return (
       <div className='home container'>
         <HTMLTitle title='Nayem Alam | Engineer, Slam Poet & Developer' />
-  
+        
         <NotificationBar />
         <TypeWriter words={featuredWords} />
         <MoreInfoButtons />
