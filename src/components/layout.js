@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 /* component imports */
 import NavigationBar from './navigationbar/NavigationBar';
 /* internal css */
-import '../styles/global.scss';
+import '../sass/global.scss';
 
 function Layout ({children}) {
 

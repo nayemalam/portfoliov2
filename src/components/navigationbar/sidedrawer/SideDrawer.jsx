@@ -21,7 +21,7 @@ import MainMenu from './mainmenu/MainMenu';
 import { Link } from 'gatsby';
 
 // internal css
-import style from '../../../styles/global.scss';
+import style from '../../../sass/global.scss';
 
 class SideDrawer extends Component {
 
