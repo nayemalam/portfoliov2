@@ -1,6 +1,8 @@
 /* external imports */
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 /* component imports */
 import NavigationBar from './navigationbar/NavigationBar';
 /* internal css */
@@ -11,6 +13,8 @@ function Layout ({children}) {
   // trigger for landscape devices
   useEffect(() => {
 
+    AOS.init();
+    
     if (typeof window !== `undefined`) {
       const readDeviceOrientation = () => {
         if (window.orientation === 90 || window.orientation === -90) {

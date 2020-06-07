@@ -11,7 +11,7 @@ class Awards extends Component {
                 <table>
                     <tbody>
                         {awards.map((item,id) => (
-                            <tr key={id}>
+                            <tr key={id} data-aos='fade'>
                                 <td><FontAwesomeIcon className='icon-bullet' icon={faCaretRight} /> &nbsp; {item.title}</td>
                                 <td>{item.date}</td>
                             </tr>

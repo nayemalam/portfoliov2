@@ -6,7 +6,7 @@ class Education extends Component {
     render() {
         return (
             <div className='education'>
-                <h3 className='titleWithBackground'>Education</h3>
+                <h3 className='titleWithBackground' data-aos='slide-right'>Education</h3>
                 <Timeline 
                     items={educationItems}
                 />

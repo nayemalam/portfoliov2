@@ -51,7 +51,7 @@ class Media extends Component {
         <div className='mediaItems'>
             <Grid container spacing={4}>
               {this.state.mediaItems.map((media, id) => (
-                <Grid key={id} item xs={12} sm={4} style={{textAlign: 'center'}}>
+                <Grid key={id} item xs={12} sm={4} style={{textAlign: 'center'}} data-aos='fade'>
                   <a target='_blank' rel='noopener noreferrer' href={media.website}>
                     <LazyLoadImage className='hvr-bounce-in mediaItem' width='225' alt={media.alt} src={media.logo} />
                   </a>

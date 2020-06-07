@@ -6,7 +6,7 @@ class WorkExperience extends Component {
     render() {
         return (
             <div className='workexperience'>
-                <h3 className='titleWithBackground'>Work Experience</h3>
+                <h3 className='titleWithBackground' data-aos='slide-right'>Work Experience</h3>
                 <Timeline 
                     items={workItems}
                 />

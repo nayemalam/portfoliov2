@@ -5,7 +5,7 @@ class TimelineItem extends Component {
     render() {
         return (
             // styles under timeline
-            <li className='timeline-item'>
+            <li className='timeline-item' data-aos='fade'>
                 <div className='timeline-icon'><FontAwesomeIcon className='timeline-fa' icon={this.props.icon}  /></div>
                 <div className='timeline-content'>
                     <p className='timeline-date'>{this.props.date}</p>
