@@ -74,7 +74,7 @@ class VideoPlayer extends Component {
 
         return (
             <div className='videoplayer'>
-                <div className='frame'>
+                <div className='frame' id='anchor'>
                     <PlayerInfo url={url} title={title} />
                     <ReactPlayer
                         ref={this.ref}
