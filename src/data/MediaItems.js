@@ -6,7 +6,8 @@ const mediaItems = [
         'date': 'May 7, 2015'
     },
     {
-        'website': 'https://globalnews.ca/video/1178025/marymount-poetry-slam',
+        'website': 'https://vimeo.com/89800577',
+        // src: https://globalnews.ca/video/1178025/marymount-poetry-slam
         'logo': require('../images/media/global.png'),
         'alt': 'Global News',
         'date': 'March 25, 2014'
@@ -76,6 +77,12 @@ const mediaItems = [
         'logo': require('../images/media/514-mag.png'),
         'alt': '514 Magazine',
         'date': 'February 3, 2017'
+    },
+    {
+        'website': 'https://az184419.vo.msecnd.net/emsb/emsb-website/common/emsb-express/2014-spring-printemps-emsb-express.pdf',
+        'logo': require('../images/media/emsb-express.png'),
+        'alt': 'EMSB Express',
+        'date': 'March 27, 2014'
     },
     {
         'website': 'https://open.spotify.com/episode/45qlGbLtmB2He6RwWZQx0Q',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import HTMLTitle from '../components/htmltitle/HTMLTitle';
 import TypeWriter from '../components/home/TypeWriter';
-import NotificationBar from '../components/notificationbar/NotificationBar';
+// import NotificationBar from '../components/notificationbar/NotificationBar';
 import MoreInfoButtons from '../components/home/MoreInfoButtons';
 import Socials from '../components/home/Socials';
 
@@ -15,7 +15,7 @@ class Home extends Component {
       <div className='home container'>
         <HTMLTitle title='Nayem Alam | Engineer, Slam Poet & Developer' />
         
-        <NotificationBar />
+        {/* <NotificationBar /> */}
         <TypeWriter words={featuredWords} />
         <MoreInfoButtons />
         <Socials />
