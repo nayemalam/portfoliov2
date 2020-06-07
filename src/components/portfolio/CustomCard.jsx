@@ -31,7 +31,7 @@ class CustomCard extends Component {
     render() {
 
         return (
-            <div className='customcard' data-aos='fade'>
+            <div className='customcard'>
                 <Card className='card'>
                     <CardActionArea>
                         <CardMedia
