@@ -4,6 +4,10 @@ node_js:
 cache:
   directories:
   - node_modules
+branches:
+  only:
+    - master
+    - stable
 before_script:
   - npm i -g gatsby
   - npm i

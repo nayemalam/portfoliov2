@@ -10,7 +10,7 @@ This repository contains the code for my personal portfolio.
 
 #
 
-The following project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The following project was initially bootstrapped with [Create React App](https://github.com/facebook/create-react-app); now it has been transformed to Gatsby Js.
 
 ## Available Scripts
 
