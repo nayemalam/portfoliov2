@@ -6,7 +6,7 @@ const educationItems = [
         'date': '2016 - 2020',
         'name': 'McGill University',
         'location': 'Montréal, QC',
-        'role': 'Electrical Engineering',
+        'role': 'B.Eng. in Electrical Engineering',
         'desc': '+ 2018: Minor in Software Engineering'
     },
     {
@@ -14,7 +14,7 @@ const educationItems = [
         'date': '2014 - 2016',
         'name': 'Vanier College',
         'location': 'Montréal, QC',
-        'role': 'Pure & Applied Sciences',
+        'role': 'DEC Pure & Applied Sciences',
         'desc': '+ 2015: Computer Sciences & Mathematics'
     },
     {

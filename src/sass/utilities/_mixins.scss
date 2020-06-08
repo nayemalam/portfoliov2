@@ -32,7 +32,14 @@ $widths: (
     galaxys5: 360px,
     galaxys8: 360px,
     huaweip20: 360px,
-    laptophidpi: 1440px
+    laptophidpi: 1440px,
+    laptop1920-1080: 1920px,
+    desktop1920-1200: 1920px,
+    desktop1680-1050: 1680px,
+    desktop4096-2304: 4096px,
+    desktop5120-2880: 5120px,
+    desktop2560-1440: 2560px,
+    desktop3840-2160: 3840px
 );
 
 $heights: (
@@ -42,16 +49,78 @@ $heights: (
     galaxys5: 640px,
     galaxys8: 740px,
     huaweip20: 748px,
-    laptophidpi: 900px
+    laptophidpi: 900px,
+    laptop1920-1080: 1080px,
+    desktop1680-1050: 1050px,
+    desktop4096-2304: 2304px,
+    desktop5120-2880: 2880px,
+    desktop1920-1200: 1200px,
+    desktop2560-1440: 1440px,
+    desktop3840-2160: 2160px
 );
 
 @mixin custom-mobile-viewports {
-    @each $key in (iphone6-7-8-plus,pixel2,pixel2xl,galaxys5,galaxys8,huaweip20,laptophidpi) {
+    @each $key in 
+        (
+            iphone6-7-8-plus,
+            pixel2,
+            pixel2xl,
+            galaxys5,
+            galaxys8,
+            huaweip20,
+            laptophidpi,
+            laptop1920-1080,
+            desktop1920-1200
+        ) {
         @media 
             (min-width: map-get($widths, $key)) and 
             (max-width: map-get($widths, $key)) and 
             (min-height: map-get($heights, $key)) and 
             (max-height: map-get($heights, $key))
+        { @content; }
+    }
+}
+
+@mixin custom-mobile-viewports-lg {
+    @each $key in 
+    (
+        desktop1680-1050,
+        desktop2560-1440
+    ) {
+        @media
+        (min-width: map-get($widths, $key)) and 
+        (max-width: map-get($widths, $key)) and 
+        (min-height: map-get($heights, $key)) and 
+        (max-height: map-get($heights, $key))
+        { @content; }
+    }
+}
+
+@mixin custom-mobile-viewports-xl {
+    @each $key in 
+    (
+        desktop4096-2304,
+        desktop3840-2160
+    ) {
+        @media
+        (min-width: map-get($widths, $key)) and 
+        (max-width: map-get($widths, $key)) and 
+        (min-height: map-get($heights, $key)) and 
+        (max-height: map-get($heights, $key))
+        { @content; }
+    }
+}
+
+@mixin custom-mobile-viewports-xxl {
+    @each $key in 
+    (
+        desktop5120-2880
+    ) {
+        @media
+        (min-width: map-get($widths, $key)) and 
+        (max-width: map-get($widths, $key)) and 
+        (min-height: map-get($heights, $key)) and 
+        (max-height: map-get($heights, $key))
         { @content; }
     }
 }

@@ -50,6 +50,24 @@
         }
     }
 
+    @include custom-mobile-viewports-lg {
+        .card {
+            height: 465px;
+        }
+    }
+
+    @include custom-mobile-viewports-xl {
+        .card {
+            height: 700px;
+        }
+    }
+
+    @include custom-mobile-viewports-xxl {
+        .card {
+            height: 850px;
+        }
+    }
+
 }
 
 .customcard:hover {

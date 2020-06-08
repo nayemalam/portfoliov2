@@ -6,7 +6,7 @@ The updated (version 2) of my portfolio is now written in HTML, SASS and React f
 
 This repository contains the code for my personal portfolio.
 
-(insert website link here later)
+[https://nayemalam-portfolio.web.app/](https://nayemalam-portfolio.web.app/)
 
 #
 
