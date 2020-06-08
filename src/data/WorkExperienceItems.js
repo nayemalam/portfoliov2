@@ -10,23 +10,23 @@ const moneyLionDesc =
     <li>Developed a dual layered encryption method using Cipher and base64</li>
     <li>Learned how to use lombok and elementary lambda expressions</li>
     <li>Implemented multiple string similarity algorithms using fuzzy matching (edit distance, dice coefficient, jaccard index)</li>
-    <li>Additionally, implemented an algorithm which takes the positioning of words into account. If words match in a string, where are these words located</li>
+    <li>Additionally, implemented an algorithm which takes the positioning of words into account and assigns a score based on position</li>
 </ul>
 
 const pharmaDesc = 
 <span>
     <ul>
         <u>Web Developer Intern</u> <span className='subDate'>(Aug. - Oct.)</span>
-        <li>Build new websites for clients in different departments (including PENDOPHARM) – <a href='https://pendopharm-gi.com/' rel='noopener noreferrer' target='_blank'>pendopharm-gi.com</a></li>
-        <li>Consolidate all hosting providers and registrars, creating a high-level estimate savings of $37K/year</li>
+        <li>Built new websites for clients in different departments (including PENDOPHARM) – <a href='https://pendopharm-gi.com/' rel='noopener noreferrer' target='_blank'>pendopharm-gi.com</a></li>
+        <li>Consolidated all hosting providers and registrars, creating a high-level estimate savings of $37K/year</li>
         <li>Built an operational and contextual document regarding how to manage domains, hosting providers... including troubleshooting methods and simplified how-to guides</li>
     </ul>
     <br/>
     <ul>
         <u>Programmer Analyst</u> <span className='subDate'>(May - Aug.)</span>
         <li>SharePoint super user and acting consultant for Communications, Legal, Finance and HR departments and the Pendopharm division</li>
-        <li>Produce a site road map and flowchart of both companies (Pharmascience and Pendopharm) using <span className='customLink'>draw.io</span></li>
-        <li>Create an excel database with all the websites currently under both companies including their provider, registrar, IP, NS Records using <span className='customLink'>Pivot tables</span> and <span className='customLink'>VBA</span> to streamline process</li>
+        <li>Produced a site road map and flowchart of both companies (Pharmascience and Pendopharm) using <span className='customLink'>draw.io</span></li>
+        <li>Created an excel database with all the websites currently under both companies including their provider, registrar, IP, NS Records using <span className='customLink'>Pivot tables</span> and <span className='customLink'>VBA</span> to streamline process</li>
         <li>Successfully adopted a new and better hosting provider for the company to put in action the consolidation of all websites under one hosting provider and one registrar</li>
     </ul>
 </span>
