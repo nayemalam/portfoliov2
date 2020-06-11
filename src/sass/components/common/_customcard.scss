@@ -44,6 +44,10 @@
         color: $defaultBlack;
     }
 
+    .card-action-area {
+        cursor: default;
+    }
+
     @include custom-mobile-viewports {
         .card {
             height: 385px;
