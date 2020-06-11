@@ -1,80 +1,55 @@
-During the COVID-19 Quarantine I've decided to revamp my entire personal portfolio [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio) with React.
+[![Build Status](https://travis-ci.com/nayemalam/portfoliov2.svg?token=aYqsUyzyzydDXmyhz8yW&branch=master)](https://travis-ci.com/nayemalam/portfoliov2)
+
+# Welcome 2.0 🚀
+
+#### Desktop speed: 
+![image](https://user-images.githubusercontent.com/25883629/84351997-7c737780-ab8a-11ea-854b-ce542a2ca47e.png)
+<br/>
+#### Mobile speed: 
+![image](https://user-images.githubusercontent.com/25883629/84351937-5f3ea900-ab8a-11ea-94ad-9dd91e3468b4.png)
+
+# 
+
+#### Brief: 
+During the COVID-19 Quarantine I've decided to revamp my entire personal (previous) portfolio [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio) with React JS.
 
 The previous version of my portfolio (link above) was written in pure HTML, CSS and vanilla JS.
 
-The updated (version 2) of my portfolio is now written in HTML, SASS and React framework.
+The updated (version 2) of my portfolio is now written in HTML, SASS and React library.
 
-This repository contains the code for my personal portfolio.
+This repository contains the code for my new and updated personal portfolio.
 
-[https://nayemalam-portfolio.web.app/](https://nayemalam-portfolio.web.app/)
+[https://nayemalam.com/](https://nayemalam.com/)
 
 #
 
-The following project was initially bootstrapped with [Create React App](https://github.com/facebook/create-react-app); now it has been transformed to Gatsby Js.
+The following project was initially bootstrapped with [Create React App](https://github.com/facebook/create-react-app) (CRA) and now ported to Gatsby JS (completed April 21). You can view the CRA part [here](https://github.com/nayemalam/portfoliov2/tree/cra-backup). Reason? Will be making a blog post about this soon and how to do this; basically it's a static site generator that build and produces only static files to run on the client-end, this way it increases speed drastically, it's SEO friendly and blogging is so much easier.
 
-## Available Scripts
+If you'd like to run this project locally for your own dev experience, feel free to do so; in order to replicate:
 
-In the project directory, you can run:
+- `git clone https://github.com/nayemalam/portfoliov2.git`
+- `cd into directory`
+- `npm install`
+- `cd functions`
+- `npm install`
+- `gatsby develop`
 
-### `npm start`
+This will run the app in development mode. < br/ >
+Open it up in [http://localhost:8000](http://localhost:8000) to view it in browser.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
+The page will reload if you make edits. <br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more about CRA in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+You can learn more about Gatsby JS in the [Gatsby JS documentation](https://www.gatsbyjs.org/)
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Socials 🔥
+Catch me on: 
+- [Instagram](https://www.instagram.com/nayem_wizdom/)
+- [Medium](https://medium.com/@nayemalam)
+- [LinkedIn](https://www.linkedin.com/in/nayemalam/)

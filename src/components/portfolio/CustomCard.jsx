@@ -33,7 +33,7 @@ class CustomCard extends Component {
         return (
             <div className='customcard'>
                 <Card className='card'>
-                    <CardActionArea>
+                    <CardActionArea className='card-action-area'>
                         <CardMedia
                             className='featuredImage'
                             image={this.props.image}
