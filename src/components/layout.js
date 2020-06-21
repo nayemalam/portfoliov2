@@ -30,6 +30,7 @@ function Layout ({children}) {
     <div className='layout'>
       {/* head elements */}
       <Helmet>
+        <html lang='en' />
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand&display=swap' />
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Josefin+Sans:500&display=swap' />
       </Helmet>

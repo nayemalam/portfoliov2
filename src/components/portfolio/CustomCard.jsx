@@ -19,7 +19,8 @@ class CustomCard extends Component {
         this.state = {
             count: 0
         }
-        this.incrementCounter = this.incrementCounter.bind(this);  
+        this.incrementCounter = this.incrementCounter.bind(this);
+        this.linkReminder = this.linkReminder.bind(this);
     }
 
     incrementCounter() {
@@ -28,12 +29,18 @@ class CustomCard extends Component {
         })
     }
 
+    linkReminder (e) {
+        if (e.detail === 2) {
+            alert('If you want to view project, click the link icon below.')
+        }
+    }
+
     render() {
 
         return (
             <div className='customcard'>
                 <Card className='card'>
-                    <CardActionArea className='card-action-area'>
+                    <CardActionArea className='card-action-area' onClick={this.linkReminder}>
                         <CardMedia
                             className='featuredImage'
                             image={this.props.image}

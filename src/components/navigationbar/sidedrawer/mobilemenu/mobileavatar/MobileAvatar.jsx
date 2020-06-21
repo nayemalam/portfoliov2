@@ -6,7 +6,7 @@ import {
     Button
 } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import personalPic from '../../../../../images/headshot.png';
+import personalPic from '../../../../../images/common/headshot.jpg';
 
 class MobileAvatar extends Component {
 
