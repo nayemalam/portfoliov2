@@ -27,6 +27,7 @@
 //  the media quiery above can be transformed into:
 $widths: (
     iphone6-7-8-plus: 414px,
+    iphone11: 414px,
     pixel2: 411px,
     pixel2xl: 411px,
     galaxys5: 360px,
@@ -44,6 +45,7 @@ $widths: (
 
 $heights: (
     iphone6-7-8-plus: 736px,
+    iphone11: 896px,
     pixel2: 731px,
     pixel2xl: 823px,
     galaxys5: 640px,
@@ -63,6 +65,7 @@ $heights: (
     @each $key in 
         (
             iphone6-7-8-plus,
+            iphone11,
             pixel2,
             pixel2xl,
             galaxys5,

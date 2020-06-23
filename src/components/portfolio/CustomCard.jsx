@@ -31,7 +31,7 @@ class CustomCard extends Component {
 
     linkReminder (e) {
         if (e.detail === 2) {
-            alert('If you want to view project, click the link icon below.')
+            alert('If you want to view the project, click the link icon below.')
         }
     }
 
