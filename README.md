@@ -31,14 +31,16 @@ The following project was initially bootstrapped with [Create React App](https:/
 
 If you'd like to run this project locally for your own dev experience, feel free to do so; in order to replicate:
 
-- `git clone https://github.com/nayemalam/portfoliov2.git`
-- `cd into directory`
-- `npm install`
-- `cd functions`
-- `npm install`
-- `gatsby develop`
+```
+- git clone https://github.com/nayemalam/portfoliov2.git
+- cd into directory
+- npm install
+- cd functions
+- npm install
+- gatsby develop
+```
 
-This will run the app in development mode. < br/ >
+This will run the app in development mode. <br/>
 Open it up in [http://localhost:8000](http://localhost:8000) to view it in browser.
 
 The page will reload if you make edits. <br />
