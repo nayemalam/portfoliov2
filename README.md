@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/nayemalam/portfoliov2.svg?token=aYqsUyzyzydDXmyhz8yW&branch=master)](https://travis-ci.com/nayemalam/portfoliov2)
-
-# Welcome 2.0 🚀
+# Welcome to my Portfolio2.0 🚀 [![Build Status](https://travis-ci.com/nayemalam/portfoliov2.svg?token=aYqsUyzyzydDXmyhz8yW&branch=master)](https://travis-ci.com/nayemalam/portfoliov2)
 
 #### Desktop speed: 
 ![image](https://user-images.githubusercontent.com/25883629/84351997-7c737780-ab8a-11ea-854b-ce542a2ca47e.png)
@@ -29,19 +27,8 @@ This repository contains the code for my new and updated personal portfolio.
 
 The following project was initially bootstrapped with [Create React App](https://github.com/facebook/create-react-app) (CRA) and now ported to Gatsby JS (completed April 21). You can view the CRA part [here](https://github.com/nayemalam/portfoliov2/tree/cra-backup). Reason? Will be making a blog post about this soon and how to do this; basically it's a static site generator that build and produces only static files to run on the client-end, this way it increases speed drastically, it's SEO friendly and blogging is so much easier.
 
-If you'd like to run this project locally for your own dev experience, feel free to do so; in order to replicate:
-
-```
-- git clone https://github.com/nayemalam/portfoliov2.git
-- cd into directory
-- npm install
-- cd functions
-- npm install
-- gatsby develop
-```
-
-This will run the app in development mode. <br/>
-Open it up in [http://localhost:8000](http://localhost:8000) to view it in browser.
+Dev mode app runs in [http://localhost:8000](http://localhost:8000). <br/>
+Build mode app runs in [http://localhost:9000](http://localhost:9000).
 
 The page will reload if you make edits. <br />
 You will also see any lint errors in the console.
