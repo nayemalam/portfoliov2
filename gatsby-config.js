@@ -42,7 +42,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Nayem Alam Official Website`,
-        short_name: `Nayem Alam Official`,
+        short_name: `NayemAlam`,
         start_url: `/`,
         background_color: `#43C6AC`,
         theme_color: `#43C6AC`,
