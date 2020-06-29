@@ -1,13 +1,11 @@
 # Welcome to my Portfolio2.0 🚀 [![Build Status](https://travis-ci.com/nayemalam/portfoliov2.svg?token=aYqsUyzyzydDXmyhz8yW&branch=master)](https://travis-ci.com/nayemalam/portfoliov2)
 
-#### Desktop speed: 
-![image](https://user-images.githubusercontent.com/25883629/84351997-7c737780-ab8a-11ea-854b-ce542a2ca47e.png)
-<br/>
-#### Mobile speed: 
-![image](https://user-images.githubusercontent.com/25883629/84351937-5f3ea900-ab8a-11ea-94ad-9dd91e3468b4.png)
-
+| Desktop speed: | Mobile speed: |
+|---------------------|--------------------|
+|![image](https://user-images.githubusercontent.com/25883629/84351997-7c737780-ab8a-11ea-854b-ce542a2ca47e.png)|![image](https://user-images.githubusercontent.com/25883629/84351937-5f3ea900-ab8a-11ea-94ad-9dd91e3468b4.png)|
 # 
 #### Changelog(s):
+- June 29, 2020: Updated functions node 8 to node 10
 - May 8, 2020: Hosted on Firebase and using Firebase Functions for contact form.
 #### Brief: 
 `Project start date: March 18th, 2020` <br/>
