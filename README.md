@@ -7,8 +7,12 @@
 ![image](https://user-images.githubusercontent.com/25883629/84351937-5f3ea900-ab8a-11ea-94ad-9dd91e3468b4.png)
 
 # 
-
+#### Changelog(s):
+- May 8, 2020: Hosted on Firebase and using Firebase Functions for contact form.
 #### Brief: 
+```Project start date: March 18th, 2020``` <br/>
+```Project completed: June 8th, 2020 ``` 
+#
 During the COVID-19 Quarantine I've decided to revamp my entire personal (previous) portfolio [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio) with React JS.
 
 The previous version of my portfolio (link above) was written in pure HTML, CSS and vanilla JS.

@@ -16,7 +16,7 @@ export default class Speaking extends Component {
 
                 <HeaderDesc header={headerText} desc={descText} />
                 <VideoPlayer />
-                <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/speaking.html'} />
+                <EditPage link={'https://github.com/nayemalam/portfoliov2/blob/dev/src/pages/speaking.jsx'} />
             </div>
         )
     }

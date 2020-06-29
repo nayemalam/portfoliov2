@@ -76,7 +76,7 @@ class Portfolio extends Component {
                     ))}
                 </Grid>
 
-                <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/portfolio.html'} />
+                <EditPage link={'https://github.com/nayemalam/portfoliov2/blob/dev/src/pages/portfolio.jsx'} />
             </div>
         )
     }

@@ -59,7 +59,7 @@ class Media extends Component {
               ))}
             </Grid>
         </div>
-        <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/media.html'} />
+        <EditPage link={'https://github.com/nayemalam/portfoliov2/blob/dev/src/pages/media.jsx'} />
       </div>
     )
   }

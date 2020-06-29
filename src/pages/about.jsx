@@ -25,7 +25,7 @@ class About extends Component {
         <Awards />
         <FavQuotes />
         {/* <UsefulData /> */}
-        <EditPage link={'https://github.com/nayemalam/portfolio/blob/master/about.html'} />
+        <EditPage link={'https://github.com/nayemalam/portfoliov2/blob/dev/src/pages/about.jsx'} />
       </div>
     )
   }
