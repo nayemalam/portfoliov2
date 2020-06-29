@@ -30,9 +30,13 @@ $widths: (
     iphone11: 414px,
     pixel2: 411px,
     pixel2xl: 411px,
+    pixel4: 411px,
+    samsungNote10: 412px,
     galaxys5: 360px,
     galaxys8: 360px,
     huaweip20: 360px,
+    huaweiMate20Pro: 360px,
+    xiaomiNote8: 393px,
     laptophidpi: 1440px,
     laptop1920-1080: 1920px,
     desktop1920-1200: 1920px,
@@ -48,9 +52,13 @@ $heights: (
     iphone11: 896px,
     pixel2: 731px,
     pixel2xl: 823px,
+    pixel4: 869px,
+    samsungNote10: 869px,
     galaxys5: 640px,
     galaxys8: 740px,
     huaweip20: 748px,
+    huaweiMate20Pro: 780px,
+    xiaomiNote8: 851px,
     laptophidpi: 900px,
     laptop1920-1080: 1080px,
     desktop1680-1050: 1050px,
@@ -61,6 +69,7 @@ $heights: (
     desktop3840-2160: 2160px
 );
 
+// height: 385px
 @mixin custom-mobile-viewports {
     @each $key in 
         (
@@ -68,9 +77,13 @@ $heights: (
             iphone11,
             pixel2,
             pixel2xl,
+            pixel4,
+            samsungNote10,
             galaxys5,
             galaxys8,
             huaweip20,
+            huaweiMate20Pro,
+            xiaomiNote8,
             laptophidpi,
             laptop1920-1080,
             desktop1920-1200
@@ -84,6 +97,7 @@ $heights: (
     }
 }
 
+// height: 465px
 @mixin custom-mobile-viewports-lg {
     @each $key in 
     (
@@ -99,6 +113,7 @@ $heights: (
     }
 }
 
+// height: 700px
 @mixin custom-mobile-viewports-xl {
     @each $key in 
     (
@@ -114,6 +129,7 @@ $heights: (
     }
 }
 
+// height: 850px
 @mixin custom-mobile-viewports-xxl {
     @each $key in 
     (
