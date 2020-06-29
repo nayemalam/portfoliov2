@@ -222,6 +222,26 @@ const portfolioItems = [
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','personal'],
         'tags': ['Vanilla JS', 'jQuery', 'HTML', 'CSS']
+    },
+    {
+        'image': require('../images/work/superhero.png'),
+        'title': 'SuperHero Squad',
+        'description': 'Dynamically search through an API of all the superheroes and villains from all universes. You can add a superhero/villain to your squad, see details and more.',
+        'date': 'June 13, 2020',
+        'link': 'https://github.com/nayemalam/superhero',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','personal'],
+        'tags': ['React.js', 'HTML', 'SASS']
+    },
+    {
+        'image': require('../images/work/yulrealtor.png'),
+        'title': 'YUL Realtor',
+        'description': 'One of my friend is a great broker here in Montreal and Brossard, here is a website designed and developed for her.',
+        'date': 'October 2, 2019',
+        'link': 'https://yulrealtor.com/',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','sites'],
+        'tags': ['Wordpress']
     }
 ];
 

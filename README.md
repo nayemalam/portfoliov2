@@ -10,8 +10,11 @@
 #### Changelog(s):
 - May 8, 2020: Hosted on Firebase and using Firebase Functions for contact form.
 #### Brief: 
-```Project start date: March 18th, 2020``` <br/>
-```Project completed: June 8th, 2020 ``` 
+`Project start date: March 18th, 2020` <br/>
+`Project completed: June 8th, 2020 ` <br/> <br/>
+`New portfolio:` [https://nayemalam.com](https://nayemalam.com) <br/>
+`Previous portfolio:` [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio)
+
 #
 During the COVID-19 Quarantine I've decided to revamp my entire personal (previous) portfolio [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio) with React JS.
 
@@ -30,7 +33,7 @@ The following project was initially bootstrapped with [Create React App](https:/
 Dev mode app runs in [http://localhost:8000](http://localhost:8000). <br/>
 Build mode app runs in [http://localhost:9000](http://localhost:9000).
 
-The page will reload if you make edits. <br />
+The page will reload if you make edits (on dev mode). <br />
 You will also see any lint errors in the console.
 
 ## Learn More
