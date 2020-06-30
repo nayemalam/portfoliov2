@@ -1,6 +1,9 @@
 # Welcome to my Portfolio2.0 🚀 [![Build Status](https://travis-ci.com/nayemalam/portfoliov2.svg?token=aYqsUyzyzydDXmyhz8yW&branch=master)](https://travis-ci.com/nayemalam/portfoliov2)
 
-| Desktop speed: | Mobile speed: |
+### Lighthouse Speed Test
+<img width="887" alt="Screen Shot 2020-06-30 at 5 30 10 PM" src="https://user-images.githubusercontent.com/25883629/86179176-cb605d00-baf7-11ea-968b-e8c4af391d9b.png">
+
+| Desktop speed | Mobile speed |
 |---------------------|--------------------|
 |![image](https://user-images.githubusercontent.com/25883629/84351997-7c737780-ab8a-11ea-854b-ce542a2ca47e.png)|![image](https://user-images.githubusercontent.com/25883629/84351937-5f3ea900-ab8a-11ea-94ad-9dd91e3468b4.png)|
 # 
