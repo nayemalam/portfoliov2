@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import HTMLTitle from '../components/htmltitle/HTMLTitle';
+import MetaTags from '../components/metatags/MetaTags';
 import portfolioItems from '../data/PortfolioItems';
 import CustomCard from '../components/portfolio/CustomCard';
 import FilterButtons from '../components/portfolio/FilterButtons';
@@ -54,7 +54,7 @@ class Portfolio extends Component {
 
         return (
             <div className='portfolio container'>
-                <HTMLTitle title='Portfolio | Nayem Alam' />
+                <MetaTags title='Portfolio | Nayem Alam' />
                 
                 <HeaderDesc header={headerText} desc={descText} />
                 <FilterButtons changeFilter={this.changeFilter.bind(this)} activeIndex={this.state.activeIndex} />

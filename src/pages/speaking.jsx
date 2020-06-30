@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HTMLTitle from '../components/htmltitle/HTMLTitle';
+import MetaTags from '../components/metatags/MetaTags';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import EditPage from '../components/editpage/EditPage';
 import VideoPlayer from '../components/speaking/VideoPlayer';
@@ -12,7 +12,7 @@ export default class Speaking extends Component {
 
         return (
             <div className='speaking container'>
-                <HTMLTitle title='Speaker | Nayem Alam' />
+                <MetaTags title='Speaker | Nayem Alam' />
 
                 <HeaderDesc header={headerText} desc={descText} />
                 <VideoPlayer />

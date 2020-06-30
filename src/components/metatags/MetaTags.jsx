@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-class HTMLTitle extends Component {
+class MetaTags extends Component {
     render() {
         return (
             <Helmet>
@@ -30,4 +30,4 @@ class HTMLTitle extends Component {
     }
 }
 
-export default HTMLTitle;
+export default MetaTags;

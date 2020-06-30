@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import HTMLTitle from '../components/htmltitle/HTMLTitle';
+import MetaTags from '../components/metatags/MetaTags';
 import Form from '../components/contact/Form';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 
@@ -11,7 +11,7 @@ class Contact extends Component {
 
         return (
             <div className='contact container'>
-                <HTMLTitle title="Let's Talk | Nayem Alam" />
+                <MetaTags title="Let's Talk | Nayem Alam" />
                 
                 <HeaderDesc header={headerText} desc={descText} />
                 <Form />                
