@@ -5,7 +5,7 @@ import { sortByDateASC, sortByDateDESC } from '../components/helpers';
 import mediaItems from '../data/MediaItems';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import EditPage from '../components/editpage/EditPage';
-import SortButtons from '../components/portfolio/SortButtons';
+import SortButtons from '../components/sortbuttons/SortButtons';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 class Media extends Component {

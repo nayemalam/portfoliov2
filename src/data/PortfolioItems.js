@@ -4,6 +4,16 @@ import LinkOffSharpIcon from '@material-ui/icons/LinkOffSharp';
 
 const portfolioItems = [
     {
+        'image': require('../images/work/superhero.png'),
+        'title': 'SuperHero Squad',
+        'description': 'Dynamically search through an API of all the superheroes and villains from all universes, add to your squad and more.',
+        'date': 'June 13, 2020',
+        'link': 'https://github.com/nayemalam/superhero',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','personal'],
+        'tags': ['React.js', 'HTML', 'SASS']
+    },
+    {
         'image': require('../images/work/fuzzymatching.png'),
         'title': 'Fuzzy Matching',
         'description': 'Implemented multiple string similarity algorithms. This algorithm compares the accuracy between two strings and assigns a similarity score.',
@@ -222,16 +232,6 @@ const portfolioItems = [
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','personal'],
         'tags': ['Vanilla JS', 'jQuery', 'HTML', 'CSS']
-    },
-    {
-        'image': require('../images/work/superhero.png'),
-        'title': 'SuperHero Squad',
-        'description': 'Dynamically search through an API of all the superheroes and villains from all universes. You can add a superhero/villain to your squad, see details and more.',
-        'date': 'June 13, 2020',
-        'link': 'https://github.com/nayemalam/superhero',
-        'LinkIcon': <LinkSharpIcon />,
-        'filters': ['all','personal'],
-        'tags': ['React.js', 'HTML', 'SASS']
     },
     {
         'image': require('../images/work/yulrealtor.png'),

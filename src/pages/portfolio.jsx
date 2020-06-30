@@ -5,7 +5,7 @@ import portfolioItems from '../data/PortfolioItems';
 import CustomCard from '../components/portfolio/CustomCard';
 import FilterButtons from '../components/portfolio/FilterButtons';
 import { sortByDateASC, sortByDateDESC, filterArrayByString } from '../components/helpers';
-import SortButtons from '../components/portfolio/SortButtons';
+import SortButtons from '../components/sortbuttons/SortButtons';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import EditPage from '../components/editpage/EditPage';
 
