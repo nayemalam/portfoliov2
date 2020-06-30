@@ -8,17 +8,12 @@ import {
     MenuItem,
     Hidden
 } from '@material-ui/core';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import PermMediaOutlinedIcon from '@material-ui/icons/PermMediaOutlined';
-import RecordVoiceOverOutlinedIcon from '@material-ui/icons/RecordVoiceOverOutlined';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
-import PermIdentityIcon from '@material-ui/icons/PermIdentity';
-import CodeIcon from '@material-ui/icons/Code';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons'; 
 import MobileMenu from './mobilemenu/MobileMenu';
 import MainMenu from './mainmenu/MainMenu';
 import { Link } from 'gatsby';
+import { mainItems, socialItems } from '../../../data/NavigationItems';
 
 // internal css
 import style from '../../../sass/global.scss';
@@ -29,30 +24,17 @@ class SideDrawer extends Component {
   
         const drawer = (
             <div
-            style={{width: style.drawerWidth}}
+                style={{width: style.drawerWidth}}
+                role="menu"
             >
                 <Divider/>
                 <List>
-                    <MenuItem component={Link} to='/'>
-                        <ListItemIcon><HomeOutlinedIcon/></ListItemIcon>
-                        <ListItemText>Home</ListItemText>
-                    </MenuItem>
-                    <MenuItem component={Link} to='/about'>
-                        <ListItemIcon><PermIdentityIcon/></ListItemIcon>
-                        <ListItemText>About</ListItemText>
-                    </MenuItem>
-                    <MenuItem component={Link} to='/portfolio'>
-                        <ListItemIcon><CodeIcon/></ListItemIcon>
-                        <ListItemText>Portfolio</ListItemText>
-                    </MenuItem>
-                    <MenuItem component={Link} to='/media'>
-                        <ListItemIcon><PermMediaOutlinedIcon/></ListItemIcon>
-                        <ListItemText>Media</ListItemText>
-                    </MenuItem>
-                    <MenuItem component={Link} to='/speaking'>
-                        <ListItemIcon><RecordVoiceOverOutlinedIcon/></ListItemIcon>
-                        <ListItemText>Speaking</ListItemText>
-                    </MenuItem>
+                    {mainItems.map((item, id) => (
+                        <MenuItem key={id} component={Link} to={item.link}>
+                            <ListItemIcon>{item.icon}</ListItemIcon>
+                            <ListItemText>{item.title}</ListItemText>
+                        </MenuItem>
+                    ))}
                 </List>
                 <Divider />
                 <List>
@@ -66,30 +48,14 @@ class SideDrawer extends Component {
 
         const socialLinks = (
             <MenuList>
-                <a className='linkWithNoDecoration' href="https://github.com/nayemalam">
-                    <MenuItem>
-                        <FontAwesomeIcon icon={faGithub} size='2x' style={{paddingRight: '5px'}} />
-                        Github
-                    </MenuItem>
-                </a>
-                <a className='linkWithNoDecoration' href="https://www.linkedin.com/in/nayemalam/">
-                    <MenuItem>
-                        <FontAwesomeIcon icon={faLinkedin} size='2x' style={{color: '#0e76a8', paddingRight: '5px'}} />
-                        LinkedIn
-                    </MenuItem>
-                </a>
-                <a className='linkWithNoDecoration' href="https://www.instagram.com/nayem_wizdom/">
-                    <MenuItem>
-                        <FontAwesomeIcon icon={faInstagram} size='2x' style={{color: '#fb3958', paddingRight: '5px'}} />
-                        Instagram
-                    </MenuItem>
-                </a>
-                <a className='linkWithNoDecoration' href="https://medium.com/@nayemalam">
-                    <MenuItem>
-                        <FontAwesomeIcon icon={faMedium} size='2x' style={{color: '#000', paddingRight: '5px'}} />
-                        Medium
-                    </MenuItem>
-                </a>
+                {socialItems.map((item,id) =>(
+                    <a key={id} className='linkWithNoDecoration' href={item.link}>
+                        <MenuItem>
+                            <FontAwesomeIcon icon={item.icon} size='2x' style={{color: item.styleColor, paddingRight: '5px'}} />
+                            {item.title}
+                        </MenuItem>
+                    </a>
+                ))}
             </MenuList>
         )
 

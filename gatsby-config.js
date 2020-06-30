@@ -25,7 +25,8 @@ module.exports = {
         name: `email`,
         url: `nayem.alam@mail.mcgill.ca`
       },
-    ]
+    ],
+    siteUrl: `https://nayemalam.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -62,18 +63,18 @@ module.exports = {
       options: {
         trackingId: `UA-165824010-2`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/admin`, `/tags/links`] // not implemented yet
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     }
-    // {
-    //   resolve: `gatsby-plugin-sitemap`,
-    //   options: {
-    //     exclude: [`/admin`, `/tags/links`] // not implemented yet
-    //   }
-    // },
-    // {
-    //   resolve: 'gatsby-plugin-robots-txt',
-    //   options: {
-    //     policy: [{ userAgent: '*', allow: '/' }]
-    //   }
-    // }
   ],
 }

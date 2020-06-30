@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram, faMedium } from '@fortawesome/free-brands-svg-icons'; 
+import { socialItems } from '../../data/NavigationItems';
 
 class Socials extends Component {
     render() {
@@ -9,26 +9,13 @@ class Socials extends Component {
         return (
             <div className='socials'>
                 <div className='buttons'>
-                    <a className='linkWithNoDecoration hvr-bounce-in' href="https://github.com/nayemalam">
-                        <Button>
-                            <FontAwesomeIcon icon={faGithub} size='3x' style={{paddingRight: '5px'}} />
-                        </Button>
-                    </a>
-                    <a className='linkWithNoDecoration hvr-bounce-in' href="https://www.linkedin.com/in/nayemalam/">
-                        <Button>
-                            <FontAwesomeIcon icon={faLinkedin} size='3x' style={{color: '#0e76a8', paddingRight: '5px'}} />
-                        </Button>
-                    </a>
-                    <a className='linkWithNoDecoration hvr-bounce-in' href="https://www.instagram.com/nayem_wizdom/">
-                        <Button>
-                            <FontAwesomeIcon icon={faInstagram} size='3x' style={{color: '#fb3958', paddingRight: '5px'}} />
-                        </Button>
-                    </a>
-                    <a className='linkWithNoDecoration hvr-bounce-in' href="https://medium.com/@nayemalam">
-                        <Button>
-                            <FontAwesomeIcon icon={faMedium} size='3x' style={{color: '#000', paddingRight: '5px'}} />
-                        </Button>
-                    </a>
+                    {socialItems.map((item,id) => (
+                        <a key={id} className='linkWithNoDecoration hvr-bounce-in' href={item.link} aria-label={item.ariaLabel}>
+                            <Button aria-label='GitHub Icon'>
+                                <FontAwesomeIcon icon={item.icon} size='3x' style={{color: item.styleColor, paddingRight: '5px'}} />
+                            </Button>
+                        </a>
+                    ))}
                 </div>
             </div>
         )
