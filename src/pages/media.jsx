@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import HTMLTitle from '../components/htmltitle/HTMLTitle';
+import MetaTags from '../components/metatags/MetaTags';
 import { sortByDateASC, sortByDateDESC } from '../components/helpers';
 import mediaItems from '../data/MediaItems';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
@@ -44,7 +44,7 @@ class Media extends Component {
     
     return (
       <div className='media container'>
-        <HTMLTitle title='Honorable Mentions | Nayem Alam' />
+        <MetaTags title='Honorable Mentions | Nayem Alam' />
         
         <HeaderDesc header={headerText} desc={descText} />
         <SortButtons option={this.state.option} sortItems={this.sortItems} />

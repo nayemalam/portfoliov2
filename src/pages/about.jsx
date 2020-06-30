@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HTMLTitle from '../components/htmltitle/HTMLTitle';
+import MetaTags from '../components/metatags/MetaTags';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import Description from '../components/about/Description';
 import WorkExperience from '../components/about/WorkExperience';
@@ -16,7 +16,7 @@ class About extends Component {
     const descText = '';
     return (
       <div className='about container'>
-        <HTMLTitle title='Who Am I? | Nayem Alam' />
+        <MetaTags title='Who Am I? | Nayem Alam' />
         
         <HeaderDesc header={headerText} desc={descText} />
         <Description />

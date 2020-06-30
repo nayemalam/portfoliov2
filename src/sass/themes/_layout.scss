@@ -120,6 +120,20 @@ body {
         background: $highlightGreen;
     }
 
+    .skip-link {
+        position: absolute;
+        display: none;
+        left: 0;
+        background: #000000;
+        color: white;
+        padding: 8px;
+        z-index: 100;
+    }
+      
+    .skip-link:focus {
+        top: 0;
+    }
+
     @include mobile-up {
         .titleWithBackground {
             text-align: center;
