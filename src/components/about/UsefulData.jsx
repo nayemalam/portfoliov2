@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ShowHideButton from '../showhidebutton/ShowHideButton';
 import usefulDataItems from '../../data/UsefulDataItems';
+import { gitRequest } from '../../components/api/services';
 
 class UsefulData extends Component {
     render() {
+        console.log(gitRequest)
 
         return (
             <div className='usefuldata'>
