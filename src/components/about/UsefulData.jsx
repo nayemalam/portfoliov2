@@ -4,7 +4,6 @@ import usefulDataItems from '../../data/UsefulDataItems';
 
 class UsefulData extends Component {
     render() {
-
         return (
             <div className='usefuldata'>
                 <h3>Some other data you might not be interested in ...</h3>

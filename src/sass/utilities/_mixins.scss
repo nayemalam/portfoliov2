@@ -38,6 +38,8 @@ $widths: (
     huaweiMate20Pro: 360px,
     xiaomiNote8: 393px,
     laptophidpi: 1440px,
+    laptop1920-899: 1920px,
+    laptop1920-917: 1920px,
     laptop1920-1080: 1920px,
     desktop1920-1200: 1920px,
     desktop1680-1050: 1680px,
@@ -60,6 +62,8 @@ $heights: (
     huaweiMate20Pro: 780px,
     xiaomiNote8: 851px,
     laptophidpi: 900px,
+    laptop1920-899: 899px,
+    laptop1920-917: 917px,
     laptop1920-1080: 1080px,
     desktop1680-1050: 1050px,
     desktop4096-2304: 2304px,
@@ -85,6 +89,8 @@ $heights: (
             huaweiMate20Pro,
             xiaomiNote8,
             laptophidpi,
+            laptop1920-899,
+            laptop1920-917,
             laptop1920-1080,
             desktop1920-1200
         ) {
