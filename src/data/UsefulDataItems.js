@@ -30,7 +30,6 @@ const usefulDataItems =
                         <span key={descId}>{desc}</span>
                     ))}
                 </div>
-                <services />
             </Grid>
         ))}
     </Grid>

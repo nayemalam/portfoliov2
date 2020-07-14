@@ -7,7 +7,7 @@ import Education from '../components/about/Education';
 import Awards from '../components/about/Awards';
 import EditPage from '../components/editpage/EditPage';
 import FavQuotes from '../components/about/FavQuotes';
-import UsefulData from '../components/about/UsefulData';
+// import UsefulData from '../components/about/UsefulData';
 
 class About extends Component {
   render() {
@@ -24,7 +24,7 @@ class About extends Component {
         <Education />
         <Awards />
         <FavQuotes />
-        <UsefulData />
+        {/* <UsefulData /> */}
         <EditPage link={'https://github.com/nayemalam/portfoliov2/blob/dev/src/pages/about.jsx'} />
       </div>
     )
