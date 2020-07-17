@@ -113,6 +113,12 @@ const mediaItems = [
         'logo': require('../images/media/marymount.jpg'),
         'alt': 'Marymount Academy',
         'date': 'February 29, 2014'
+    },
+    {
+        'website': 'https://joysofsolotravel.podbean.com/e/joys-of-solo-travel-10-nayem-alam/',
+        'logo': require('../images/media/joysofsolotravel.png'),
+        'alt': 'Joys of Solo Travel',
+        'date': 'July 15, 2020'
     }
 ];
 
