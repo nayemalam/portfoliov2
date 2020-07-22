@@ -242,6 +242,16 @@ const portfolioItems = [
         'LinkIcon': <LinkSharpIcon />,
         'filters': ['all','sites'],
         'tags': ['Wordpress']
+    },
+    {
+        'image': require('../images/work/mdc.png'),
+        'title': 'McGill Design Consultancy',
+        'description': 'Started a non-profit hub to help local McGill startups and clubs scale digitally; through building websites and logos.',
+        'date': 'January 27, 2020',
+        'link': 'https://mcgilldesignconsultancy.com/',
+        'LinkIcon': <LinkSharpIcon />,
+        'filters': ['all','sites', 'personal', 'academic'],
+        'tags': ['Wordpress', 'Graphics']
     }
 ];
 
