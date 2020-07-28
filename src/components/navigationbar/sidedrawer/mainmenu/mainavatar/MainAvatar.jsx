@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import Avatar from '@material-ui/core/Avatar';
 import personalPic from '../../../../../images/common/headshot.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'; 
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faMapMarkerAlt, faBriefcase } from '@fortawesome/free-solid-svg-icons'; 
 
 class MainAvatar extends Component {
 
