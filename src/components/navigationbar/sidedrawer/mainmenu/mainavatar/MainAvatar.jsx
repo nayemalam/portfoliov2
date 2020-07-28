@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import Avatar from '@material-ui/core/Avatar';
 import personalPic from '../../../../../images/common/headshot.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'; 
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faMapMarkerAlt, faBriefcase } from '@fortawesome/free-solid-svg-icons'; 
 
 class MainAvatar extends Component {
 
@@ -14,7 +14,7 @@ class MainAvatar extends Component {
                     <Avatar className='hvr-grow' alt="Nayem Alam" src={personalPic} style={{width: '130px', height: '130px', margin: 'auto'}}/>
                 </Link>
                 <h2>Nayem Alam</h2>
-                <p style={{marginTop: '-10px'}}><FontAwesomeIcon icon={faMapMarkerAlt} size='sm'/> Brossard, QC</p>
+                <p style={{marginTop: '-10px'}}>Fullstack Dev. @ <a href="https://fundmore.ai" className="linkWithNoDecoration" target="_blank" rel="noopener noreferrer">fundmore.ai</a></p>
             </div>
         )
     }
