@@ -119,6 +119,12 @@ const mediaItems = [
         'logo': require('../images/media/joysofsolotravel.png'),
         'alt': 'Joys of Solo Travel',
         'date': 'July 15, 2020'
+    },
+    {
+        'website': 'https://medium.com/@shapersMTL/introducing-the-montreal-hubs-newest-global-shapers-ebddde80df6d',
+        'logo': require('../images/media/gsmtl.png'),
+        'alt': 'Global Shapers Montréal',
+        'date': 'November 12, 2017'
     }
 ];
 

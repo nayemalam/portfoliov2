@@ -2,6 +2,11 @@ import React from 'react';
 import { faCode, faCapsules, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import ShowHideButton from '../components/showhidebutton/ShowHideButton';
 
+// const fundmoreDesc = 
+// <ul>
+//     <li>Develop MVP using Angular 9,10 on Storybook</li>
+// </ul>
+
 const moneyLionDesc = 
 <ul>
     <li>Developed RESTful endpoints using SpringBoot</li>
@@ -41,6 +46,20 @@ const otherDesc =
 </ul>
 
 const workItems = [
+    {
+        'icon': faCode,
+        'date': 'June - Present',
+        'name': 'fundmore.ai',
+        'location': 'Ottawa, ON',
+        'role': 'Fullstack Developer',
+        // 'desc': <ShowHideButton 
+        //             btnclass={'readmore-info'}
+        //             txtclass={'info'}
+        //             readLessText={'read less'} 
+        //             readMoreText={'read more'} 
+        //             text={fundmoreDesc}>
+        //         </ShowHideButton>
+    },
     {
         'icon': faCode,
         'date': 'May - August 2019',
