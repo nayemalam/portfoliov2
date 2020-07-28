@@ -14,7 +14,7 @@ class MainAvatar extends Component {
                     <Avatar className='hvr-grow' alt="Nayem Alam" src={personalPic} style={{width: '130px', height: '130px', margin: 'auto'}}/>
                 </Link>
                 <h2>Nayem Alam</h2>
-                <p style={{marginTop: '-10px'}}>Fullstack Dev. @ <a href="https://fundmore.ai" className="linkWithNoDecoration" target="_blank" rel="noopener noreferrer">fundmore.ai</a></p>
+                <p style={{marginTop: '-10px'}} className="hvr-icon-float"><FontAwesomeIcon icon={faMapMarkerAlt} size='sm' style={{color: '#E95B5B'}} className="hvr-icon" /> Brossard, QC</p>
             </div>
         )
     }

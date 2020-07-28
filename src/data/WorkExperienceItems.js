@@ -46,6 +46,20 @@ const otherDesc =
 </ul>
 
 const workItems = [
+    // {
+    //     'icon': faCode,
+    //     'date': 'June - Present',
+    //     'name': 'fundmore.ai',
+    //     'location': 'Ottawa, ON',
+    //     'role': 'Fullstack Developer',
+    //     'desc': <ShowHideButton 
+    //                 btnclass={'readmore-info'}
+    //                 txtclass={'info'}
+    //                 readLessText={'read less'} 
+    //                 readMoreText={'read more'} 
+    //                 text={fundmoreDesc}>
+    //             </ShowHideButton>
+    // },
     {
         'icon': faCode,
         'date': 'June - Present',
