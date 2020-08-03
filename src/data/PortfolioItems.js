@@ -48,8 +48,8 @@ const portfolioItems = [
         'title': 'Speak Up Montreal',
         'description': 'Something I started in 2014 and it has gained momentum since expanding all over Montreal (feel free to ask me more about this).',
         'date': 'February 26, 2014',
-        'link': 'https://speakupmtl.com/',
-        'LinkIcon': <LinkSharpIcon />,
+        'link': '',
+        'LinkIcon': <LinkOffSharpIcon />,
         'filters': ['all','personal','sites'],
         'tags': ['Wordpress']
     },
