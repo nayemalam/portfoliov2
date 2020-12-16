@@ -1,3 +1,4 @@
+// prettier-ignore
 @import 
 // theme
 './utilities/variables',
@@ -30,6 +31,7 @@
 './components/common/timeline',
 './components/common/showhidebutton',
 // page items
+'./components/home/featuredcards',
 './components/home/socials',
 './components/home/moreinfobuttons',
 './components/about/description',
@@ -45,4 +47,5 @@
 './pages/media',
 './pages/portfolio',
 './pages/speaking',
-'./pages/error404';
+'./pages/error404',
+'./pages/life';

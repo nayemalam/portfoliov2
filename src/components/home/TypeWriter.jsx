@@ -1,92 +1,94 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class TypeWriter extends Component {
-    _isMounted = false;
+  _isMounted = false
 
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props)
 
-        this.state = {
-            text: '',
-            index: 0,
-            isDeleting: false,
-            isWaiting: false
-        }
-
-        this.type = this.type.bind(this);
+    this.state = {
+      text: '',
+      index: 0,
+      isDeleting: false,
+      isWaiting: false,
     }
 
-    componentDidMount() {
-        this._isMounted = true;
-        if (this._isMounted) {
-            window.onload = this.type()
-        }
+    this.type = this.type.bind(this)
+  }
+
+  componentDidMount() {
+    this._isMounted = true
+    if (this._isMounted) {
+      window.onload = this.type()
+    }
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false
+  }
+
+  type() {
+    const { text, index, isDeleting } = this.state
+    const currentIndex = index % this.props.words.length
+    const currentWord = this.props.words[currentIndex]
+
+    this.setState({
+      isWaiting: false,
+    })
+
+    if (isDeleting) {
+      this.setState({
+        text: currentWord.substring(0, this.state.text.length - 1),
+      })
+    } else {
+      this.setState({
+        text: currentWord.substring(0, this.state.text.length + 1),
+      })
     }
 
-    componentWillUnmount() {
-        this._isMounted = false;
+    let typeSpeed = 100
+
+    if (this.isDeleting) {
+      typeSpeed /= 2
     }
 
-    type() {
-        
-        const { text, index, isDeleting } = this.state
-        const currentIndex = index % this.props.words.length;
-        const currentWord = this.props.words[currentIndex];
+    if (!isDeleting && text === currentWord) {
+      typeSpeed = 500
 
-        this.setState({
-            isWaiting: false
-        })
+      this.setState({
+        isWaiting: true,
+        isDeleting: true,
+      })
+    } else if (isDeleting && text === '') {
+      typeSpeed = 300
 
-        if(isDeleting) {
-            this.setState({
-                text: currentWord.substring(0, this.state.text.length - 1)
-            })
-        } else {
-            this.setState({
-                text: currentWord.substring(0, this.state.text.length + 1)
-            })
-        }
-
-        let typeSpeed = 100;
-
-        if(this.isDeleting) {
-            typeSpeed /= 2;
-        }
-
-        if(!isDeleting && (text === currentWord)) {
-            typeSpeed = 500;
-
-            this.setState({
-                isWaiting: true,
-                isDeleting: true
-            })
-        } else if (isDeleting && text === '') {
-            typeSpeed = 300;
-
-            this.setState({
-                isDeleting: false,
-                index: this.state.index + 1
-            })
-        }
-
-        setTimeout(() => this.type(), typeSpeed)
-
+      this.setState({
+        isDeleting: false,
+        index: this.state.index + 1,
+      })
     }
 
-    render () {
+    setTimeout(() => this.type(), typeSpeed)
+  }
 
-        return (
-            <div className='typewriter'>
-                <span className='staticText'>Hi, I'm Nayem <span role='img' aria-label='rocket emoji' className='hvr-grow'>🚀</span></span>
-                <br/>
-                <br/>
-                <span className='dynamicText'>I like to&nbsp;{this.state.text}</span>
-                <br/>
-                <br/>
-                {/* <span>While I enjoy putting myself in several distinct areas, my main interests lie within the intersections of engineering, speaking, writing and building some pretty cool things.</span> */}
-            </div>
-        )    
-    }
+  render() {
+    return (
+      <div className="typewriter">
+        <span className="staticText">
+          Welcome to my cave{' '}
+          <span role="img" aria-label="rocket emoji" className="hvr-grow">
+            🚀
+          </span>
+        </span>
+        <br />
+        <br />
+        <span className="dynamicText">I like to&nbsp;{this.state.text}</span>
+        <br />
+        <br />
+        {/* <span>While I enjoy putting myself in several distinct areas, my main interests lie within the intersections of engineering, speaking, writing and building some pretty cool things.</span> */}
+      </div>
+    )
+  }
 }
 
-export default TypeWriter;
+export default TypeWriter
