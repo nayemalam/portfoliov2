@@ -34,7 +34,7 @@ class NotificationBar extends Component {
                             <div className='icon'>
                                 <InfoOutlinedIcon />
                             </div>
-                            Welcome to portfolio v2.0. If you're curious about my previos portfolio, feel free to check it out <a href='https://nayemalam.github.io/portfolio' rel='noopener noreferrer' target='_blank'>here</a>.
+Hello, I'm currently doing some beta testing (hence some links might be broken) - come back on Dec 30.
                         </div>
                         <div className='action'>
                             <IconButton

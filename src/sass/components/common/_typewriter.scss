@@ -1,54 +1,52 @@
 .typewriter {
+  color: $defaultBlack;
+  font-family: $titleFont !important;
+  font-size: 30px;
+  // text-align: center;
+  position: relative;
+  width: 100%;
+  //   margin-top: 15%;
 
-    color: $defaultBlack;
-    font-family: $titleFont !important;
-    font-size: 30px;
-    text-align: center;
+  .dynamicText {
     position: relative;
-    width: 100%;
-    margin-top: 15%;
+    font-size: 30px;
 
-    .dynamicText {
-        position: relative;
-        font-size: 30px;
-
-        &:after {
-            content: '|';
-            position: absolute;
-            left: calc(100%);
-        }
-
-        & {
-            &:after {
-                animation: cursorFade 1s infinite ease-in-out;
-            }
-        }
+    &:after {
+      content: '|';
+      position: absolute;
+      left: calc(100%);
     }
 
-    .staticText {
-        font-size: 50px;
+    & {
+      &:after {
+        animation: cursorFade 1s infinite ease-in-out;
+      }
     }
-      
-    @keyframes cursorFade {
+  }
 
-        0%, 100% {
-            opacity: 1;
-        }
-    
-        50% {
-            opacity: 0;
-        }
+  .staticText {
+    font-size: 50px;
+  }
+
+  @keyframes cursorFade {
+    0%,
+    100% {
+      opacity: 1;
     }
+
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 @include mobile-up {
-    .typewriter {
-        font-size: 20px;
-        margin-top: 35%;
+  .typewriter {
+    font-size: 20px;
+    margin-top: 5%;
 
-        .staticText {
-            font-size: 30px;
-        }
-        
+    .staticText {
+      font-size: 30px;
     }
+  }
 }
