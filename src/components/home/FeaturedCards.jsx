@@ -7,7 +7,7 @@ class FeaturedCards extends Component {
       <div className="featured-cards">
         <div className="container-lg">
           <div className="card">
-            <Link to="/life">
+            <Link to="/">
               <div
                 className="cover"
                 style={{
@@ -33,7 +33,7 @@ class FeaturedCards extends Component {
           </div>
 
           <div className="card">
-            <Link to="/uses">
+            <Link to="/">
               <div
                 className="cover"
                 style={{
@@ -47,7 +47,7 @@ class FeaturedCards extends Component {
 
           <div className="card">
             <a
-              href="https://www.youtube.com/channel/UCzxuB9xo-RmnFgqLqLiRQDQ"
+              href="https://www.youtube.com/techtutorialsz"
               target="_blank"
               rel="noreferrer"
             >
