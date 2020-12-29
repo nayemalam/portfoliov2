@@ -1,29 +1,40 @@
+require('dotenv').config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Nayem Alam`,
     description: `Official personal portfolio to document my journey, goals, objectives and learning experiences.`,
     author: `@nayemalam`,
-    keywords: ['full stack', 'electrical engineer', 'portfolio', 'developer', 'slam poet', 'designer'],
+    keywords: [
+      'full stack',
+      'electrical engineer',
+      'portfolio',
+      'developer',
+      'slam poet',
+      'designer',
+    ],
     social: [
       {
         name: `GitHub`,
-        url: `http://github.com/nayemalam/`
+        url: `http://github.com/nayemalam/`,
       },
       {
         name: `LinkedIn`,
-        url: `https://www.linkedin.com/in/nayemalam/`
+        url: `https://www.linkedin.com/in/nayemalam/`,
       },
       {
         name: `Instagram`,
-        url: `https://www.instagram.com/nayem_wizdom/`
+        url: `https://www.instagram.com/nayem_wizdom/`,
       },
       {
         name: `Medium`,
-        url: `https://medium.com/@nayemalam`
+        url: `https://medium.com/@nayemalam`,
       },
       {
         name: `email`,
-        url: `nayem.alam@mail.mcgill.ca`
+        url: `nayem.alam@mail.mcgill.ca`,
       },
     ],
     siteUrl: `https://nayemalam.com`,
@@ -67,14 +78,34 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/admin`, `/tags/links`] // not implemented yet
-      }
+        exclude: [`/admin`, `/tags/links`], // not implemented yet
+      },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: process.env.API_URL || 'http://localhost:1337',
+        contentTypes: ['article', 'category', 'writer'],
+        singleTypes: [`homepage`, `global`],
+        queryLimit: 1000,
+      },
+    },
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: `image`,
+        prefix: `gatsby-source-cloudinary/`,
+      },
+    },
   ],
-}
+};

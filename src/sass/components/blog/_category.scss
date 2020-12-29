@@ -1,0 +1,15 @@
+.category {
+  h1 {
+    font-family: $blogTitleFont;
+    font-size: 80px;
+    margin: 0;
+  }
+}
+
+@include mobile-up {
+  .category {
+    h1 {
+      font-size: 50px;
+    }
+  }
+}

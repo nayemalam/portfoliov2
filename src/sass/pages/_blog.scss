@@ -1,0 +1,26 @@
+.blog {
+  padding-bottom: 50px;
+  h1 {
+    font-family: $blogTitleFont;
+    font-size: 80px;
+    margin: 0;
+  }
+
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      vertical-align: middle;
+      font-size: 20px;
+    }
+  }
+}
+
+@include mobile-up {
+  .blog {
+    h1 {
+      font-size: 50px;
+    }
+  }
+}
