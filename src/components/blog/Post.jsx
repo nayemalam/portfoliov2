@@ -45,21 +45,21 @@ const Post = ({ data, location, pageContext }) => {
     shareImage: article.image,
     article: true,
   };
-  console.log(location.state);
+  // console.log(location.state);
   console.log('context', pageContext);
   const { prev, next } = pageContext;
 
   return (
     <Layout seo={seo}>
       <div className="post container">
-        {location.state.prevPath && (
+        {/* {location.state.prevPath && (
           <span className="previous-button">
             <Link to={location.state.prevPath}>
               <FontAwesomeIcon className="icon-bullet" icon={faCaretLeft} /> go
               back
             </Link>
           </span>
-        )}
+        )} */}
         <div>
           {prev && <Link to={`/blog/post/${prev.slug}`}>{prev.title}</Link>}
           <br />
@@ -96,7 +96,7 @@ const Post = ({ data, location, pageContext }) => {
                 <p className="uk-text-meta uk-margin-remove-top">
                   <Moment format="MMM Do YYYY">{article.published_at}</Moment>
                 </p>
-                <p>{location.state.prevPath}</p>
+                {/* <p>{location.state.prevPath}</p> */}
               </div>
             </div>
           </div>

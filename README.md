@@ -1,23 +1,32 @@
 # Welcome to my Portfolio2.0 🚀 [![Build Status](https://travis-ci.com/nayemalam/portfoliov2.svg?token=aYqsUyzyzydDXmyhz8yW&branch=master)](https://travis-ci.com/nayemalam/portfoliov2)
 
 ### Lighthouse Speed Test
+
 <img width="887" alt="Screen Shot 2020-06-30 at 5 30 10 PM" src="https://user-images.githubusercontent.com/25883629/86179176-cb605d00-baf7-11ea-968b-e8c4af391d9b.png">
 
-| Desktop speed | Mobile speed |
-|---------------------|--------------------|
-|![image](https://user-images.githubusercontent.com/25883629/84351997-7c737780-ab8a-11ea-854b-ce542a2ca47e.png)|![image](https://user-images.githubusercontent.com/25883629/84351937-5f3ea900-ab8a-11ea-94ad-9dd91e3468b4.png)|
-# 
+| Desktop speed                                                                                                  | Mobile speed                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| ![image](https://user-images.githubusercontent.com/25883629/84351997-7c737780-ab8a-11ea-854b-ce542a2ca47e.png) | ![image](https://user-images.githubusercontent.com/25883629/84351937-5f3ea900-ab8a-11ea-94ad-9dd91e3468b4.png) |
+
+#
+
 #### Changelog(s):
+
+- December 29: Migrated from npm to yarn completely
+- December 28, 2020: Removed firebase and travis builds
 - July 21, 2020: Upgraded to Blaze plan
 - June 29, 2020: Updated functions node 8 to node 10
 - May 8, 2020: Hosted on Firebase and using Firebase Functions for contact form.
-#### Brief: 
+
+#### Brief:
+
 `Project start date: March 18th, 2020` <br/>
 `Project completed: June 8th, 2020 ` <br/> <br/>
 `New portfolio:` [https://nayemalam.com](https://nayemalam.com) <br/>
 `Previous portfolio:` [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio)
 
 #
+
 During the COVID-19 Quarantine I've decided to revamp my entire personal (previous) portfolio [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio) with React JS.
 
 The previous version of my portfolio (link above) was written in pure HTML, CSS and vanilla JS.
@@ -47,7 +56,9 @@ You can learn more about Gatsby JS in the [Gatsby JS documentation](https://www.
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Socials 🔥
-Catch me on: 
+
+Catch me on:
+
 - [Instagram](https://www.instagram.com/nayem_wizdom/)
 - [Medium](https://medium.com/@nayemalam)
 - [LinkedIn](https://www.linkedin.com/in/nayemalam/)

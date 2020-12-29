@@ -6,14 +6,11 @@ import CalendarToday from '@material-ui/icons/CalendarToday';
 
 const ArticleCard = ({ article }) => {
   console.log(article.node.category);
-  
+
   return (
     <div className="article-card">
       <Card className="card-container">
-        <Link
-          to={`/blog/post/${article.node.slug}`}
-          state={{ prevPath: window.location.pathname }}
-        >
+        <Link to={`/blog/post/${article.node.slug}`}>
           <CardMedia
             className="feature-image"
             image={article.node.image.childImageSharp.fixed.src}
@@ -22,10 +19,7 @@ const ArticleCard = ({ article }) => {
         </Link>
 
         <CardContent>
-          <Link
-            to={`/blog/post/${article.node.slug}`}
-            state={{ prevPath: window.location.pathname }}
-          >
+          <Link to={`/blog/post/${article.node.slug}`}>
             <Typography gutterBottom variant="h5" component="h5">
               {article.node.title}
             </Typography>
@@ -41,10 +35,7 @@ const ArticleCard = ({ article }) => {
           </Typography>
         </CardContent>
         <div className="category-name">
-          <Link
-            to={`/blog/category/${article.node.category.slug}`}
-            state={{ prevPath: window.location.pathname }}
-          >
+          <Link to={`/blog/category/${article.node.category.slug}`}>
             {article.node.category.name}
           </Link>
         </div>

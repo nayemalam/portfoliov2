@@ -7,36 +7,39 @@ class FeaturedCards extends Component {
       <div className="featured-cards">
         <div className="container-lg">
           <div className="card">
-            <Link to="/">
+            <Link to="/blog/life/">
               <div
                 className="cover"
                 style={{
                   backgroundImage: `url(${require('../../images/misc/life.jpg')})`,
-                }}>
+                }}
+              >
                 <h1 className="title">Current Life in a Nutshell</h1>
               </div>
             </Link>
           </div>
 
           <div className="card">
-            <Link to="/">
+            <Link to="/blog">
               <div
                 className="cover"
                 style={{
                   backgroundImage: `url(${require('../../images/misc/book.jpg')})`,
-                }}>
+                }}
+              >
                 <h1 className="title">Blog Posts</h1>
               </div>
             </Link>
           </div>
 
           <div className="card">
-            <Link to="/">
+            <Link to="/blog/uses/">
               <div
                 className="cover"
                 style={{
                   backgroundImage: `url(${require('../../images/misc/chess.jpg')})`,
-                }}>
+                }}
+              >
                 <h1 className="title">Uses</h1>
               </div>
             </Link>
@@ -46,12 +49,14 @@ class FeaturedCards extends Component {
             <a
               href="https://www.youtube.com/techtutorialsz"
               target="_blank"
-              rel="noreferrer">
+              rel="noreferrer"
+            >
               <div
                 className="cover"
                 style={{
                   backgroundImage: `url(${require('../../images/misc/laptop.jpg')})`,
-                }}>
+                }}
+              >
                 <h1 className="title">YouTube Channel</h1>
               </div>
             </a>

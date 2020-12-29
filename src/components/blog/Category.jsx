@@ -14,6 +14,7 @@ export const query = graphql`
         node {
           slug
           title
+          description
           category {
             slug
             name
@@ -52,19 +53,20 @@ const Category = ({ data, location }) => {
     metaTitle: category,
     metaDescription: `All ${category} articles`,
   };
+  console.log(articles);
 
   return (
     <Layout seo={seo}>
       <div className="category container">
         <div className="uk-container uk-container-large">
-          {location.state.prevPath && (
+          {/* {location.state.prevPath && (
             <span className="previous-button">
               <Link to={location.state.prevPath}>
                 <FontAwesomeIcon className="icon-bullet" icon={faCaretLeft} />{' '}
                 go back
               </Link>
             </span>
-          )}
+          )} */}
           <h1> Category - {category.toUpperCase()}</h1>
           <Articles articles={articles} />
         </div>

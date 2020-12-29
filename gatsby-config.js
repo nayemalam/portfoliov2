@@ -96,7 +96,7 @@ module.exports = {
         queryLimit: 1000,
       },
     },
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-cloudinary`,
       options: {
