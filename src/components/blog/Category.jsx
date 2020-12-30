@@ -67,7 +67,7 @@ const Category = ({ data, location }) => {
               </Link>
             </span>
           )} */}
-          <h1> Category - {category.toUpperCase()}</h1>
+          <h1> Category - {category}</h1>
           <Articles articles={articles} />
         </div>
       </div>

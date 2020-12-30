@@ -23,7 +23,7 @@ class Home extends Component {
 
         <MetaTags title="Nayem Alam | Engineer, Slam Poet & Developer" />
 
-        <NotificationBar />
+        {/* <NotificationBar /> */}
         <TypeWriter words={featuredWords} />
         <FeaturedCards />
         <MoreInfoButtons />

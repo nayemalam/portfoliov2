@@ -81,10 +81,6 @@ const SEO = ({ seo = {} }) => {
           rel: 'icon',
           href: favicon.publicURL,
         },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=Staatliches',
-        },
       ]}
       meta={metaTags}
     />

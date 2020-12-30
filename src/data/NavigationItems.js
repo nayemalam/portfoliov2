@@ -50,7 +50,7 @@ const socialItems = [
     title: 'GitHub',
     link: 'https://github.com/nayemalam',
     icon: faGithub,
-    styleColor: 'default',
+    styleColor: '#211F1F',
     ariaLabel: 'GitHub',
   },
   {
