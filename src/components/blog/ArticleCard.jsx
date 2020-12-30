@@ -5,8 +5,6 @@ import Moment from 'react-moment';
 import CalendarToday from '@material-ui/icons/CalendarToday';
 
 const ArticleCard = ({ article }) => {
-  console.log(article.node.category);
-
   return (
     <div className="article-card">
       <Card className="card-container">
@@ -25,13 +23,13 @@ const ArticleCard = ({ article }) => {
             </Typography>
           </Link>
           <Typography variant="body2" color="textSecondary" component="p">
-            <div className="details">
+            <span className="details">
               <CalendarToday className="calendar-icon" />
               <Moment fromNow className="date">
                 {article.node.publishedAt}
               </Moment>
-            </div>
-            <div className="description">{article.node.description}</div>
+            </span>
+            <span className="description">{article.node.description}</span>
           </Typography>
         </CardContent>
         <div className="category-name">

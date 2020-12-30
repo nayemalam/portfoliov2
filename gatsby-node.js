@@ -43,6 +43,7 @@ exports.createPages = async ({ graphql, actions }) => {
         prev: index === articles.length - 1 ? null : articles[index + 1].node,
         next: index === 0 ? null : articles[index - 1].node,
       },
+      index,
     });
   });
 

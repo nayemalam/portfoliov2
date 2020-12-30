@@ -5,15 +5,9 @@ import Moment from 'react-moment';
 import Layout from '../layout';
 import Markdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faAngleLeft,
-  faAngleRight,
-  faCaretLeft,
-  faCaretRight,
-} from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
-import { MenuItem, MenuList } from '@material-ui/core';
-import { socialItems } from '../../data/NavigationItems';
+import PostAuthor from './PostAuthor';
+import PrevNextPost from './PrevNextPost';
 import ShareButtons from '../sharebuttons/ShareButtons';
 
 export const query = graphql`
@@ -25,6 +19,7 @@ export const query = graphql`
       content
       publishedAt
       slug
+      readTime
       image {
         publicURL
         childImageSharp {
@@ -47,7 +42,7 @@ export const query = graphql`
   }
 `;
 
-const Post = ({ data, location, pageContext }) => {
+const Post = ({ data, pageContext }) => {
   const article = data.strapiArticle;
   const seo = {
     metaTitle: article.title,
@@ -55,10 +50,9 @@ const Post = ({ data, location, pageContext }) => {
     shareImage: article.image,
     article: true,
   };
-  console.log('hey', location.state);
-  console.log('context', pageContext);
-  const { prev, next } = pageContext;
-  console.log(article);
+
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+
   return (
     <Layout seo={seo}>
       <div className="post container">
@@ -67,101 +61,38 @@ const Post = ({ data, location, pageContext }) => {
           fluid={article.image.childImageSharp.fluid}
           imgStyle={{ objectFit: 'cover', objectPosition: '50% 50%' }}
         />
+        <span className="all-posts-button">
+          <Link to="/blog">Back to all posts</Link>
+        </span>
+
         <div className="inner-container">
           <h1 className="title">{article.title}</h1>
           <p className="sub-description">
             Published on{' '}
             <Moment format="Do MMM YYYY">{article.publishedAt}</Moment> -{' '}
             <FontAwesomeIcon className="icon-bullet" icon={faClock} size="sm" />{' '}
-            3 min read
+            {article.readTime} min read
           </p>
-          <Markdown source={article.content} escapeHtml={false} />
+          <div className="content">
+            <Markdown source={article.content} escapeHtml={false} />
+          </div>
           <hr />
           <div className="footer">
-            <table className="author">
-              <tr>
-                <td rowSpan={2} className="image">
-                  {article.author.picture && (
-                    <Img
-                      fixed={article.author.picture.childImageSharp.fixed}
-                      imgStyle={{ position: 'static', borderRadius: '50%' }}
-                    />
-                  )}
-                </td>
-                <td className="name">{article.author.name}</td>
-              </tr>
-              <tr>
-                <td>
-                  <MenuList className="social">
-                    {socialItems.map((item, id) => (
-                      <a
-                        key={id}
-                        className="linkWithNoDecoration"
-                        href={item.link}
-                      >
-                        <MenuItem>
-                          <FontAwesomeIcon
-                            icon={item.icon}
-                            size="lg"
-                            style={{
-                              color: '#757575',
-                            }}
-                          />
-                        </MenuItem>
-                      </a>
-                    ))}
-                  </MenuList>
-                </td>
-              </tr>
-            </table>
-            <ShareButtons
-              title={article.title}
-              url={`https://nayemalam.com/blog/post/${article.slug}`}
-              twitterHandle={'nayem_wizdom'}
-            />
-            <div className="prev-next-section">
-              <table>
-                {prev && (
-                  <Link
-                    to={`/blog/post/${prev.slug}`}
-                    className="action-button"
-                  >
-                    <tr>
-                      <td className="icon">
-                        <FontAwesomeIcon icon={faAngleLeft} size="2x" />
-                      </td>
-                      <td className="prev-text">{prev.title}</td>
-                    </tr>
-                  </Link>
-                )}
-              </table>
-              <table>
-                {next && (
-                  <Link
-                    to={`/blog/post/${next.slug}`}
-                    className="action-button"
-                  >
-                    <tr>
-                      <td className="next-text">{next.title}</td>
-                      <td className="icon">
-                        <FontAwesomeIcon icon={faAngleRight} size="2x" />
-                      </td>
-                    </tr>
-                  </Link>
-                )}
-              </table>
+            <div className="author-container">
+              <PostAuthor article={article} />
+              <div className="share-buttons">
+                <p>Like this post? Share it!</p>
+                <ShareButtons
+                  url={url}
+                  title={article.title}
+                  twitterHandle={'nayem_wizdom'}
+                />
+              </div>
             </div>
+            <PrevNextPost pageContext={pageContext} />
           </div>
         </div>
       </div>
-      {/* {location.state.prevPath && (
-          <span className="previous-button">
-            <Link to={location.state.prevPath}>
-              <FontAwesomeIcon className="icon-bullet" icon={faCaretLeft} /> go
-              back
-            </Link>
-          </span>
-        )} */}
     </Layout>
   );
 };

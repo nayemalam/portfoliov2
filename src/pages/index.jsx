@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MetaTags from '../components/metatags/MetaTags';
 import TypeWriter from '../components/home/TypeWriter';
-import NotificationBar from '../components/notificationbar/NotificationBar';
+// import NotificationBar from '../components/notificationbar/NotificationBar';
 import MoreInfoButtons from '../components/home/MoreInfoButtons';
 import Socials from '../components/home/Socials';
 import FeaturedCards from '../components/home/FeaturedCards';

@@ -1,9 +1,7 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Articles from './Articles';
 import Layout from '../layout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 
 export const query = graphql`
   query Category($slug: String!) {
@@ -46,27 +44,18 @@ export const query = graphql`
   }
 `;
 
-const Category = ({ data, location }) => {
+const Category = ({ data }) => {
   const articles = data.articles.edges;
   const category = data.category.name;
   const seo = {
     metaTitle: category,
     metaDescription: `All ${category} articles`,
   };
-  console.log(articles);
 
   return (
     <Layout seo={seo}>
       <div className="category container">
         <div className="uk-container uk-container-large">
-          {/* {location.state.prevPath && (
-            <span className="previous-button">
-              <Link to={location.state.prevPath}>
-                <FontAwesomeIcon className="icon-bullet" icon={faCaretLeft} />{' '}
-                go back
-              </Link>
-            </span>
-          )} */}
           <h1> Category - {category}</h1>
           <Articles articles={articles} />
         </div>

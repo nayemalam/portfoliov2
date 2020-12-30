@@ -33,7 +33,7 @@ class SortButtons extends Component {
               <FontAwesomeIcon
                 title="learn how this component works! sortItems() function"
                 icon={faInfoCircle}
-                size="md"
+                size="1x"
                 className="hvr-icon"
               />
             </a>
