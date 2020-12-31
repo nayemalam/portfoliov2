@@ -53,7 +53,13 @@ const ApplauseButton = ({ url }) => {
   }, []);
 
   return (
-    <div className="applause-button" onClick={doApplause}>
+    <div
+      className="applause-button"
+      onClick={doApplause}
+      onKeyDown={doApplause}
+      role="button"
+      tabIndex="0"
+    >
       {isClapped ? '🤟 ' : '👏 '}
       {count === 1 ? <>{count} clap</> : <>{count} claps</>}
     </div>
