@@ -64,17 +64,11 @@
 
     .applause-button {
       padding: 10px;
-      border-radius: 50px;
-      border: 1px solid $defaultBlack;
       width: 150px;
       margin: 0 auto;
       text-align: center;
       cursor: pointer;
       font-size: 20px;
-
-      &:hover {
-        background-color: $mainGreen;
-      }
     }
 
     .footer {

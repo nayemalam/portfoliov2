@@ -60,8 +60,10 @@ const ApplauseButton = ({ url }) => {
       role="button"
       tabIndex="0"
     >
-      {isClapped ? '🤟 ' : '👏 '}
-      {count === 1 ? <>{count} clap</> : <>{count} claps</>}
+      <span className="hvr-bounce-in">
+        {isClapped ? '🤟 ' : '👏 '}
+        {count === 1 ? <>{count} clap</> : <>{count} claps</>}
+      </span>
     </div>
   );
 };
