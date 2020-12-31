@@ -21,7 +21,7 @@
 #### Brief:
 
 `Project start date: March 18th, 2020` <br/>
-`Project completed: June 8th, 2020 ` <br/> <br/>
+`Project completed: June 8th, 2020` <br/> <br/>
 `New portfolio:` [https://nayemalam.com](https://nayemalam.com) <br/>
 `Previous portfolio:` [https://nayemalam.github.io/portfolio](https://nayemalam.github.io/portfolio)
 
