@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import ReCAPTCHA from 'react-google-recaptcha';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
@@ -100,24 +101,25 @@ class Form extends Component {
   render() {
     const subjectOptions = [
       {
-        value: 'Hire me to speak',
+        value: 'Hire me to speak 🎤',
       },
       {
-        value: 'Need a website',
+        value: 'Website related ⚡',
       },
       {
-        value: "Let's work on a project together",
+        value: "Let's work on a project together 🚀",
       },
       {
-        value: 'Down to grab coffee?',
+        value: 'Down to grab coffee? ☕',
       },
       {
-        value: 'Volunteering opportunity',
+        value: 'Volunteering opportunity 🙏',
       },
       {
-        value: 'Other, see message below',
+        value: 'Other, see message below 🕑',
       },
     ];
+    console.log(process.env.GATSBY_SITE_RECAPTCHA_KEY);
 
     return (
       <div className="form">
@@ -174,6 +176,7 @@ class Form extends Component {
             value={this.state.message}
             onChange={this.onMessageChange}
           />
+          <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
           <Button
             type="submit"
             style={{ marginTop: '15px' }}
