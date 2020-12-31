@@ -1,35 +1,42 @@
-const sgMail = require('@sendgrid/mail');
-const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL } = process.env;
-exports.handler = async event => {
-  const payload = JSON.parse(event.body);
-  const { name, email, subject, message } = payload;
+'use strict';
 
-  sgMail.setApiKey(SENDGRID_API_KEY);
+const functions = require('firebase-functions');
+const nodemailer = require('nodemailer');
+const cors = require('cors')({ origin: true });
+const gmailEmail = functions.config().gmail.email;
+const gmailPassword = functions.config().gmail.password;
+const mcgillEmail = 'nayem.alam@mail.mcgill.ca';
 
-  const msg = {
-    to: SENDGRID_TO_EMAIL,
-    from: `${name} <${email}>`,
-    subject: subject,
-    text: message,
-    html: `
-        <p>New email from ${name} (${email}):</p> 
-        <p><strong>Message:</strong> <br/> ${message}</p>
+const mailTransport = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: gmailEmail,
+    pass: gmailPassword,
+  },
+});
+
+exports.submit = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    if (req.method !== 'POST') {
+      return;
+    }
+
+    const mailOptions = {
+      from: `${req.body.name} <${req.body.email}>`,
+      replyTo: req.body.email,
+      to: mcgillEmail,
+      subject: req.body.subject,
+      text: `${req.body.message}`,
+      html: `
+        <p>New email from ${req.body.name} (${req.body.email}):</p> 
+        <p><strong>Message:</strong> <br/> ${req.body.message}</p>
       `,
-  };
-
-  try {
-    await sgMail.send(msg);
-
-    return {
-      statusCode: 202,
-      body: 'Message sent',
     };
-  } catch (error) {
-    const statusCode = typeof error.code === 'number' ? error.code : 500;
 
-    return {
-      statusCode,
-      body: error.message,
-    };
-  }
-};
+    return mailTransport.sendMail(mailOptions).then(() => {
+      console.log('New email sent to:', mcgillEmail);
+      res.status(200).send({ isEmailSend: true });
+      return;
+    });
+  });
+});

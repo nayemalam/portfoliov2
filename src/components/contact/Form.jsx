@@ -75,35 +75,10 @@ class Form extends Component {
       message: this.state.message,
     };
 
-    // try {
-    //     const res = await fetch('/.netlify/functions/sendmail', {
-    //       method: 'POST',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body: JSON.stringify({
-    //         email,
-    //         message,
-    //       }),
-    //     });
-
-    //     if (!res.ok) {
-    //         this.setState({
-    //             sent: false,
-    //         })
-    //     } else {
-    //         this.setState({
-    //             sent: true,
-    //         })
-    //     }
-    //   } catch (e) {
-    //     this.setState({
-    //         sent: false,
-    //     })
-
-    // };
-
-    Axios.post('/.netlify/functions/index', dataToCollect)
+    Axios.post(
+      'https://us-central1-nayemalam-portfolio.cloudfunctions.net/submit',
+      dataToCollect,
+    )
       .then(response => {
         this.setState(
           {

@@ -74,5 +74,6 @@
   },
   "bugs": {
     "url": "https://github.com/nayemalam/portfoliov2/issues"
-  }
+  },
+  "proxy": "https://us-central1-nayemalam-portfolio.cloudfunctions.net/submit"
 }
