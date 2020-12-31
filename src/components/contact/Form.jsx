@@ -119,7 +119,6 @@ class Form extends Component {
         value: 'Other, see message below 🕑',
       },
     ];
-    console.log(process.env.GATSBY_SITE_RECAPTCHA_KEY);
 
     return (
       <div className="form">
@@ -176,7 +175,11 @@ class Form extends Component {
             value={this.state.message}
             onChange={this.onMessageChange}
           />
-          <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
+          {process.env.GATSBY_SITE_RECAPTCHA_KEY ? (
+            <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
+          ) : (
+            <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} />
+          )}
           <Button
             type="submit"
             style={{ marginTop: '15px' }}

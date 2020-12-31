@@ -52,6 +52,7 @@ const Category = ({ data }) => {
     metaTitle: category,
     metaDescription: `All ${category} articles`,
   };
+  console.log(articles);
 
   return (
     <Layout seo={seo}>
@@ -68,6 +69,7 @@ const Category = ({ data }) => {
                   textAlign: 'center',
                   display: 'block',
                   marginTop: '50px',
+                  marginBottom: '50px',
                 }}
               >
                 <Button variant="contained" color="primary">

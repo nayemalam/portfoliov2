@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MetaTags from '../components/metatags/MetaTags';
 import Form from '../components/contact/Form';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import Socials from '../components/socials/Socials';
 
 class Contact extends Component {
   render() {
@@ -15,6 +16,7 @@ class Contact extends Component {
 
         <HeaderDesc header={headerText} desc={descText} />
         <Form />
+        <Socials />
       </div>
     );
   }

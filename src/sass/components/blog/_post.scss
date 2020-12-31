@@ -51,7 +51,8 @@
     }
 
     .content {
-      p {
+      p,
+      ul {
         font-size: 18px;
       }
       iframe {
@@ -122,14 +123,12 @@
           }
 
           .prev-text {
-            font-size: 15px;
+            font-size: 17px;
             padding-left: 10px;
-            vertical-align: super;
           }
           .next-text {
-            font-size: 15px;
+            font-size: 17px;
             padding-right: 10px;
-            vertical-align: super;
           }
         }
       }
@@ -163,10 +162,13 @@
       }
 
       .prev-next-post {
-        .icon,
         .prev-text,
         .next-text {
-          font-size: 12px !important;
+          font-size: 14px !important;
+        }
+
+        .icon {
+          font-size: 10px !important;
         }
 
         .prev-text {

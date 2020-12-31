@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 import Markdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { ClapButton } from '@lyket/react';
 import Layout from '../layout';
 import PostAuthor from './PostAuthor';
 import PrevNextPost from './PrevNextPost';
@@ -81,7 +82,6 @@ const Post = ({ data, pageContext }) => {
           <hr />
           <div className="footer">
             <div className="author-container">
-              <PostAuthor article={article} />
               <div className="share-buttons">
                 <p>Like this post? Share it!</p>
                 <ShareButtons
@@ -90,7 +90,12 @@ const Post = ({ data, pageContext }) => {
                   twitterHandle={'nayem_wizdom'}
                 />
               </div>
-            </div>
+            </div>{' '}
+            <ClapButton
+              id={article.title}
+              namespace="post"
+              component={ClapButton.templates.Medium}
+            />
             <PrevNextPost pageContext={pageContext} />
           </div>
         </div>
