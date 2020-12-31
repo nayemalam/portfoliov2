@@ -82,7 +82,7 @@ body {
   }
 
   .customLink:hover {
-    background-color: #fff;
+    background-color: $defaultWhite;
   }
 
   .titleWithBackground {
@@ -120,7 +120,7 @@ body {
     position: absolute;
     display: none;
     left: 0;
-    background: #000000;
+    background: $defaultBlack;
     color: white;
     padding: 8px;
     z-index: 100;

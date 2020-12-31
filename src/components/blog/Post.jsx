@@ -6,9 +6,9 @@ import Markdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import Layout from '../layout';
-import PostAuthor from './PostAuthor';
 import PrevNextPost from './PrevNextPost';
 import ShareButtons from '../sharebuttons/ShareButtons';
+import ApplauseButton from '../applausebutton/ApplauseButton';
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -81,6 +81,9 @@ const Post = ({ data, pageContext }) => {
           <hr />
           <div className="footer">
             <div className="author-container">
+              <div>
+                <ApplauseButton url={url} />
+              </div>
               <div className="share-buttons">
                 <p>Like this post? Share it!</p>
                 <ShareButtons

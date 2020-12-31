@@ -29,7 +29,7 @@
 
   .inner-container {
     width: 95%;
-    background: $defaultWhite;
+    background: #fafafa;
     margin: 0 auto;
     position: relative;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -62,12 +62,23 @@
       }
     }
 
+    .applause-button {
+      padding: 10px;
+      border-radius: 50px;
+      border: 1px solid $defaultBlack;
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      cursor: pointer;
+      font-size: 20px;
+
+      &:hover {
+        background-color: $mainGreen;
+      }
+    }
+
     .footer {
       .author-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         .post-author {
           border-right: 1px solid rgba(0, 0, 0, 0.2);
           padding-right: 20px;
@@ -88,8 +99,6 @@
         }
 
         .share-buttons {
-          padding-left: 20px;
-
           p,
           div {
             text-align: center;
@@ -105,6 +114,9 @@
       }
 
       .prev-next-post {
+        margin-top: 25px;
+        padding: 10px;
+        background-color: #f0f0f0;
         display: flex;
         justify-content: space-between;
 
@@ -123,12 +135,15 @@
           }
 
           .prev-text {
-            font-size: 17px;
+            font-size: 18px;
             padding-left: 10px;
           }
           .next-text {
-            font-size: 17px;
+            font-size: 18px;
             padding-right: 10px;
+          }
+          .icon {
+            font-size: 10px;
           }
         }
       }

@@ -1,70 +1,68 @@
 .sidedrawer {
-    @include mobile-up {
-        
-        .drawerChild {
-            position: sticky;
-            top: 0;
-            height: 100%;
-        }
-
-        ul.active.open {
-            z-index: 1000;
-            padding-top: 50px;
-        }
-
-        .active {
-            position: fixed;
-            display: block;
-            background: rgb(255, 255, 255);
-            width: 50%;
-            left: 0;
-            /* top: 0; */
-            height: 100%;
-            padding-top: 100px;
-            -webkit-box-shadow: 6px 2px 5px 0px rgba(0,0,0,0.25);
-            -moz-box-shadow: 6px 2px 5px 0px rgba(0,0,0,0.25);
-            box-shadow: 6px 2px 5px 0px rgba(0,0,0,0.25);
-        }
-        
-        ul.social-links.active.open>li {
-            display: inline;
-            padding-left: 10px;
-        }
-
-        ul.social-links li a {
-            color: #43C6AC;
-        }
-        
-        ul.social-links li a:hover {
-            color: #000;
-        }
-        
-        ul.social-links.active.open {
-            z-index: 1001;
-            height: inherit;
-            box-shadow: none;
-            padding-bottom: 20px;
-            padding-left: 1rem;
-            width: inherit;
-            top: 500px;
-        }
-        ul {
-            display: none;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        ul li a.nav-link {
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.8em;
-            font-weight: bold;
-            display: block;
-            padding: 1.5em 3em;
-            background-color: rgba(255, 255, 255, 0.397);
-            color: #000;
-        }
+  @include mobile-up {
+    .drawerChild {
+      position: sticky;
+      top: 0;
+      height: 100%;
     }
-   
+
+    ul.active.open {
+      z-index: 1000;
+      padding-top: 50px;
+    }
+
+    .active {
+      position: fixed;
+      display: block;
+      background: rgb(255, 255, 255);
+      width: 50%;
+      left: 0;
+      /* top: 0; */
+      height: 100%;
+      padding-top: 100px;
+      -webkit-box-shadow: 6px 2px 5px 0px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 6px 2px 5px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 6px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    ul.social-links.active.open > li {
+      display: inline;
+      padding-left: 10px;
+    }
+
+    ul.social-links li a {
+      color: #43c6ac;
+    }
+
+    ul.social-links li a:hover {
+      color: $defaultBlack;
+    }
+
+    ul.social-links.active.open {
+      z-index: 1001;
+      height: inherit;
+      box-shadow: none;
+      padding-bottom: 20px;
+      padding-left: 1rem;
+      width: inherit;
+      top: 500px;
+    }
+    ul {
+      display: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li a.nav-link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: bold;
+      display: block;
+      padding: 1.5em 3em;
+      background-color: rgba(255, 255, 255, 0.397);
+      color: $defaultBlack;
+    }
+  }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import ReCAPTCHA from 'react-google-recaptcha';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import TelegramIcon from '@material-ui/icons/Telegram';
@@ -122,7 +121,7 @@ class Form extends Component {
 
     return (
       <div className="form">
-        <form onSubmit={this.handleSubmit} data-netlify-recaptcha="true">
+        <form onSubmit={this.handleSubmit}>
           <div style={{ display: 'flex' }}>
             <TextField
               // style={{display: 'block',width: '50%'}}
@@ -175,12 +174,6 @@ class Form extends Component {
             value={this.state.message}
             onChange={this.onMessageChange}
           />
-          <div data-netlify-recaptcha="true"></div>
-          {process.env.SITE_RECAPTCHA_KEY ? (
-            <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} />
-          ) : (
-            <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
-          )}
           <Button
             type="submit"
             style={{ marginTop: '15px' }}
