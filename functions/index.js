@@ -2,15 +2,19 @@ const sgMail = require('@sendgrid/mail');
 const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL } = process.env;
 exports.handler = async event => {
   const payload = JSON.parse(event.body);
-  const { email, message } = payload;
+  const { name, email, subject, message } = payload;
 
   sgMail.setApiKey(SENDGRID_API_KEY);
 
   const msg = {
     to: SENDGRID_TO_EMAIL,
-    from: email,
-    subject: `New message from yourdomain.com`,
+    from: `${name} <${email}>`,
+    subject: subject,
     text: message,
+    html: `
+        <p>New email from ${name} (${email}):</p> 
+        <p><strong>Message:</strong> <br/> ${message}</p>
+      `,
   };
 
   try {
