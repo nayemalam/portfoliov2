@@ -5,6 +5,14 @@
     font-size: 60px;
     margin: 0;
   }
+
+  .not-found-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 @include mobile-up {

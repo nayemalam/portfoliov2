@@ -1,8 +1,8 @@
 import React from 'react';
-import { MenuItem, MenuList } from '@material-ui/core';
-import { socialItems } from '../../data/NavigationItems';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Img from 'gatsby-image';
+import { MenuItem, MenuList } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { socialItems } from '../../data/NavigationItems';
 
 const PostAuthor = ({ article }) => {
   return (

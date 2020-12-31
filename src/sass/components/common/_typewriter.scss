@@ -5,7 +5,7 @@
   text-align: center;
   position: relative;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 20px;
 
   .dynamicText {
     position: relative;
@@ -43,7 +43,8 @@
 @include mobile-up {
   .typewriter {
     font-size: 20px;
-    margin-top: 5%;
+    margin-top: 10%;
+    margin-bottom: 12%;
 
     .staticText {
       font-size: 30px;

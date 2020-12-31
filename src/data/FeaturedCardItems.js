@@ -1,21 +1,21 @@
 const featuredCardItems = [
   {
-    title: 'Current Life in a Nutshell',
-    url: '/blog/life',
+    title: 'Life in a Nutshell',
+    url: '/blog/post/life/',
     backgroundImage: {
       backgroundImage: `url(${require('../images/misc/life.jpg')})`,
     },
   },
   {
     title: 'Blog Posts',
-    url: '/blog',
+    url: '/blog/',
     backgroundImage: {
       backgroundImage: `url(${require('../images/misc/book.jpg')})`,
     },
   },
   {
     title: 'Uses',
-    url: '/blog/uses',
+    url: '/blog/post/uses/',
     backgroundImage: {
       backgroundImage: `url(${require('../images/misc/chess.jpg')})`,
     },

@@ -11,13 +11,12 @@ import FavQuotes from '../components/about/FavQuotes';
 
 class About extends Component {
   render() {
-
     const headerText = 'Hello World';
     const descText = '';
     return (
-      <div className='about container'>
-        <MetaTags title='Who Am I? | Nayem Alam' />
-        
+      <div className="about container">
+        <MetaTags title="Who Am I? | Nayem Alam" />
+
         <HeaderDesc header={headerText} desc={descText} />
         <Description />
         <WorkExperience />
@@ -25,9 +24,13 @@ class About extends Component {
         <Awards />
         <FavQuotes />
         {/* <UsefulData /> */}
-        <EditPage link={'https://github.com/nayemalam/portfoliov2/blob/dev/src/pages/about.jsx'} />
+        <EditPage
+          link={
+            'https://github.com/nayemalam/portfoliov2/blob/dev/src/pages/about.jsx'
+          }
+        />
       </div>
-    )
+    );
   }
 }
 

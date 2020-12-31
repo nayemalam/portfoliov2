@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
-import Moment from 'react-moment';
 import CalendarToday from '@material-ui/icons/CalendarToday';
+import Moment from 'react-moment';
 
 const ArticleCard = ({ article }) => {
   return (

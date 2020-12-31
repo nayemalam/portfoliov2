@@ -1,19 +1,8 @@
-import { Grid } from '@material-ui/core';
 import React from 'react';
+import { Grid } from '@material-ui/core';
 import ArticleCard from './ArticleCard';
 
 const Articles = ({ articles }) => {
-  // const featuredArticles = articles.slice(articles.length - 2, articles.length);
-  // const allArticles = articles.slice(0, articles.length - 2);
-
-  // const sortedArticles = articles.sort((a, b) =>
-  //   a.node.publishedAt < b.node.publishedAt
-  //     ? 1
-  //     : a.node.publishedAt > b.node.publishedAt
-  //     ? -1
-  //     : 0,
-  // );
-
   return (
     <div className="articles">
       <Grid container spacing={5} data-aos="fade">

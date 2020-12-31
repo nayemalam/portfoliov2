@@ -1,5 +1,6 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import { Button } from '@material-ui/core';
 import Articles from './Articles';
 import Layout from '../layout';
 
@@ -57,7 +58,33 @@ const Category = ({ data }) => {
       <div className="category container">
         <div className="uk-container uk-container-large">
           <h1> Category - {category}</h1>
-          <Articles articles={articles} />
+          {articles.length > 0 ? (
+            <div>
+              <Articles articles={articles} />
+              <Link
+                to="/blog/"
+                style={{
+                  textDecoration: 'none',
+                  textAlign: 'center',
+                  display: 'block',
+                  marginTop: '50px',
+                }}
+              >
+                <Button variant="contained" color="primary">
+                  Back to all posts
+                </Button>
+              </Link>
+            </div>
+          ) : (
+            <div className="not-found-message">
+              <h1>No articles within this category (yet).</h1>
+              <Link to="/blog/" style={{ textDecoration: 'none' }}>
+                <Button variant="contained" color="primary">
+                  Back to all posts
+                </Button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </Layout>

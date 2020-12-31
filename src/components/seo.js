@@ -70,12 +70,11 @@ const SEO = ({ seo = {} }) => {
   };
 
   const metaTags = getMetaTags();
-  // end blog SEO
 
   return (
     <Helmet
       title={fullSeo.metaTitle}
-      titleTemplate={`%s | ${siteName}`}
+      // titleTemplate={`%s | ${siteName}`}
       link={[
         {
           rel: 'icon',

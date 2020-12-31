@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import Moment from 'react-moment';
-import Layout from '../layout';
 import Markdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
+import Layout from '../layout';
 import PostAuthor from './PostAuthor';
 import PrevNextPost from './PrevNextPost';
 import ShareButtons from '../sharebuttons/ShareButtons';
@@ -23,7 +23,7 @@ export const query = graphql`
       image {
         publicURL
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -32,7 +32,9 @@ export const query = graphql`
         name
         picture {
           childImageSharp {
-            fixed(width: 50, height: 50) {
+            fixed(width: 50, height: 50, quality: 100) {
+              width
+              height
               src
             }
           }
