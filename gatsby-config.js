@@ -107,6 +107,5 @@ module.exports = {
         prefix: `gatsby-source-cloudinary/`,
       },
     },
-    `gatsby-plugin-emotion`,
   ],
 };

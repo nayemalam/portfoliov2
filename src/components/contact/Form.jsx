@@ -122,7 +122,7 @@ class Form extends Component {
 
     return (
       <div className="form">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} data-netlify-recaptcha="true">
           <div style={{ display: 'flex' }}>
             <TextField
               // style={{display: 'block',width: '50%'}}
@@ -175,10 +175,11 @@ class Form extends Component {
             value={this.state.message}
             onChange={this.onMessageChange}
           />
-          {process.env.GATSBY_SITE_RECAPTCHA_KEY ? (
-            <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
-          ) : (
+          <div data-netlify-recaptcha="true"></div>
+          {process.env.SITE_RECAPTCHA_KEY ? (
             <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} />
+          ) : (
+            <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
           )}
           <Button
             type="submit"

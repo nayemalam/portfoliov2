@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import { Provider as LyketProvider } from '@lyket/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 /* component imports */
@@ -47,7 +46,6 @@ const Layout = ({ children, seo }) => {
       {/* site elements */}
       <SEO seo={seo} />
       <NavigationBar />
-      <LyketProvider apiKey={process.env.LYKET_KEY} />
       {children}
     </div>
   );
