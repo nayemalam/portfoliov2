@@ -12,7 +12,7 @@
 
 #### Changelog(s):
 
-- December 31: Using Netlify for hosting, firebase functions for emails, Strapi for blogging, graphql for querying posts and categories
+- December 31: Using Netlify for hosting, firebase functions for emails, Strapi for blogging (hosted on heroku), graphql for querying posts and categories
 - December 29: Migrated from npm to yarn completely
 - December 28, 2020: Removed firebase and travis builds
 - July 21, 2020: Upgraded to Blaze plan
