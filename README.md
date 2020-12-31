@@ -1,4 +1,4 @@
-# Welcome to my Portfolio2.0 🚀 [![Build Status](https://travis-ci.com/nayemalam/portfoliov2.svg?token=aYqsUyzyzydDXmyhz8yW&branch=master)](https://travis-ci.com/nayemalam/portfoliov2)
+# Welcome to my Portfolio2.0 🚀 [![Netlify Status](https://api.netlify.com/api/v1/badges/31c0e7d0-1c58-4965-b211-4470dc9c11d0/deploy-status)](https://app.netlify.com/sites/nayemalam-portfolio/deploys)
 
 ### Lighthouse Speed Test
 
@@ -12,6 +12,7 @@
 
 #### Changelog(s):
 
+- December 31: Using Netlify for hosting, firebase functions for emails, Strapi for blogging, graphql for querying posts and categories
 - December 29: Migrated from npm to yarn completely
 - December 28, 2020: Removed firebase and travis builds
 - July 21, 2020: Upgraded to Blaze plan
