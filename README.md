@@ -12,6 +12,7 @@
 
 #### Changelog(s):
 
+- December 29: Migrated from npm to yarn completely
 - December 28, 2020: Removed firebase and travis builds
 - July 21, 2020: Upgraded to Blaze plan
 - June 29, 2020: Updated functions node 8 to node 10

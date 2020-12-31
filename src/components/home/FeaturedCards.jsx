@@ -1,70 +1,50 @@
-import { Link } from 'gatsby'
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
+import { Grid } from '@material-ui/core';
+import featuredCardItems from '../../data/FeaturedCardItems';
 
 class FeaturedCards extends Component {
   render() {
+    const [xs, sm, md, lg, xl] = [6, 6, 3, 3, 3];
+
     return (
       <div className="featured-cards">
         <div className="container-lg">
-          <div className="card">
-            <Link to="/">
-              <div
-                className="cover"
-                style={{
-                  backgroundImage: `url(${require('../../images/misc/life.jpg')})`,
-                }}
-              >
-                <h1 className="title">Current Life in a Nutshell</h1>
+          <Grid container spacing={5} data-aos="fade">
+            {featuredCardItems.map((item, i) => (
+              <Grid key={i} item xs={xs} sm={sm} md={md} lg={lg} xl={xl}>
+                <div className="card">
+                  <Link to={item.url}>
+                    <div className="cover" style={item.backgroundImage}>
+                      <h1 className="title">{item.title}</h1>
+                    </div>
+                  </Link>
+                </div>
+              </Grid>
+            ))}
+            <Grid item xs={xs} sm={sm} md={md} lg={lg} xl={xl}>
+              <div className="card">
+                <a
+                  href="https://www.youtube.com/techtutorialsz"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div
+                    className="cover"
+                    style={{
+                      backgroundImage: `url(${require('../../images/misc/laptop.jpg')})`,
+                    }}
+                  >
+                    <h1 className="title">YouTube Channel</h1>
+                  </div>
+                </a>
               </div>
-            </Link>
-          </div>
-
-          <div className="card">
-            <Link to="/uses">
-              <div
-                className="cover"
-                style={{
-                  backgroundImage: `url(${require('../../images/misc/book.jpg')})`,
-                }}
-              >
-                <h1 className="title">Blog Posts</h1>
-              </div>
-            </Link>
-          </div>
-
-          <div className="card">
-            <Link to="/">
-              <div
-                className="cover"
-                style={{
-                  backgroundImage: `url(${require('../../images/misc/chess.jpg')})`,
-                }}
-              >
-                <h1 className="title">Uses</h1>
-              </div>
-            </Link>
-          </div>
-
-          <div className="card">
-            <a
-              href="https://www.youtube.com/techtutorialsz"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className="cover"
-                style={{
-                  backgroundImage: `url(${require('../../images/misc/laptop.jpg')})`,
-                }}
-              >
-                <h1 className="title">YouTube Channel</h1>
-              </div>
-            </a>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default FeaturedCards
+export default FeaturedCards;

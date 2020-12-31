@@ -7,9 +7,6 @@
   align-items: center;
 
   .container-lg {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
     width: 100%;
     max-width: 1200px;
     padding: 30px;
@@ -68,7 +65,7 @@
           text-align: center;
           display: table-cell;
           vertical-align: middle;
-          text-shadow: 2px 2px #000;
+          text-shadow: 2px 2px $defaultBlack;
         }
       }
 
@@ -102,15 +99,21 @@
         transform: rotateX(7deg) translateY(-6px) scale(1.05);
       }
     }
-
-    @include mobile-down {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 }
 
 @include mobile-up {
   .featured-cards {
     margin-top: -40px;
+
+    .container-lg {
+      .card {
+        .cover {
+          .title {
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
 }
