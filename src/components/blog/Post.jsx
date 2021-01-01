@@ -88,6 +88,7 @@ const Post = ({ data, pageContext }) => {
                   url={url}
                   title={article.title}
                   twitterHandle={'nayem_wizdom'}
+                  media={article.image}
                 />
               </div>
             </div>
