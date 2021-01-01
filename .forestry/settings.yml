@@ -25,9 +25,14 @@ front_matter_path: ''
 use_front_matter_path: true
 file_template: ":filename:"
 build:
+  preview_env:
+  - API_URL=https://nayem-blog-backend.herokuapp.com
+  - CLOUDINARY_API_KEY=514449117963338
+  - CLOUDINARY_API_SECRET=hVNBpmJSdpslW43XvIAecR5Efug
+  - CLOUDINARY_CLOUD_NAME=nayemalam-com
   preview_output_directory: public
-  install_dependencies_command: npm install
+  install_dependencies_command: yarn
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: yarn develop
