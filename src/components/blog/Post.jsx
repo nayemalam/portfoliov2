@@ -8,7 +8,7 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 import Layout from '../layout';
 import PrevNextPost from './PrevNextPost';
 import ShareButtons from '../sharebuttons/ShareButtons';
-import ApplauseButton from '../applausebutton/ApplauseButton';
+import ClapButton from '../clapbutton/ClapButton';
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -81,9 +81,7 @@ const Post = ({ data, pageContext }) => {
           <hr />
           <div className="footer">
             <div className="author-container">
-              <div>
-                <ApplauseButton url={url} />
-              </div>
+              <ClapButton slug={article.slug} />
               <div className="share-buttons">
                 <p>Like this post? Share it!</p>
                 <ShareButtons
