@@ -19,10 +19,10 @@ sections:
 - type: document
   path: author
   label: Author
-upload_dir: backend/uploads
-public_path: backend/uploads
+upload_dir: blog
+public_path: https://res.cloudinary.com/nayemalam-com/image/upload
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_output_directory: public
