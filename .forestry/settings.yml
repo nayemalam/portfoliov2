@@ -11,6 +11,15 @@ sections:
   label: Posts
   create: all
   match: "**/*"
+- type: directory
+  path: categories
+  label: Categories
+  create: all
+  match: "**/*"
+- type: document
+  path: author
+  label: Author
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
