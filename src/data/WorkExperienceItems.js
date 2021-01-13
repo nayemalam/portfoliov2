@@ -1,6 +1,18 @@
-import React from "react"
-import { faCode, faCapsules, faGlobe } from "@fortawesome/free-solid-svg-icons"
-import ShowHideButton from "../components/showhidebutton/ShowHideButton"
+import React from 'react';
+import { faCode, faCapsules, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import ShowHideButton from '../components/showhidebutton/ShowHideButton';
+
+const RIWDesc = (
+  <ul>
+    <li>Implemented Firestore pagination (next, prev)</li>
+    <li>Implement on page edits onSnapshotListener without reload</li>
+    <li>
+      Set up bootstrapped ReactJS project structure (including redux, thunk &
+      auth)
+    </li>
+    <li>UI updates: form validations, code cleanup, custom buttons</li>
+  </ul>
+);
 
 const fundmoreDesc = (
   <ul>
@@ -15,7 +27,7 @@ const fundmoreDesc = (
     <li>Created two important features for an MVP release</li>
     <li>Learned how to use the NGXS store to store and retrieve data</li>
   </ul>
-)
+);
 
 const moneyLionDesc = (
   <ul>
@@ -33,7 +45,7 @@ const moneyLionDesc = (
       words into account and assigns a score based on position
     </li>
   </ul>
-)
+);
 
 const pharmaDesc = (
   <span>
@@ -41,7 +53,7 @@ const pharmaDesc = (
       <u>Web Developer Intern</u> <span className="subDate">(Aug. - Oct.)</span>
       <li>
         Built new websites for clients in different departments (including
-        PENDOPHARM) –{" "}
+        PENDOPHARM) –{' '}
         <a
           href="https://pendopharm-gi.com/"
           rel="noopener noreferrer"
@@ -73,8 +85,8 @@ const pharmaDesc = (
       </li>
       <li>
         Created an excel database with all the websites currently under both
-        companies including their provider, registrar, IP, NS Records using{" "}
-        <span className="customLink">Pivot tables</span> and{" "}
+        companies including their provider, registrar, IP, NS Records using{' '}
+        <span className="customLink">Pivot tables</span> and{' '}
         <span className="customLink">VBA</span> to streamline process
       </li>
       <li>
@@ -84,104 +96,120 @@ const pharmaDesc = (
       </li>
     </ul>
   </span>
-)
+);
 
 const otherDesc = (
   <ul>
     <li>
-      Specialized Math Tutor{" "}
+      Specialized Math Tutor{' '}
       <span className="subDate">
         (Oct. 2015 - Jan 2018) @ Tyndale St-Georges
       </span>
     </li>
     <li>
-      Brand Ambassador / Sales Associate{" "}
+      Brand Ambassador / Sales Associate{' '}
       <span className="subDate">(May - Aug. 2017) @ Banana Republic</span>
     </li>
     <li>
-      Cashier{" "}
+      Cashier{' '}
       <span className="subDate">
         (May - Sep. 2017) @ McDonalds Gare Centrale
       </span>
     </li>
     <li>
-      Academic Tutor{" "}
+      Academic Tutor{' '}
       <span className="subDate">(Sep. 2016 - Jan 2017) @ Liberty Tutoring</span>
     </li>
     <li>
-      Math Tutor{" "}
+      Math Tutor{' '}
       <span className="subDate">
         (Dec. 2015 - July 2016) @ English Montreal School Board
       </span>
     </li>
   </ul>
-)
+);
 
 const workItems = [
   {
     icon: faCode,
-    date: "June - September 2020",
-    name: "fundmore.ai",
-    location: "Ottawa, ON",
-    role: "Fullstack Developer",
+    date: 'September - December 2020',
+    name: 'ReInvestWealth',
+    location: 'Montréal, QC',
+    role: 'Software Developer',
     desc: (
       <ShowHideButton
-        btnclass={"readmore-info"}
-        txtclass={"info"}
-        readLessText={"read less"}
-        readMoreText={"read more"}
+        btnclass={'readmore-info'}
+        txtclass={'info'}
+        readLessText={'read less'}
+        readMoreText={'read more'}
+        text={RIWDesc}
+      ></ShowHideButton>
+    ),
+  },
+  {
+    icon: faCode,
+    date: 'June - September 2020',
+    name: 'fundmore.ai',
+    location: 'Ottawa, ON',
+    role: 'Fullstack Developer',
+    desc: (
+      <ShowHideButton
+        btnclass={'readmore-info'}
+        txtclass={'info'}
+        readLessText={'read less'}
+        readMoreText={'read more'}
         text={fundmoreDesc}
       ></ShowHideButton>
     ),
   },
   {
     icon: faCode,
-    date: "May - August 2019",
-    name: "MoneyLion",
-    location: "Kuala Lumpur, Malaysia",
-    role: "AI Engineer (Intern)",
+    date: 'May - August 2019',
+    name: 'MoneyLion',
+    location: 'Kuala Lumpur, Malaysia',
+    role: 'AI Engineer (Intern)',
     desc: (
       <ShowHideButton
-        btnclass={"readmore-info"}
-        txtclass={"info"}
-        readLessText={"read less"}
-        readMoreText={"read more"}
+        btnclass={'readmore-info'}
+        txtclass={'info'}
+        readLessText={'read less'}
+        readMoreText={'read more'}
         text={moneyLionDesc}
       ></ShowHideButton>
     ),
   },
   {
     icon: faCapsules,
-    date: "May - August, August - October 2018",
-    name: "Pharmascience",
-    location: "Montréal, QC",
-    role: "Sharepoint Analyst | Web Developer Intern",
+    date: 'May - August, August - October 2018',
+    name: 'Pharmascience',
+    location: 'Montréal, QC',
+    role: 'Sharepoint Analyst | Web Developer Intern',
     desc: (
       <ShowHideButton
-        btnclass={"readmore-info"}
-        txtclass={"info"}
-        readLessText={"read less"}
-        readMoreText={"read more"}
+        btnclass={'readmore-info'}
+        txtclass={'info'}
+        readLessText={'read less'}
+        readMoreText={'read more'}
         text={pharmaDesc}
       ></ShowHideButton>
     ),
   },
   {
     icon: faGlobe,
-    date: "",
+    date: '',
     name: "Other places I've worked at",
-    location: "Montréal, QC",
-    role: "",
+    location: 'Montréal, QC',
+    role: '',
     desc: (
       <ShowHideButton
-        btnclass={"readmore-info"}
-        txtclass={"info"}
-        readLessText={"read less"}
-        readMoreText={"read more"}
+        btnclass={'readmore-info'}
+        txtclass={'info'}
+        readLessText={'read less'}
+        readMoreText={'read more'}
         text={otherDesc}
       ></ShowHideButton>
     ),
   },
-]
+];
 
-export default workItems
+export default workItems;
