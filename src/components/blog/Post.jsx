@@ -1,103 +1,71 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
-import Moment from 'react-moment';
-import Markdown from 'react-markdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
-import Layout from '../layout';
-import PrevNextPost from './PrevNextPost';
-import ShareButtons from '../sharebuttons/ShareButtons';
-import ClapButton from '../clapbutton/ClapButton';
+import Seo from './seo';
+import MetaSeo from '../seo';
+import { graphql } from 'gatsby';
+// New Tina Import!
+import { remarkForm } from 'gatsby-tinacms-remark';
+
+const Post = ({ location, data }) => {
+  const {
+    category,
+    date,
+    dateOriginal,
+    author,
+    title,
+    slug,
+    metaDescription,
+  } = data.post.frontmatter;
+  const content = data.post.html;
+
+  console.log(data);
+  return (
+    <div>
+      <Seo
+        slug={slug}
+        title={title}
+        date={dateOriginal}
+        description={metaDescription}
+        author={author}
+      />
+      <MetaSeo title={title} description={metaDescription} />
+      <div className="post container">
+        {author} in {category}
+      </div>
+    </div>
+  );
+};
 
 export const query = graphql`
-  query ArticleQuery($slug: String!) {
-    strapiArticle(slug: { eq: $slug }, status: { eq: "published" }) {
-      strapiId
-      title
-      description
-      content
-      publishedAt
-      slug
-      readTime
-      image {
-        publicURL
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      author {
-        name
-        picture {
+  query($slug: String!) {
+    post: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        date(formatString: "MMM Do, YYYY")
+        dateOriginal: date
+        category
+        author
+        title
+        metaDescription
+        slug
+        postImage {
           childImageSharp {
-            fixed(width: 50, height: 50, quality: 100) {
-              width
-              height
-              src
+            fluid {
+              ...GatsbyImageSharpFluid
             }
           }
         }
+      }
+      # Tina uses additional, specialized query data.
+      # Add the required data using this GraphQL fragment.
+      ...TinaRemark
+    }
+    date: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        date
       }
     }
   }
 `;
 
-const Post = ({ data, pageContext }) => {
-  const article = data.strapiArticle;
-  const seo = {
-    metaTitle: article.title,
-    metaDescription: article.description,
-    shareImage: article.image,
-    article: true,
-  };
-
-  const url = typeof window !== 'undefined' ? window.location.href : '';
-
-  return (
-    <Layout seo={seo}>
-      <div className="post container">
-        <Img
-          className="cover-image"
-          fluid={article.image.childImageSharp.fluid}
-          imgStyle={{ objectFit: 'cover', objectPosition: '50% 50%' }}
-        />
-        <span className="all-posts-button">
-          <Link to="/blog">Back to all posts</Link>
-        </span>
-
-        <div className="inner-container">
-          <h1 className="title">{article.title}</h1>
-          <p className="sub-description">
-            Published on{' '}
-            <Moment format="Do MMM YYYY">{article.publishedAt}</Moment> -{' '}
-            <FontAwesomeIcon className="icon-bullet" icon={faClock} size="sm" />{' '}
-            {article.readTime} min read
-          </p>
-          <div className="content">
-            <Markdown source={article.content} escapeHtml={false} />
-          </div>
-          <hr />
-          <div className="footer">
-            <div className="author-container">
-              <ClapButton slug={article.slug} />
-              <div className="share-buttons">
-                <p>Like this post? Share it!</p>
-                <ShareButtons
-                  url={url}
-                  title={article.title}
-                  twitterHandle={'nayem_wizdom'}
-                  media={article.media}
-                />
-              </div>
-            </div>
-            <PrevNextPost pageContext={pageContext} />
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
-};
-
-export default Post;
+// Pass in the component to wrap and configuration object
+export default remarkForm(Post, { queryName: 'post' });

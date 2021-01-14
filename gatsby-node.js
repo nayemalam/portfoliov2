@@ -1,89 +1,100 @@
-exports.createPages = async ({ graphql, actions }) => {
+const path = require('path');
+
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const result = await graphql(
-    `
-      {
-        articles: allStrapiArticle {
-          edges {
-            node {
-              title
-              strapiId
-              slug
+
+  return new Promise((resolve, reject) => {
+    resolve(
+      graphql(
+        `
+          {
+            allPosts: allMarkdownRemark(
+              filter: { frontmatter: { type: { eq: "post" } } }
+              sort: { fields: frontmatter___date, order: DESC }
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    slug
+                  }
+                }
+              }
+              group(field: frontmatter___category) {
+                fieldValue
+                edges {
+                  node {
+                    frontmatter {
+                      slug
+                    }
+                  }
+                }
+              }
             }
           }
+        `,
+      ).then(result => {
+        if (result.errors) {
+          reject(result.errors);
         }
-        categories: allStrapiCategory {
-          edges {
-            node {
-              strapiId
-              slug
-            }
-          }
-        }
-      }
-    `,
-  );
+        const allPosts = result.data.allPosts.edges;
+        const groupedPosts = result.data.allPosts.group;
+        // const paginationTemplate = path.resolve('./src/pages/blog.jsx');
+        const postsPerPage = 10;
+        let numPages = Math.ceil(allPosts.length / postsPerPage);
 
-  if (result.errors) {
-    throw result.errors;
-  }
+        // // Creating the main blog index
+        // Array.from({ length: numPages }).forEach((_, i) => {
+        //   createPage({
+        //     path: i === 0 ? '/blog' : `/blog/${i + 1}`,
+        //     component: paginationTemplate,
+        //     context: {
+        //       limit: postsPerPage,
+        //       skip: i * postsPerPage,
+        //       nextPage: `/blog/${i + 2}`,
+        //       pageNumber: i + 1,
+        //     },
+        //   });
+        // });
 
-  // Create blog articles pages.
-  const articles = result.data.articles.edges;
-  const categories = result.data.categories.edges;
+        // Creating all category pages.
+        let category;
+        let categoryPosts;
+        const categoryTemplate = path.resolve(
+          './src/components/blog/Category.jsx',
+        );
+        groupedPosts.forEach((group, _) => {
+          category = group.fieldValue;
+          categoryPosts = group.edges;
+          numPages = Math.ceil(categoryPosts.length / postsPerPage);
+          Array.from({ length: numPages }).forEach((_, i) => {
+            createPage({
+              path: i === 0 ? `/${category}` : `/${category}/${i + 1}`,
+              component: categoryTemplate,
+              context: {
+                limit: postsPerPage,
+                skip: i * postsPerPage,
+                nextPage: `/${category}/${i + 2}`,
+                pageNumber: i + 1,
+                category: category,
+              },
+            });
+          });
+        });
 
-  const ArticleTemplate = require.resolve('./src/components/blog/Post.jsx');
-
-  articles.forEach((article, index) => {
-    createPage({
-      path: `/blog/post/${article.node.slug}`,
-      component: ArticleTemplate,
-      context: {
-        slug: article.node.slug,
-        prev: index === articles.length - 1 ? null : articles[index + 1].node,
-        next: index === 0 ? null : articles[index - 1].node,
-      },
-      index,
-    });
+        // Create all the blog post pages.
+        const template = path.resolve('./src/components/blog/Post.jsx');
+        allPosts.forEach(({ node }) => {
+          let slug = `blog/posts/${node.frontmatter.slug}`;
+          console.log(slug);
+          createPage({
+            path: slug,
+            component: template,
+            context: {
+              slug,
+            },
+          });
+        });
+      }),
+    );
   });
-
-  const CategoryTemplate = require.resolve(
-    './src/components/blog/Category.jsx',
-  );
-
-  categories.forEach((category, index) => {
-    createPage({
-      path: `/blog/category/${category.node.slug}`,
-      component: CategoryTemplate,
-      context: {
-        slug: category.node.slug,
-      },
-    });
-  });
-};
-
-module.exports.onCreateNode = async ({ node, actions, createNodeId }) => {
-  const crypto = require(`crypto`);
-
-  if (node.internal.type === 'StrapiArticle') {
-    const newNode = {
-      id: createNodeId(`StrapiArticleContent-${node.id}`),
-      parent: node.id,
-      children: [],
-      internal: {
-        content: node.content || ' ',
-        type: 'StrapiArticleContent',
-        mediaType: 'text/markdown',
-        contentDigest: crypto
-          .createHash('md5')
-          .update(node.content || ' ')
-          .digest('hex'),
-      },
-    };
-    actions.createNode(newNode);
-    actions.createParentChildLink({
-      parent: node,
-      child: newNode,
-    });
-  }
 };

@@ -1,16 +1,14 @@
 /* external imports */
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 /* component imports */
-import SEO from './seo';
 import NavigationBar from './navigationbar/NavigationBar';
 /* internal css */
 import '../sass/global.scss';
 
-const Layout = ({ children, seo }) => {
+const Layout = ({ children }) => {
   // trigger for landscape devices
   useEffect(() => {
     AOS.init();
@@ -44,7 +42,6 @@ const Layout = ({ children, seo }) => {
       </Helmet>
 
       {/* site elements */}
-      <SEO seo={seo} />
       <NavigationBar />
       {children}
     </div>
@@ -52,7 +49,3 @@ const Layout = ({ children, seo }) => {
 };
 
 export default Layout;
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};

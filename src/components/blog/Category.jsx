@@ -1,96 +1,55 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import { Button } from '@material-ui/core';
-import Articles from './Articles';
-import Layout from '../layout';
+import { Link, graphql } from 'gatsby';
+import MetaSeo from '../seo';
 
-export const query = graphql`
-  query Category($slug: String!) {
-    articles: allStrapiArticle(
-      filter: { status: { eq: "published" }, category: { slug: { eq: $slug } } }
+export default class BlogIndex extends React.Component {
+  render() {
+    const posts = this.props.data.posts.edges;
+    const hasNext = this.props.data.posts.pageInfo.hasNextPage;
+    const category = this.props.pageContext.category;
+
+    console.log(category, hasNext, posts);
+    return (
+      <div className="category container">
+        <MetaSeo
+          title={`Posts Tagged ${category} - Page ${this.props.pageContext.pageNumber}`}
+        />
+      </div>
+    );
+  }
+}
+
+export const blogListQuery = graphql`
+  query categoryPosts($skip: Int!, $limit: Int!, $category: String!) {
+    posts: allMarkdownRemark(
+      filter: {
+        frontmatter: { type: { eq: "post" }, category: { eq: $category } }
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
-          slug
-          title
-          description
-          category {
+          frontmatter {
+            title
+            date(formatString: "MMM Do YYYY")
+            category
+            metaDescription
             slug
-            name
-          }
-          image {
-            childImageSharp {
-              fixed(width: 660) {
-                src
-              }
-            }
-          }
-          author {
-            name
-            picture {
+            postImage {
               childImageSharp {
-                fixed(width: 30, height: 30) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 1080, maxHeight: 512) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
           }
         }
       }
-    }
-    category: strapiCategory(slug: { eq: $slug }) {
-      slug
-      name
+      pageInfo {
+        hasNextPage
+      }
     }
   }
 `;
-
-const Category = ({ data }) => {
-  const articles = data.articles.edges;
-  const category = data.category.name;
-  const seo = {
-    metaTitle: category,
-    metaDescription: `All ${category} articles`,
-  };
-  console.log(articles);
-
-  return (
-    <Layout seo={seo}>
-      <div className="category container">
-        <div className="uk-container uk-container-large">
-          <h1> Category - {category}</h1>
-          {articles.length > 0 ? (
-            <div>
-              <Articles articles={articles} />
-              <Link
-                to="/blog/"
-                style={{
-                  textDecoration: 'none',
-                  textAlign: 'center',
-                  display: 'block',
-                  marginTop: '50px',
-                  marginBottom: '50px',
-                }}
-              >
-                <Button variant="contained" color="primary">
-                  Back to all posts
-                </Button>
-              </Link>
-            </div>
-          ) : (
-            <div className="not-found-message">
-              <h1>No articles within this category (yet).</h1>
-              <Link to="/blog/" style={{ textDecoration: 'none' }}>
-                <Button variant="contained" color="primary">
-                  Back to all posts
-                </Button>
-              </Link>
-            </div>
-          )}
-        </div>
-      </div>
-    </Layout>
-  );
-};
-
-export default Category;

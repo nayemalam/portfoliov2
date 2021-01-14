@@ -40,6 +40,8 @@ module.exports = {
     siteUrl: `https://nayemalam.com`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -48,8 +50,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'content',
+        path: `${__dirname}/content`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -87,15 +94,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: process.env.API_URL || 'http://localhost:1337',
-        contentTypes: ['article', 'category', 'writer'],
-        singleTypes: [`homepage`, `global`],
-        queryLimit: 1000,
-      },
-    },
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-cloudinary`,
@@ -116,6 +114,37 @@ module.exports = {
           projectId: process.env.FIREBASE_PROJECT_ID || 'none',
           appId: process.env.FIREBASE_APPID || 'none',
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-tinacms`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-tinacms-git`,
+            options: {
+              enabled: process.env.NODE_ENV !== 'production',
+              sidebar: true,
+              defaultCommitMessage: `Custom Commit Message`, // Change this!
+              pushOnCommit: false,
+            },
+          },
+          `gatsby-tinacms-remark`,
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1400,
+            },
+          },
+        ],
       },
     },
   ],
