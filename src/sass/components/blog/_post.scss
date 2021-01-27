@@ -60,6 +60,21 @@
         margin: 0 auto;
         width: 100% !important;
       }
+      img {
+        width: 80% !important;
+        display: block;
+        margin: 0 auto;
+      }
+      blockquote {
+        font-size: 1em;
+        font-family: 'Open Sans';
+        font-style: italic;
+        color: #555555;
+        padding: 5px 30px 5px 40px;
+        border-left: 7px solid $mainGreen;
+        position: relative;
+        background: #ededed;
+      }
     }
 
     .footer {
