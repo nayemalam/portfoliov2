@@ -4,7 +4,7 @@ import ShowHideButton from '../components/showhidebutton/ShowHideButton';
 
 const RIWDesc = (
   <ul>
-    <li>Implemented Firestore pagination (next, prev)</li>
+    <li>Implemented Firestore pagination</li>
     <li>Implement on page edits onSnapshotListener without reload</li>
     <li>
       Set up bootstrapped ReactJS project structure (including redux, thunk &
