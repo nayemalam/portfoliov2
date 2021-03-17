@@ -3,7 +3,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        articles: allStrapiArticle {
+        articles: allStrapiArticle(
+          sort: { order: DESC, fields: [publishedAt] }
+        ) {
           edges {
             node {
               title
@@ -40,10 +42,9 @@ exports.createPages = async ({ graphql, actions }) => {
       component: ArticleTemplate,
       context: {
         slug: article.node.slug,
-        prev: index === articles.length - 1 ? null : articles[index + 1].node,
-        next: index === 0 ? null : articles[index - 1].node,
+        prev: index === 0 ? null : articles[index - 1].node,
+        next: index === articles.length - 1 ? null : articles[index + 1].node,
       },
-      index,
     });
   });
 

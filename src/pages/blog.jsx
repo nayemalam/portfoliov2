@@ -55,6 +55,7 @@ const query = graphql`
           title
           description
           publishedAt
+          readTime
           category {
             name
             slug

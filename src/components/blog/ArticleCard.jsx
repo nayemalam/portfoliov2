@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
 import CalendarToday from '@material-ui/icons/CalendarToday';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
 import Moment from 'react-moment';
 
 const ArticleCard = ({ article }) => {
@@ -25,9 +27,15 @@ const ArticleCard = ({ article }) => {
           <Typography variant="body2" color="textSecondary" component="p">
             <span className="details">
               <CalendarToday className="calendar-icon" />
-              <Moment fromNow className="date">
-                {article.node.publishedAt}
-              </Moment>
+              <span className="date">
+                <Moment fromNow>{article.node.publishedAt}</Moment> -{' '}
+                <FontAwesomeIcon
+                  className="icon-bullet"
+                  icon={faClock}
+                  size="sm"
+                />{' '}
+                {article.node.readTime} min read
+              </span>
             </span>
             <span className="description">{article.node.description}</span>
           </Typography>
