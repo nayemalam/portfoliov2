@@ -1,7 +1,7 @@
 const featuredCardItems = [
   {
-    title: 'Life in a Nutshell',
-    url: '/blog/post/life/',
+    title: 'About',
+    url: '/about',
     backgroundImage: {
       backgroundImage: `url(${require('../images/misc/life.jpg')})`,
     },
