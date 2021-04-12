@@ -76,7 +76,16 @@ class Portfolio extends Component {
         />
         <Grid container spacing={4}>
           {filteredArray.map((item, id) => (
-            <Grid key={id} item xs={12} sm={6} md={4} lg={4} xl={3}>
+            <Grid
+              key={id}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+              xl={3}
+              className="grid-item"
+            >
               <CustomCard
                 image={item.image}
                 title={item.title}
