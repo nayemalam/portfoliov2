@@ -3,7 +3,7 @@ import MetaTags from '../components/metatags/MetaTags';
 import Form from '../components/contact/Form';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import Socials from '../components/socials/Socials';
-import { PopupButton } from 'react-calendly';
+import Calendly from '../components/contact/Calendly';
 
 class Contact extends Component {
   render() {
@@ -17,18 +17,8 @@ class Contact extends Component {
 
         <HeaderDesc header={headerText} desc={descText} />
         <Form />
-        <PopupButton
-          url="https://calendly.com/nayemalam"
-          text="Book 1on1 With Me ☕"
-          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall"
-          styles={{
-            bottom: '60px',
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            margin: 'auto',
-          }}
-        />
+        <Calendly />
+
         <Socials />
       </div>
     );
