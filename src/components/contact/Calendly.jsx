@@ -16,7 +16,7 @@ const Calendly = () => (
         textDecoration: 'underline',
       }}
     />{' '}
-    to schedule a 1on1 virtual coffee ☕ with me.
+    to schedule a virtual chat ☕ with me.
   </div>
 );
 
