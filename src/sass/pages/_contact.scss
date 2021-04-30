@@ -21,4 +21,10 @@
       margin-top: 50px;
     }
   }
+
+  @include mobile-down {
+    .calendly {
+      display: none !important;
+    }
+  }
 }
