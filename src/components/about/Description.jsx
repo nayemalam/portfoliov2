@@ -6,9 +6,9 @@ class Description extends Component {
     const text = (
       <p>
         <span style={{ display: 'block', marginBottom: '16px' }}>
-          On my free time, I like to play basketball, workout and spend time
-          with family. I’m always excited to work on projects as I’ve been
-          continuously working on{' '}
+          On my free time, I like to play basketball, workout, dev-reading and
+          spend time with family. I’m always excited to work on projects as I’ve
+          been continuously working on{' '}
           <a href="http://speakupmtl.com/">
             <span className="customLink">Speak Up</span>
           </a>
@@ -61,18 +61,19 @@ class Description extends Component {
     return (
       <div className="description">
         <div className="info">
-          My name is Nayem Alam, I am a 24 y/o tech enthusiast with a passion
-          for slam poetry and engineering. I hold a B.Eng. in Electrical
-          Engineering with a Minor in Software Engineering from McGill
-          University. My hobbies include writing, playing ball, coding,
-          travelling, meeting new people and of course, drinking coffee.
+          Welcome! My name is Nayem Alam, I am a 25 y/o tech enthusiast
+          passionate about blockchain technology and cryptocurrency. I hold a
+          B.Eng. in Electrical Engineering with a Minor in Software Engineering
+          from McGill University. My hobbies include coding, reading
+          audits/whitepapers, writing, playing ball, travelling, meeting new
+          people and of course, drinking coffee.
           <ShowHideButton text={text} btnclass={'btn'} txtclass={'info'} />
         </div>
 
         <p className="info">
           Feel free to check out my projects, and connect with me on my other
-          platforms. If you’d like to get to know me, the best way is by hitting
-          me up!{' '}
+          platforms. If you’d like to get to know me, the best way is by
+          connecting with me.{' '}
           <span role="img" aria-label="smiling emoji">
             🙂
           </span>
