@@ -34,7 +34,7 @@
     "gatsby-transformer-sharp": "^2.4.6",
     "moment": "^2.29.1",
     "netlify-cli": "^2.69.11",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "preval.macro": "^5.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
