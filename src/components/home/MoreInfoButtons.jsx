@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import { faFilePdf, faFingerprint } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from '@material-ui/core';
 import { Link } from 'gatsby';
-import resume from '../../images/Nayem_Resume_2021.pdf';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFingerprint, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import React, { Component } from 'react';
+import resume from '../../images/Nayem_Resume_2022.pdf';
 
 class MoreInfoButtons extends Component {
   render() {

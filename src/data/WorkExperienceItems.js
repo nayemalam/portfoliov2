@@ -1,6 +1,27 @@
+import { faCapsules, faCode, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { faCode, faCapsules, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import ShowHideButton from '../components/showhidebutton/ShowHideButton';
+
+const UbisoftDesc = (
+  <ul>
+    <li>
+      Monorepos, Typescript heavy, GitLab CI, Mocha/Jest testing
+      (Arrange-Act-Assert pattern), e2e with cypress
+    </li>
+    <li>
+      ReactJS, redux with redux toolkit (slice, action creators, reducers,
+      selectors), code reviews, Storybook
+    </li>
+    <li>
+      Angular JS (MVC): bindings, directives, $scope, $q, promise chaining +
+      async/await
+    </li>
+    <li>
+      Aggregate and manipulate service APIs to build controllers, models, views,
+      microapps and microfrontends
+    </li>
+  </ul>
+);
 
 const RIWDesc = (
   <ul>
@@ -130,6 +151,22 @@ const otherDesc = (
 );
 
 const workItems = [
+  {
+    icon: faCode,
+    date: 'September 2020 - April 2022',
+    name: 'Ubisoft',
+    location: 'Montréal, QC',
+    role: 'Full Stack Web Developer',
+    desc: (
+      <ShowHideButton
+        btnclass={'readmore-info'}
+        txtclass={'info'}
+        readLessText={'read less'}
+        readMoreText={'read more'}
+        text={UbisoftDesc}
+      ></ShowHideButton>
+    ),
+  },
   {
     icon: faCode,
     date: 'September - December 2020',
