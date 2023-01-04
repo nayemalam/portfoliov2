@@ -61,12 +61,7 @@ class Description extends Component {
     return (
       <div className="description">
         <div className="info">
-          Welcome! My name is Nayem Alam, I am a 25 y/o tech enthusiast
-          passionate about blockchain technology and cryptocurrency. I hold a
-          B.Eng. in Electrical Engineering with a Minor in Software Engineering
-          from McGill University. My hobbies include coding, reading
-          audits/whitepapers, writing, playing ball, travelling, meeting new
-          people and of course, drinking coffee.
+          Welcome! I'm Nayem, a technology enthusiast with a background in Electrical Engineering and Software Engineering from McGill University. In my free time, I enjoy activities such as coding, reading technical documents, writing, playing ball, traveling, meeting new people, and enjoying a cup of coffee.
           <ShowHideButton text={text} btnclass={'btn'} txtclass={'info'} />
         </div>
 
