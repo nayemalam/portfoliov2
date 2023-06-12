@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         name: `Instagram`,
-        url: `https://www.instagram.com/nayem_wizdom/`,
+        url: `https://www.instagram.com/nayemwizdom/`,
       },
       {
         name: `Medium`,
@@ -48,6 +48,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -87,16 +95,16 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    {
-      // backend uri: https://nayem-blog-backend.herokuapp.com/admin
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: process.env.API_URL || 'http://localhost:1337',
-        contentTypes: ['article', 'category', 'writer'],
-        singleTypes: [`homepage`, `global`],
-        queryLimit: 1000,
-      },
-    },
+    // {
+    //   // backend uri: https://nayem-blog-backend.herokuapp.com/admin
+    //   resolve: 'gatsby-source-strapi',
+    //   options: {
+    //     apiURL: process.env.API_URL || 'http://localhost:1337',
+    //     contentTypes: ['article', 'category', 'writer'],
+    //     singleTypes: [`homepage`, `global`],
+    //     queryLimit: 1000,
+    //   },
+    // },
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-cloudinary`,

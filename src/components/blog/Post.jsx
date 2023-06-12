@@ -10,54 +10,54 @@ import PrevNextPost from './PrevNextPost';
 import ShareButtons from '../sharebuttons/ShareButtons';
 import ClapButton from '../clapbutton/ClapButton';
 
-export const query = graphql`
-  query ArticleQuery($slug: String!) {
-    strapiArticle(slug: { eq: $slug }, status: { eq: "published" }) {
-      strapiId
-      title
-      description
-      content
-      publishedAt
-      slug
-      readTime
-      image {
-        publicURL
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      author {
-        name
-        picture {
-          childImageSharp {
-            fixed(width: 50, height: 50, quality: 100) {
-              width
-              height
-              src
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+// //   query ArticleQuery($slug: String!) {
+// //     strapiArticle(slug: { eq: $slug }, status: { eq: "published" }) {
+// //       strapiId
+// //       title
+// //       description
+// //       content
+// //       publishedAt
+// //       slug
+// //       readTime
+// //       image {
+// //         publicURL
+// //         childImageSharp {
+// //           fluid(quality: 100) {
+// //             ...GatsbyImageSharpFluid
+// //           }
+// //         }
+// //       }
+// //       author {
+// //         name
+// //         picture {
+// //           childImageSharp {
+// //             fixed(width: 50, height: 50, quality: 100) {
+// //               width
+// //               height
+// //               src
+// //             }
+// //           }
+// //         }
+// //       }
+// //     }
+// //   }
+// // `;
 
 const Post = ({ data, pageContext }) => {
-  const article = data.strapiArticle;
-  const seo = {
-    metaTitle: article.title,
-    metaDescription: article.description,
-    shareImage: article.image,
-    article: true,
-  };
+  // const article = data.strapiArticle;
+  // const seo = {
+  //   metaTitle: article.title,
+  //   metaDescription: article.description,
+  //   shareImage: article.image,
+  //   article: true,
+  // };
 
-  const url = typeof window !== 'undefined' ? window.location.href : '';
+  // const url = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
     <Layout seo={seo}>
-      <div className="post container">
+      {/* <div className="post container">
         <Img
           className="cover-image"
           fluid={article.image.childImageSharp.fluid}
@@ -95,7 +95,7 @@ const Post = ({ data, pageContext }) => {
             <PrevNextPost pageContext={pageContext} />
           </div>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

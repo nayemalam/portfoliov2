@@ -21,7 +21,7 @@ import style from '../../../sass/global.scss';
 class SideDrawer extends Component {
   render() {
     const drawer = (
-      <div style={{ width: style.drawerWidth }} role="menu">
+      <div style={{ width: style?.drawerWidth }} role="menu">
         <Divider />
         <List>
           {mainItems.map((item, id) => (

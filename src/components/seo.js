@@ -3,10 +3,12 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SEO = ({ seo = {} }) => {
-  const { strapiGlobal } = useStaticQuery(query);
-  const { defaultSeo, favicon } = strapiGlobal;
+  // const { strapiGlobal } = useStaticQuery(query);
+  // const { defaultSeo, favicon } = strapiGlobal;
   // Merge default and page-specific SEO values
-  const fullSeo = { ...defaultSeo, ...seo };
+  const fullSeo = { 
+    // ...defaultSeo, 
+    ...seo };
 
   const getMetaTags = () => {
     const tags = [];
@@ -78,7 +80,7 @@ const SEO = ({ seo = {} }) => {
       link={[
         {
           rel: 'icon',
-          href: favicon.publicURL,
+          // href: favicon.publicURL,
         },
       ]}
       meta={metaTags}
@@ -101,20 +103,20 @@ SEO.defaultProps = {
   article: false,
 };
 
-const query = graphql`
-  query {
-    strapiGlobal {
-      siteName
-      favicon {
-        publicURL
-      }
-      defaultSeo {
-        metaTitle
-        metaDescription
-        shareImage {
-          publicURL
-        }
-      }
-    }
-  }
-`;
+// const query = graphql`
+//   query {
+//     strapiGlobal {
+//       siteName
+//       favicon {
+//         publicURL
+//       }
+//       defaultSeo {
+//         metaTitle
+//         metaDescription
+//         shareImage {
+//           publicURL
+//         }
+//       }
+//     }
+//   }
+// `;

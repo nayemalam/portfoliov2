@@ -20,15 +20,15 @@ class MainAvatar extends Component {
         <h2>Nayem Alam</h2>
         <p style={{ marginTop: '-10px' }}>
           <FontAwesomeIcon icon={faCode} size="sm" className="hvr-icon" />{' '}
-          Frontend Engineer @{' '}
+          Software Engineer @{' '}
           <a
             className="linkWithNoDecoration"
-            href="https://ntropy.com/en/"
+            href="https://pulley.com/"
             target="_blank"
             aria-label="link to ubisoft"
             rel="noreferrer"
           >
-            Ntropy
+            pulley
           </a>
         </p>
       </div>
