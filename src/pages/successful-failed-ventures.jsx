@@ -14,6 +14,6 @@ const SuccessfulAndFailedVentures = () => {
       <h1>Successful & Failed Ventures</h1>
     </div>
   );
-}
+};
 
 export default SuccessfulAndFailedVentures;

@@ -6,9 +6,10 @@ const SEO = ({ seo = {} }) => {
   // const { strapiGlobal } = useStaticQuery(query);
   // const { defaultSeo, favicon } = strapiGlobal;
   // Merge default and page-specific SEO values
-  const fullSeo = { 
-    // ...defaultSeo, 
-    ...seo };
+  const fullSeo = {
+    // ...defaultSeo,
+    ...seo,
+  };
 
   const getMetaTags = () => {
     const tags = [];

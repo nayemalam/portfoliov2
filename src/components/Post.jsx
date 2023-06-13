@@ -1,9 +1,9 @@
-import Markdown from "markdown-to-jsx"
-import React, { useEffect, useState } from "react"
-import Code from "./Code";
+import Markdown from 'markdown-to-jsx';
+import React, { useEffect, useState } from 'react';
+import Code from './Code';
 
 const Post = () => {
-  const [postContent, setPostContent] = useState("");
+  const [postContent, setPostContent] = useState('');
 
   // useEffect(() => {
   //   import("../posts/random-post.md")
@@ -19,19 +19,21 @@ const Post = () => {
     <article className="article">
       <div className="container">
         <div className="post-wrapper">
-          <Markdown options={{
-            overrides: {
-              Code: {
-                component: Code
-              }
-            }
-          }}>
+          <Markdown
+            options={{
+              overrides: {
+                Code: {
+                  component: Code,
+                },
+              },
+            }}
+          >
             {postContent}
           </Markdown>
         </div>
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;

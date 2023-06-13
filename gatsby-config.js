@@ -55,7 +55,20 @@ module.exports = {
         path: `${__dirname}/src/blog`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'blackboard',
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

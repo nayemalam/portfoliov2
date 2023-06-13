@@ -61,8 +61,16 @@ class Description extends Component {
     return (
       <div className="description">
         <div className="info">
-        Welcome! I'm Nayem Alam, a technology professional with a specialty in Electrical and Software Engineering from McGill University. Over the past few years, I've leveraged my skills to develop innovative solutions and unravel intricate technical challenges. My love for coding and deep-dive analyses of whitepapers reflects my dedication to continuous learning and development.
-        Beyond my professional life, I'm an ardent traveler, avid basketball player, writer, and a dedicated team contributor, always eager to collaborate and innovate. I have a knack for connecting with people from diverse backgrounds, which helps me adapt and thrive in any team.
+          Welcome! I'm Nayem Alam, a technology professional with a specialty in
+          Electrical and Software Engineering from McGill University. Over the
+          past few years, I've leveraged my skills to develop innovative
+          solutions and unravel intricate technical challenges. My love for
+          coding and deep-dive analyses of whitepapers reflects my dedication to
+          continuous learning and development. Beyond my professional life, I'm
+          an ardent traveler, avid basketball player, writer, and a dedicated
+          team contributor, always eager to collaborate and innovate. I have a
+          knack for connecting with people from diverse backgrounds, which helps
+          me adapt and thrive in any team.
           <ShowHideButton text={text} btnclass={'btn'} txtclass={'info'} />
         </div>
 

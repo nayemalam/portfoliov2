@@ -1,9 +1,9 @@
 // import { ThemeContext } from "../App";
-import { LogoIcon, MoonIcon, SunIcon } from "./assets/icons";
-import React from 'react'
+import { LogoIcon, MoonIcon, SunIcon } from './assets/icons';
+import React from 'react';
 
 const Header = () => {
-//   const { isDark, setIsDark } = useContext(ThemeContext);
+  //   const { isDark, setIsDark } = useContext(ThemeContext);
 
   return (
     <header className="header">

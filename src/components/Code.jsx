@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { CopyIcon, PasteIcon } from './assets/icons';
 
@@ -7,10 +7,10 @@ const Code = ({ children, language }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setCopied(false)
-    }, 1000)
-    return () => clearTimeout(timer)
-  }, [copied])
+      setCopied(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [copied]);
 
   return (
     <div className="code">
@@ -19,13 +19,9 @@ const Code = ({ children, language }) => {
           {copied ? <PasteIcon /> : <CopyIcon />}
         </button>
       </CopyToClipboard> */}
-      <SyntaxHighlighter
-        language={language}
-      >
-        {children}
-      </SyntaxHighlighter>
+      <SyntaxHighlighter language={language}>{children}</SyntaxHighlighter>
     </div>
-  )
-}
+  );
+};
 
-export default Code
+export default Code;

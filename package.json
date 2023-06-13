@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Nayem Alam <nayem.alam@mail.mcgill.ca>",
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^4.4.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
@@ -28,6 +29,7 @@
     "gatsby-plugin-sass": "^6.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-plugin-sitemap": "^6.10.0",
+    "gatsby-remark-highlight-code": "^3.3.0",
     "gatsby-source-cloudinary": "^0.5.1",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-source-strapi": "^3.2.0",
@@ -73,7 +75,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"No tests are required for the moment ...\" && exit 1",
-    "custom": "gatsby clean && gatsby develop",
+    "custom": "gatsby clean && prettier --write \"**/*.{js,jsx,json,md}\" && gatsby develop",
     "mobile": "gatsby develop -H 0.0.0.0",
     "production": "gatsby clean && gatsby build && gatsby serve"
   },

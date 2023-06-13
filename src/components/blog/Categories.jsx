@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
 
 const Categories = () => {
-  return <></>
-}
+  return <></>;
+};
 
 export default Categories;

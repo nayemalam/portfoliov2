@@ -7,16 +7,37 @@ import Articles from '../components/blog/Articles';
 import Header from '../components/Header';
 import Post from '../components/Post';
 import PostPreview from '../components/PostPreview';
+import Img from 'gatsby-image';
 
 const Blog = () => {
   // const postMetadata = getPostMetadata();
   // const postPreviews = postMetadata.map((post) => (
   //   <PostPreview key={post.slug} {...post} />
   // ));
+  const data = useStaticQuery(query);
+
+  console.log({ data });
 
   return (
     <div className="blog container">
       <MetaTags title="Blog | Nayem Alam" />
+      {data?.allMarkdownRemark?.nodes?.map(post => {
+        let featuredImgFluid =
+          post?.frontmatter?.featuredImage?.childImageSharp?.fluid;
+        return (
+          <Img
+            style={{
+              width: '125px',
+              height: '125px',
+            }}
+            fluid={featuredImgFluid}
+            imgStyle={{
+              width: '125px',
+              height: '125px',
+            }}
+          />
+        );
+      })}
       {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div> */}
       {/* <h1>{data.strapiGlobal.siteName}</h1>
       <div className="top-bar">
@@ -30,6 +51,28 @@ const Blog = () => {
   );
 };
 
+const query = graphql`
+  query Query {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          slug
+          title
+          date
+          category
+          timeToRead
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 // const query = graphql`
 //   query {
