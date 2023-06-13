@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import MetaTags from '../components/metatags/MetaTags';
-import { sortByDateASC, sortByDateDESC } from '../components/helpers';
-import mediaItems from '../data/MediaItems';
-import HeaderDesc from '../components/headerdesc/HeaderDesc';
-import EditPage from '../components/editpage/EditPage';
-import SortButtons from '../components/sortbuttons/SortButtons';
+import React, { Component } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import EditPage from '../components/editpage/EditPage';
+import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import { sortByDateASC, sortByDateDESC } from '../components/helpers';
+import MetaTags from '../components/metatags/MetaTags';
+import SortButtons from '../components/sortbuttons/SortButtons';
+import mediaItems from '../data/MediaItems';
 
 class Media extends Component {
   constructor(props) {

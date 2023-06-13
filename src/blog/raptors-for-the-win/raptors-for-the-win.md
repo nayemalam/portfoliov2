@@ -13,6 +13,7 @@ next:
   title: 'The sun reappears after the storm'
   slug: 'the-sun-reappears-after-the-storm'
 ---
+
 ![Screenshot of the game: live streaming from my phone | away from Canada](https://cdn-images-1.medium.com/max/4096/1*lPmDDrnDzzBIUFpJaF5MOQ.jpeg)
 
 I still cant believe it. This moment is surreal. For those that do not know, I am an avid basketball player and I’ve been playing ball ever since Grade 5, so I never get enough of watching the NBA playoffs. That being said, I haven’t had the opportunity to write about my experience during the last Raptors vs Warriors game, so here is the live version that I’ve written the day after the game.

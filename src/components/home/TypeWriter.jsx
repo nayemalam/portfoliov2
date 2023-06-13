@@ -46,7 +46,7 @@ class TypeWriter extends Component {
       });
     }
 
-    let typeSpeed = 200;
+    let typeSpeed = 50;
 
     if (this.isDeleting) {
       typeSpeed /= 2;

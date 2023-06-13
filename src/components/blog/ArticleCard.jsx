@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
-import CalendarToday from '@material-ui/icons/CalendarToday';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import CalendarToday from '@material-ui/icons/CalendarToday';
+import { Link } from 'gatsby';
+import React from 'react';
 import Moment from 'react-moment';
 
 const ArticleCard = ({ article }) => {

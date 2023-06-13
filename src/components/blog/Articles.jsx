@@ -1,5 +1,5 @@
-import React from 'react';
 import { Grid } from '@material-ui/core';
+import React from 'react';
 import ArticleCard from './ArticleCard';
 
 const Articles = ({ articles }) => {

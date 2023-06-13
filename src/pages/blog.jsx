@@ -1,18 +1,12 @@
-import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import MetaTags from '../components/metatags/MetaTags';
-import Categories from '../components/blog/Categories';
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
 import Articles from '../components/blog/Articles';
-import Header from '../components/Header';
-import Post from '../components/Post';
-import PostPreview from '../components/PostPreview';
-import Img from 'gatsby-image';
-import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import MetaTags from '../components/metatags/MetaTags';
 
 const Blog = () => {
   const data = useStaticQuery(query);
-  
+
   return (
     <div className="blog container">
       <MetaTags title="Blog | Nayem Alam" />

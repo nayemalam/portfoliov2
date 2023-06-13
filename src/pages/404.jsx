@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
 import { Link } from 'gatsby';
+import React, { Component } from 'react';
 import EyeRolling from '../images/common/404.gif';
 
 class Error404 extends Component {

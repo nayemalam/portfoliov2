@@ -1,17 +1,16 @@
-import React from 'react';
 import {
   faGithub,
   faInstagram,
   faLinkedin,
   faMedium,
 } from '@fortawesome/free-brands-svg-icons';
-import { AllInclusiveOutlined } from '@material-ui/icons';
 import CodeIcon from '@material-ui/icons/Code';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import PermMediaOutlinedIcon from '@material-ui/icons/PermMediaOutlined';
 import RecordVoiceOverOutlinedIcon from '@material-ui/icons/RecordVoiceOverOutlined';
+import React from 'react';
 
 const mainItems = [
   {

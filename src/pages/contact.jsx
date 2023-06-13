@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import MetaTags from '../components/metatags/MetaTags';
+import Calendly from '../components/contact/Calendly';
 import Form from '../components/contact/Form';
 import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import MetaTags from '../components/metatags/MetaTags';
 import Socials from '../components/socials/Socials';
-import Calendly from '../components/contact/Calendly';
 
 class Contact extends Component {
   render() {

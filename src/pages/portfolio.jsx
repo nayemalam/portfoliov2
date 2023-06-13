@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import MetaTags from '../components/metatags/MetaTags';
-import portfolioItems from '../data/PortfolioItems';
-import CustomCard from '../components/portfolio/CustomCard';
-import FilterButtons from '../components/portfolio/FilterButtons';
+import React, { Component } from 'react';
+import EditPage from '../components/editpage/EditPage';
+import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import {
+  filterArrayByString,
   sortByDateASC,
   sortByDateDESC,
-  filterArrayByString,
 } from '../components/helpers';
+import MetaTags from '../components/metatags/MetaTags';
+import CustomCard from '../components/portfolio/CustomCard';
+import FilterButtons from '../components/portfolio/FilterButtons';
 import SortButtons from '../components/sortbuttons/SortButtons';
-import HeaderDesc from '../components/headerdesc/HeaderDesc';
-import EditPage from '../components/editpage/EditPage';
+import portfolioItems from '../data/PortfolioItems';
 
 class Portfolio extends Component {
   constructor(props) {

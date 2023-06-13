@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MetaTags from '../components/metatags/MetaTags';
-import HeaderDesc from '../components/headerdesc/HeaderDesc';
 import EditPage from '../components/editpage/EditPage';
+import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import MetaTags from '../components/metatags/MetaTags';
 import VideoPlayer from '../components/speaking/VideoPlayer';
 
 export default class Speaking extends Component {

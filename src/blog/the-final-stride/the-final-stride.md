@@ -13,6 +13,7 @@ next:
   title: 'I cooked for the first time!'
   slug: 'i-cooked-for-the-first-time'
 ---
+
 ![](https://cdn-images-1.medium.com/max/7680/1*bif9bnhLzxefw5_wbXVfiQ.jpeg)
 
 After spending ~4 months in Malaysia, I feel more like a local than a foreigner. I must admit, the first few days in KL were not fruitful. It was the first time in my life I ventured out in to the world with no family, friends or anyone for that matter; completely alone. On top of that, coming into a country with different systems, structure, language and environment was quite daunting.

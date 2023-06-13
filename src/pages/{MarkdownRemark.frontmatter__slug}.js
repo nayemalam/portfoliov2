@@ -1,21 +1,19 @@
-import { graphql, Link } from 'gatsby';
-import * as React from 'react';
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-import Layout from '../components/layout';
-// import ClapButton from '../components/clapbutton/ClapButton';
-import ShareButtons from '../components/sharebuttons/ShareButtons';
-import PrevNextPost from '../components/blog/PrevNextPost';
-import Img from 'gatsby-image';
-import Moment from 'react-moment';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import * as React from 'react';
+import Moment from 'react-moment';
+import PrevNextPost from '../components/blog/PrevNextPost';
+import ClapButton from '../components/clapbutton/ClapButton';
+import Layout from '../components/layout';
+import ShareButtons from '../components/sharebuttons/ShareButtons';
 
 deckDeckGoHighlightElement();
 export default function BlogPostTemplate({ data: { markdownRemark } }) {
   const { frontmatter: article, html } = markdownRemark;
   const url = typeof window !== 'undefined' ? window.location.href : '';
-
-  console.log({article})
 
   return (
     <Layout
@@ -48,7 +46,7 @@ export default function BlogPostTemplate({ data: { markdownRemark } }) {
           <hr />
           <div className="footer">
             <div className="author-container">
-              {/* <ClapButton slug={article.slug} /> */}
+              <ClapButton slug={article.slug} />
               <div className="share-buttons">
                 <p>Like this post? Share it!</p>
                 <ShareButtons

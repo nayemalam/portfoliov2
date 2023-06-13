@@ -12,6 +12,7 @@
 
 #### Changelog(s):
 
+- June 13, 2023: Migrated all Strapi blog posts to in Git markdown posts using frontmatter
 - December 31: Using Netlify for hosting, firebase functions for emails, Strapi for blogging (hosted on heroku), graphql for querying posts and categories
 - December 29: Migrated from npm to yarn completely
 - December 28, 2020: Removed firebase and travis builds

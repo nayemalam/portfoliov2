@@ -1,12 +1,12 @@
 /* external imports */
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 /* component imports */
-import SEO from './seo';
 import NavigationBar from './navigationbar/NavigationBar';
+import SEO from './seo';
 /* internal css */
 import '../sass/global.scss';
 
