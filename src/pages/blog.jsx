@@ -8,45 +8,21 @@ import Header from '../components/Header';
 import Post from '../components/Post';
 import PostPreview from '../components/PostPreview';
 import Img from 'gatsby-image';
+import HeaderDesc from '../components/headerdesc/HeaderDesc';
 
 const Blog = () => {
-  // const postMetadata = getPostMetadata();
-  // const postPreviews = postMetadata.map((post) => (
-  //   <PostPreview key={post.slug} {...post} />
-  // ));
   const data = useStaticQuery(query);
-
-  console.log({ data });
-
+  console.log(data.allMarkdownRemark);
   return (
     <div className="blog container">
       <MetaTags title="Blog | Nayem Alam" />
-      {data?.allMarkdownRemark?.nodes?.map(post => {
-        let featuredImgFluid =
-          post?.frontmatter?.featuredImage?.childImageSharp?.fluid;
-        return (
-          <Img
-            style={{
-              width: '125px',
-              height: '125px',
-            }}
-            fluid={featuredImgFluid}
-            imgStyle={{
-              width: '125px',
-              height: '125px',
-            }}
-          />
-        );
-      })}
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div> */}
-      {/* <h1>{data.strapiGlobal.siteName}</h1>
+      <h1 className="customHeader">My Sanctuary</h1>
       <div className="top-bar">
-        <h2>
+        <h2 className="m-0">
           Latest <ArrowDownwardIcon className="icon" />
         </h2>
-        <Categories />
       </div>
-      <Articles articles={data.allStrapiArticle.edges} /> */}
+      <Articles articles={data?.allMarkdownRemark?.nodes} />
     </div>
   );
 };
@@ -61,6 +37,7 @@ const query = graphql`
           date
           category
           timeToRead
+          description
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 800) {
@@ -73,65 +50,5 @@ const query = graphql`
     }
   }
 `;
-
-// const query = graphql`
-//   query {
-//     strapiGlobal {
-//       siteName
-//       defaultSeo {
-//         metaTitle
-//         metaDescription
-//       }
-//     }
-//     strapiHomepage {
-//       hero {
-//         title
-//       }
-//       seo {
-//         metaTitle
-//         metaDescription
-//         shareImage {
-//           publicURL
-//         }
-//       }
-//     }
-//     allStrapiArticle(
-//       filter: { status: { eq: "published" } }
-//       sort: { order: DESC, fields: [publishedAt] }
-//     ) {
-//       edges {
-//         node {
-//           strapiId
-//           slug
-//           title
-//           description
-//           publishedAt
-//           readTime
-//           category {
-//             name
-//             slug
-//           }
-//           image {
-//             childImageSharp {
-//               fixed(width: 800, height: 500) {
-//                 src
-//               }
-//             }
-//           }
-//           author {
-//             name
-//             picture {
-//               childImageSharp {
-//                 fixed(width: 30, height: 30) {
-//                   ...GatsbyImageSharpFixed
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export default Blog;

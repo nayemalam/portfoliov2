@@ -10,41 +10,41 @@ const ArticleCard = ({ article }) => {
   return (
     <div className="article-card">
       <Card className="card-container">
-        <Link to={`/blog/post/${article.node.slug}`}>
+        <Link to={`${article.slug}`}>
           <CardMedia
             className="feature-image"
-            image={article.node.image.childImageSharp.fixed.src}
-            title={article.node.title}
+            image={article.featuredImage.childImageSharp.fluid.src}
+            title={article.title}
           />
         </Link>
 
         <CardContent>
-          <Link to={`/blog/post/${article.node.slug}`}>
+          <Link to={`${article.slug}`}>
             <Typography gutterBottom variant="h5" component="h5">
-              {article.node.title}
+              {article.title}
             </Typography>
           </Link>
           <Typography variant="body2" color="textSecondary" component="p">
             <span className="details">
               <CalendarToday className="calendar-icon" />
               <span className="date">
-                <Moment fromNow>{article.node.publishedAt}</Moment> -{' '}
+                <Moment fromNow>{article.date}</Moment> -{' '}
                 <FontAwesomeIcon
                   className="icon-bullet"
                   icon={faClock}
                   size="sm"
                 />{' '}
-                {article.node.readTime} min read
+                {article.timeToRead} read
               </span>
             </span>
-            <span className="description">{article.node.description}</span>
+            <span className="description">{article.description}</span>
           </Typography>
         </CardContent>
-        <div className="category-name">
-          <Link to={`/blog/category/${article.node.category.slug}`}>
-            {article.node.category.name}
+        {/* <div className="category-name">
+          <Link to={`/blog/category/${article.category}`}>
+            {article.category}
           </Link>
-        </div>
+        </div> */}
       </Card>
     </div>
   );

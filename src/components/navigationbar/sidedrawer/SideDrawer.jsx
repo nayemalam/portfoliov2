@@ -16,7 +16,7 @@ import { Link } from 'gatsby';
 import { mainItems, socialItems } from '../../../data/NavigationItems';
 
 // internal css
-import style from '../../../sass/global.scss';
+import * as style from '../../../sass/global.scss';
 
 class SideDrawer extends Component {
   render() {

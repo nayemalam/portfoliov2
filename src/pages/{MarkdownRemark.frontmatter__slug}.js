@@ -36,7 +36,7 @@ export default function BlogPostTemplate({ data: { markdownRemark } }) {
           <p className="sub-description">
             Published on <Moment format="Do MMM YYYY">{article.date}</Moment> -{' '}
             <FontAwesomeIcon className="icon-bullet" icon={faClock} size="sm" />{' '}
-            {article.timeToRead} min read
+            {article.timeToRead} read
           </p>
           <div className="content">
             <div
@@ -86,6 +86,7 @@ export const pageQuery = graphql`
         title
         category
         timeToRead
+        description
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
