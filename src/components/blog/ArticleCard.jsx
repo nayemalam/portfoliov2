@@ -13,8 +13,8 @@ const ArticleCard = ({ article }) => {
         <Link to={`${article.slug}`}>
           <CardMedia
             className="feature-image"
-            image={article.featuredImage.childImageSharp.fluid.src}
-            title={article.title}
+            image={article?.featuredImage?.childImageSharp?.fluid.src}
+            title={article?.title}
           />
         </Link>
 

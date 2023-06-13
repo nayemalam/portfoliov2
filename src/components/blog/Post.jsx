@@ -87,7 +87,7 @@ const Post = ({ data, pageContext }) => {
                 <ShareButtons
                   url={url}
                   title={article.title}
-                  twitterHandle={'nayem_wizdom'}
+                  twitterHandle={'nayemwizdom'}
                   media={article.media}
                 />
               </div>

@@ -68,7 +68,7 @@ const socialItems = [
   },
   {
     title: 'Instagram',
-    link: 'https://www.instagram.com/nayem_wizdom/',
+    link: 'https://www.instagram.com/nayemwizdom/',
     icon: faInstagram,
     styleColor: '#fb3958',
     ariaLabel: 'Instagram',

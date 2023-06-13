@@ -6,6 +6,9 @@ category: 'Life'
 timeToRead: '1 min'
 featuredImage: './mountains.jpeg'
 description: 'Curious to know what my day to day life consists of right now? Well here is high-level list of them all - I tend to update this periodically when things change around'
+next:
+  title: 'Uses'
+  slug: 'uses'
 ---
 
 Curious to know what my day to day life consists of right now? Well here's high-level list of what projects I am currently occupied with - I tend to update this periodically when things change around:

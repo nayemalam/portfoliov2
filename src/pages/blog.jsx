@@ -12,7 +12,7 @@ import HeaderDesc from '../components/headerdesc/HeaderDesc';
 
 const Blog = () => {
   const data = useStaticQuery(query);
-  console.log(data.allMarkdownRemark);
+  
   return (
     <div className="blog container">
       <MetaTags title="Blog | Nayem Alam" />

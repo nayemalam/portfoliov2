@@ -13,9 +13,10 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 deckDeckGoHighlightElement();
 export default function BlogPostTemplate({ data: { markdownRemark } }) {
   const { frontmatter: article, html } = markdownRemark;
-  let url = '';
+  const url = typeof window !== 'undefined' ? window.location.href : '';
 
-  console.log({ markdownRemark, article });
+  console.log({article})
+
   return (
     <Layout
       seo={{
@@ -25,7 +26,7 @@ export default function BlogPostTemplate({ data: { markdownRemark } }) {
       <div className="post container">
         <Img
           className="cover-image"
-          fluid={article.featuredImage.childImageSharp.fluid}
+          fluid={article?.featuredImage?.childImageSharp.fluid}
           imgStyle={{ objectFit: 'cover', objectPosition: '50% 50%' }}
         />
         <span className="all-posts-button">
@@ -53,20 +54,20 @@ export default function BlogPostTemplate({ data: { markdownRemark } }) {
                 <ShareButtons
                   url={url}
                   title={article.title}
-                  twitterHandle={'nayem_wizdom'}
+                  twitterHandle={'nayemwizdom'}
                   media={article.media}
                 />
               </div>
             </div>
             <PrevNextPost
               pageContext={{
-                previous: {
-                  title: 'Previous',
-                  slug: 'previous',
+                prev: {
+                  title: article?.prev?.title,
+                  slug: article?.prev?.slug,
                 },
                 next: {
-                  title: 'Next',
-                  slug: 'next',
+                  title: article?.next?.title,
+                  slug: article?.next?.slug,
                 },
               }}
             />
@@ -93,6 +94,14 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        prev {
+          title
+          slug
+        }
+        next {
+          title
+          slug
         }
       }
     }

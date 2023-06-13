@@ -60,6 +60,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 Catch me on:
 
-- [Instagram](https://www.instagram.com/nayem_wizdom/)
+- [Instagram](https://www.instagram.com/nayemwizdom/)
 - [Medium](https://medium.com/@nayemalam)
 - [LinkedIn](https://www.linkedin.com/in/nayemalam/)
