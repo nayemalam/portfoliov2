@@ -2,7 +2,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
-  faMedium,
+  faMedium
 } from '@fortawesome/free-brands-svg-icons';
 import CodeIcon from '@material-ui/icons/Code';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';

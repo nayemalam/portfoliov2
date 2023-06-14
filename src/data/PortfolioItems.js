@@ -1,10 +1,36 @@
-import React from 'react';
-import LinkSharpIcon from '@material-ui/icons/LinkSharp';
 import LinkOffSharpIcon from '@material-ui/icons/LinkOffSharp';
+import LinkSharpIcon from '@material-ui/icons/LinkSharp';
+import React from 'react';
+import argyleImg from '../images/work/argyle.png';
+import calorieCounterImg from '../images/work/caloriecounter.png';
+import colorGameImg from '../images/work/colorgame.png';
+import faceDetectionImg from '../images/work/face-detection.png';
+import francochromeImg from '../images/work/francochrome.png';
+import fuzzymatchingImg from '../images/work/fuzzymatching.png';
+import iStriveImg from '../images/work/istrive.png';
+import joysOfSoloTravelImg from '../images/work/joysofsolotravel.png';
+import mcgillchemecarImg from '../images/work/mcgillchemecar.png';
+import mcgillcoopImg from '../images/work/mcgillcoop.png';
+import mdcImg from '../images/work/mdc.png';
+import medlifeImg from '../images/work/medlife.png';
+import midroniImg from '../images/work/midroni.png';
+import nauveltyImg from '../images/work/nauvelty.png';
+import nobeMcgillImg from '../images/work/nobemcgill.png';
+import pendopharmImg from '../images/work/pendopharm.png';
+import portfolioV1Img from '../images/work/portfoliov1.png';
+import reactPortfolioTemplateImg from '../images/work/react-portfolio-template.png';
+import speakupmtlImg from '../images/work/speakupmtl.png';
+import superheroImg from '../images/work/superhero.png';
+import suporaNootropicsPillBottleImg from '../images/work/supranootropics-pillbottle.jpg';
+import supraNootropicsImg from '../images/work/supranootropics.png';
+import webscraperImg from '../images/work/webscraper.png';
+import xploreImg from '../images/work/xplore.png';
+import yulrealtorImg from '../images/work/yulrealtor.png';
+
 
 const portfolioItems = [
   {
-    image: require('../images/work/superhero.png'),
+    image: superheroImg,
     title: 'SuperHero Squad',
     description:
       'Dynamically search through an API of all the superheroes and villains from all universes, add to your squad and more.',
@@ -15,7 +41,7 @@ const portfolioItems = [
     tags: ['React.js', 'HTML', 'SASS'],
   },
   {
-    image: require('../images/work/fuzzymatching.png'),
+    image: fuzzymatchingImg,
     title: 'Fuzzy Matching',
     description:
       'Implemented multiple string similarity algorithms. This algorithm compares the accuracy between two strings and assigns a similarity score.',
@@ -26,7 +52,7 @@ const portfolioItems = [
     tags: ['Java'],
   },
   {
-    image: require('../images/work/mcgillcoop.png'),
+    image: mcgillcoopImg,
     title: 'McGill Coop Program',
     description:
       'Class project requiring us to build a version of what our McGill Coop program should look like.',
@@ -37,7 +63,7 @@ const portfolioItems = [
     tags: ['Java Spring', 'Vue.js', 'HTML', 'CSS', 'Heroku'],
   },
   {
-    image: require('../images/work/webscraper.png'),
+    image: webscraperImg,
     title: 'FinScrape | Hackerfest',
     description:
       "Created a web scraper for FormFintech that pulls 5 major bank's chequing information.",
@@ -48,7 +74,7 @@ const portfolioItems = [
     tags: ['Python'],
   },
   {
-    image: require('../images/work/speakupmtl.png'),
+    image: speakupmtlImg,
     title: 'Speak Up Montreal',
     description:
       'Something I started in 2014 and it has gained momentum since expanding all over Montreal (feel free to ask me more about this).',
@@ -59,7 +85,7 @@ const portfolioItems = [
     tags: ['Wordpress'],
   },
   {
-    image: require('../images/work/argyle.png'),
+    image: argyleImg,
     title: 'Argyle Tech',
     description:
       'A student wanting to build an AI that will perform gene screening to figure out any inherent diseases that you might have or prone to.',
@@ -70,7 +96,7 @@ const portfolioItems = [
     tags: ['Wordpress', 'MailChimp', 'Client'],
   },
   {
-    image: require('../images/work/medlife.png'),
+    image: medlifeImg,
     title: 'Medlife Concordia',
     description:
       'President and founder of Medlife Concordia reached out to me to build their website for more traction.',
@@ -81,7 +107,7 @@ const portfolioItems = [
     tags: ['Wordpress', 'Client'],
   },
   {
-    image: require('../images/work/joysofsolotravel.png'),
+    image: joysOfSoloTravelImg,
     title: 'Joys of Solo Travel',
     description:
       'An ambitious student and his startup documenting trips about the satisfaction of solo travelling.',
@@ -92,7 +118,7 @@ const portfolioItems = [
     tags: ['Wordpress', 'WooCommerce', 'Client'],
   },
   {
-    image: require('../images/work/mcgillchemecar.png'),
+    image: mcgillchemecarImg,
     title: 'McGill Chem-E Car',
     description:
       'I was a part of this club as a Web Master and built this website.',
@@ -103,7 +129,7 @@ const portfolioItems = [
     tags: ['Wordpress'],
   },
   {
-    image: require('../images/work/supranootropics.png'),
+    image: supraNootropicsImg,
     title: 'SupraNootropics',
     description:
       'A student started a startup in McGill providing supplements for stress-relief.',
@@ -114,7 +140,7 @@ const portfolioItems = [
     tags: ['Wordpress', 'Client'],
   },
   {
-    image: require('../images/work/nauvelty.png'),
+    image: nauveltyImg,
     title: 'Nauvelty Clothing Brand',
     description:
       'One of my failed startups. I sourced 8 clothes and shipped out 3, clothing quality was dull and team dispatched. Discontinued.',
@@ -125,7 +151,7 @@ const portfolioItems = [
     tags: ['Shopify'],
   },
   {
-    image: require('../images/work/nobemcgill.png'),
+    image: nobeMcgillImg,
     title: 'NOBE McGill',
     description:
       "I've been a part of this club during my entire 4 years of undergrad. I built this website as the web dev at that time.",
@@ -136,7 +162,7 @@ const portfolioItems = [
     tags: ['Wordpress'],
   },
   {
-    image: require('../images/work/istrive.png'),
+    image: iStriveImg,
     title: 'IStrive',
     description:
       'Personal trainer reached out to me to build his brand and his movement.',
@@ -147,7 +173,7 @@ const portfolioItems = [
     tags: ['Wordpress', 'MailChimp', 'Client'],
   },
   {
-    image: require('../images/work/react-portfolio-template.png'),
+    image: reactPortfolioTemplateImg,
     title: 'React Portfolio Template',
     description:
       'This is a free template made with React with fixed material sidebar. Feel free to clone and use it :)',
@@ -158,7 +184,7 @@ const portfolioItems = [
     tags: ['React.js', 'HTML', 'CSS'],
   },
   {
-    image: require('../images/work/xplore.png'),
+    image: xploreImg,
     title: 'Xplore | HackDartmouth',
     description:
       'Xplore is a cross-platform communication tool built to help people connect with one another regardless of barriers such as language.',
@@ -169,7 +195,7 @@ const portfolioItems = [
     tags: ['Android Studio', 'React Native'],
   },
   {
-    image: require('../images/work/francochrome.png'),
+    image: francochromeImg,
     title: 'FrancoChrome | ConUHacks',
     description:
       'A french language learning tool that allows Chrome users to learn a new word everytime they open a new tab.',
@@ -180,7 +206,7 @@ const portfolioItems = [
     tags: ['Vanilla JS', 'HTML', 'CSS'],
   },
   {
-    image: require('../images/work/pendopharm.png'),
+    image: pendopharmImg,
     title: 'Pendopharm: G.I. Solutions',
     description:
       'Worked with an amazing brand manager who asked me to revamp their website.',
@@ -191,7 +217,7 @@ const portfolioItems = [
     tags: ['Wordpress', 'Client'],
   },
   {
-    image: require('../images/work/midroni.png'),
+    image: midroniImg,
     title: 'Cooper Midroni',
     description: 'Built a personal website for my good friend Cooper.',
     date: 'January 11, 2020',
@@ -201,7 +227,7 @@ const portfolioItems = [
     tags: ['Wordpress'],
   },
   {
-    image: require('../images/work/supranootropics-pillbottle.jpg'),
+    image: suporaNootropicsPillBottleImg,
     title: 'Pill Bottle Design',
     description: 'FDA bottle design built for SupraNootropics.',
     date: 'January 6, 2019',
@@ -211,7 +237,7 @@ const portfolioItems = [
     tags: ['Graphics'],
   },
   {
-    image: require('../images/work/caloriecounter.png'),
+    image: calorieCounterImg,
     title: 'Calorie Counter',
     description: 'Calculate your daily calorie intake under 30 seconds.',
     date: 'July 29, 2019',
@@ -221,7 +247,7 @@ const portfolioItems = [
     tags: ['Vanilla JS', 'HTML', 'CSS'],
   },
   {
-    image: require('../images/work/colorgame.png'),
+    image: colorGameImg,
     title: 'Color Game',
     description:
       'Guess the color based on RGB. Test your RGB value skills. Game starts with "Hard" mode.',
@@ -232,7 +258,7 @@ const portfolioItems = [
     tags: ['Vanilla JS', 'HTML', 'CSS'],
   },
   {
-    image: require('../images/work/face-detection.png'),
+    image: faceDetectionImg,
     title: 'Face Detection',
     description:
       'Computer Vision | Train a model from 30 given images in order to detect faces.',
@@ -243,7 +269,7 @@ const portfolioItems = [
     tags: ['Python'],
   },
   {
-    image: require('../images/work/portfoliov1.png'),
+    image: portfolioV1Img,
     title: 'Previous Portfolio',
     description:
       "The first complete portfolio I've ever developed with vanilla JS and some open source libraries. Feel free to check out the codebase.",
@@ -254,7 +280,7 @@ const portfolioItems = [
     tags: ['Vanilla JS', 'jQuery', 'HTML', 'CSS'],
   },
   {
-    image: require('../images/work/yulrealtor.png'),
+    image: yulrealtorImg,
     title: 'YUL Realtor',
     description:
       'One of my friend is a great broker here in Montreal and Brossard, here is a website designed and developed for her.',
@@ -265,7 +291,7 @@ const portfolioItems = [
     tags: ['Wordpress'],
   },
   {
-    image: require('../images/work/mdc.png'),
+    image: mdcImg,
     title: 'McGill Design Consultancy',
     description:
       'Started a non-profit hub to help local McGill startups and clubs scale digitally; through building websites and logos.',

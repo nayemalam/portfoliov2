@@ -7,9 +7,6 @@ import laptop from '../../images/misc/laptop.jpg';
 class FeaturedCards extends Component {
   render() {
     const [xs, sm, md, lg, xl] = [6, 6, 3, 3, 3];
-    console.log({
-      featuredCardItems,
-    });
 
     return (
       <div className="featured-cards">
