@@ -1,6 +1,6 @@
 # example netlify.toml
 [context.production]
-  environment = { NODE_VERSION = '14.17.4' }
+  environment = { NODE_VERSION = '18.0.0' }
   
 [build]
   command = "yarn build"
