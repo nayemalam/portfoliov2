@@ -2,6 +2,26 @@ import { faCapsules, faCode, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import ShowHideButton from '../components/showhidebutton/ShowHideButton';
 
+const NtropyDesc = (
+  <ul>
+    <li>First Frontend Engineer, leading our team from Seed to Series A</li>
+    <li>
+      Built customer facing web app that brought in ~$100k in revenue within the
+      first 3 months, expanding our market share to targeting new non-developer
+      users
+    </li>
+    <li>
+      Led all of frontend; managing 5 in-house applications, proposed, designed,
+      architected and spear-headed 3 external client-facing applications
+      (transaction enrichment viewer, developer portal, customer dashboard)
+    </li>
+    <li>
+      Organized frontend environment by building an in-house ticketing tool that
+      allowed non-frontend engineers to seamlessly work with the frontend team
+    </li>
+  </ul>
+);
+
 const UbisoftDesc = (
   <ul>
     <li>
@@ -151,6 +171,22 @@ const otherDesc = (
 );
 
 const workItems = [
+  {
+    icon: faCode,
+    date: 'April 2022 - February 2023',
+    name: 'Ntropy',
+    location: 'Montréal, QC',
+    role: 'Lead Frontend Engineer',
+    desc: (
+      <ShowHideButton
+        btnclass={'readmore-info'}
+        txtclass={'info'}
+        readLessText={'read less'}
+        readMoreText={'read more'}
+        text={NtropyDesc}
+      ></ShowHideButton>
+    ),
+  },
   {
     icon: faCode,
     date: 'September 2020 - April 2022',

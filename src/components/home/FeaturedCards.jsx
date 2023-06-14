@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'gatsby';
 import { Grid } from '@material-ui/core';
+import { Link } from 'gatsby';
+import React, { Component } from 'react';
 import featuredCardItems from '../../data/FeaturedCardItems';
+import laptop from '../../images/misc/laptop.jpg';
 
 class FeaturedCards extends Component {
   render() {
@@ -32,7 +33,7 @@ class FeaturedCards extends Component {
                   <div
                     className="cover"
                     style={{
-                      backgroundImage: `url(${require('../../images/misc/laptop.jpg')})`,
+                      backgroundImage: `url(${laptop})`,
                     }}
                   >
                     <h1 className="title">YouTube Channel</h1>

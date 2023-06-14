@@ -1,16 +1,16 @@
-import React from 'react';
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import PermMediaOutlinedIcon from '@material-ui/icons/PermMediaOutlined';
-import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
-import RecordVoiceOverOutlinedIcon from '@material-ui/icons/RecordVoiceOverOutlined';
-import PermIdentityIcon from '@material-ui/icons/PermIdentity';
-import CodeIcon from '@material-ui/icons/Code';
 import {
   faGithub,
-  faLinkedin,
   faInstagram,
-  faMedium,
+  faLinkedin,
+  faMedium
 } from '@fortawesome/free-brands-svg-icons';
+import CodeIcon from '@material-ui/icons/Code';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import PermMediaOutlinedIcon from '@material-ui/icons/PermMediaOutlined';
+import RecordVoiceOverOutlinedIcon from '@material-ui/icons/RecordVoiceOverOutlined';
+import React from 'react';
 
 const mainItems = [
   {
@@ -28,6 +28,11 @@ const mainItems = [
     link: '/blog',
     icon: <LibraryBooksOutlinedIcon />,
   },
+  // {
+  //   title: 'Successful & Failed Ventures',
+  //   link: '/successful-failed-ventures',
+  //   icon: <AllInclusiveOutlined />,
+  // },
   {
     title: 'Portfolio',
     link: '/portfolio',
@@ -62,7 +67,7 @@ const socialItems = [
   },
   {
     title: 'Instagram',
-    link: 'https://www.instagram.com/nayem_wizdom/',
+    link: 'https://www.instagram.com/nayemwizdom/',
     icon: faInstagram,
     styleColor: '#fb3958',
     ariaLabel: 'Instagram',

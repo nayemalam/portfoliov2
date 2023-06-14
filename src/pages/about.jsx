@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import MetaTags from '../components/metatags/MetaTags';
-import HeaderDesc from '../components/headerdesc/HeaderDesc';
-import Description from '../components/about/Description';
-import WorkExperience from '../components/about/WorkExperience';
-import Education from '../components/about/Education';
 import Awards from '../components/about/Awards';
-import EditPage from '../components/editpage/EditPage';
+import Description from '../components/about/Description';
+import Education from '../components/about/Education';
 import FavQuotes from '../components/about/FavQuotes';
+import WorkExperience from '../components/about/WorkExperience';
+import EditPage from '../components/editpage/EditPage';
+import HeaderDesc from '../components/headerdesc/HeaderDesc';
+import MetaTags from '../components/metatags/MetaTags';
 // import UsefulData from '../components/about/UsefulData';
 
 class About extends Component {

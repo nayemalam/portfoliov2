@@ -3,16 +3,16 @@ import Timeline from '../timeline/Timeline';
 import educationItems from '../../data/EducationItems';
 
 class Education extends Component {
-    render() {
-        return (
-            <div className='education'>
-                <h3 className='titleWithBackground' data-aos='slide-right'>Education</h3>
-                <Timeline 
-                    items={educationItems}
-                />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="education">
+        <h3 className="titleWithBackground" data-aos="slide-right">
+          Education
+        </h3>
+        <Timeline items={educationItems} />
+      </div>
+    );
+  }
 }
 
 export default Education;

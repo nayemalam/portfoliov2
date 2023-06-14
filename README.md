@@ -12,6 +12,7 @@
 
 #### Changelog(s):
 
+- June 13, 2023: Migrated all Strapi blog posts to in Git markdown posts using frontmatter
 - December 31: Using Netlify for hosting, firebase functions for emails, Strapi for blogging (hosted on heroku), graphql for querying posts and categories
 - December 29: Migrated from npm to yarn completely
 - December 28, 2020: Removed firebase and travis builds
@@ -60,6 +61,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 Catch me on:
 
-- [Instagram](https://www.instagram.com/nayem_wizdom/)
+- [Instagram](https://www.instagram.com/nayemwizdom/)
 - [Medium](https://medium.com/@nayemalam)
 - [LinkedIn](https://www.linkedin.com/in/nayemalam/)
