@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class HeaderDesc extends Component {
   render() {
@@ -14,8 +14,8 @@ class HeaderDesc extends Component {
           </span>
         </h1>
       </div>
-    )
+    );
   }
 }
 
-export default HeaderDesc
+export default HeaderDesc;

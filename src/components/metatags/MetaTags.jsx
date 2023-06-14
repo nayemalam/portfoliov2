@@ -30,7 +30,7 @@ class MetaTags extends Component {
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://nayemalam.com/" />
-        <meta property="twitter:creator" content="@nayem_wizdom" />
+        <meta property="twitter:creator" content="@nayemwizdom" />
         <meta property="twitter:title" content={this.props.title} />
         <meta
           property="twitter:description"

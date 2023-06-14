@@ -1,23 +1,27 @@
+import book from '../images/misc/book.jpg';
+import chess from '../images/misc/chess.jpg';
+import life from '../images/misc/life.jpg';
+
 const featuredCardItems = [
   {
     title: 'About',
     url: '/about',
     backgroundImage: {
-      backgroundImage: `url(${require('../images/misc/life.jpg')})`,
+      backgroundImage: `url(${life})`,
     },
   },
   {
     title: 'Blog Posts',
     url: '/blog/',
     backgroundImage: {
-      backgroundImage: `url(${require('../images/misc/book.jpg')})`,
+      backgroundImage: `url(${book})`,
     },
   },
   {
     title: 'Uses',
     url: '/blog/post/uses/',
     backgroundImage: {
-      backgroundImage: `url(${require('../images/misc/chess.jpg')})`,
+      backgroundImage: `url(${chess})`,
     },
   },
 ];
