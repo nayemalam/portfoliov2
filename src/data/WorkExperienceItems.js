@@ -173,7 +173,7 @@ const otherDesc = (
 const workItems = [
   {
     icon: faCode,
-    date: 'April 2022 - February 2023',
+    date: 'April 2022 - October 2022',
     name: 'Ntropy',
     location: 'Montréal, QC',
     role: 'Lead Frontend Engineer',
