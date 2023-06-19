@@ -1,5 +1,6 @@
 ---
 title: 'The Final Stride'
+id: 'the-final-stride'
 slug: '/blog/post/the-final-stride'
 date: '2019-08-03'
 timeToRead: '13 min'

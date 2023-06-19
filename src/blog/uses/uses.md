@@ -1,5 +1,6 @@
 ---
 title: 'Uses'
+id: 'uses'
 slug: '/blog/post/uses'
 date: '2020-12-24'
 category: 'life'

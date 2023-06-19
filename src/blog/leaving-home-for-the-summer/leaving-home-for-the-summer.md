@@ -1,5 +1,6 @@
 ---
 title: 'Leaving home for the summer'
+id: 'leaving-home-for-the-summer'
 slug: '/blog/post/leaving-home-for-the-summer'
 date: '2019-05-25'
 timeToRead: '4 min'

@@ -1,5 +1,6 @@
 ---
 title: 'The sun reappears after the storm'
+id: 'the-sun-reappears-after-the-storm'
 slug: '/blog/post/the-sun-reappears-after-the-storm'
 date: '2019-06-22'
 timeToRead: '10 min'

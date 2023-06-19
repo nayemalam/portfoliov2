@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Avatar, Paper, Menu, Button } from '@material-ui/core';
+import { Avatar, Button, Menu, Paper } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import React, { Component } from 'react';
 import personalPic from '../../../../../images/common/headshot.jpg';
 
 class MobileAvatar extends Component {
@@ -14,11 +14,8 @@ class MobileAvatar extends Component {
         />
         <h3>Nayem Alam</h3>
         <p style={{ marginTop: '-20px' }}>
-          <a
-            href="mailto:nayem.alam@mail.mcgill.ca"
-            className="linkWithNoDecoration"
-          >
-            nayem.alam@mail.mcgill.ca
+          <a href="mailto:nayem.dev@gmail.com" className="linkWithNoDecoration">
+            nayem.dev@gmail.com
           </a>
           <Button
             aria-haspopup="true"

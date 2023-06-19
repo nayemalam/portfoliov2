@@ -1,5 +1,6 @@
 ---
 title: 'What am I currently up to?'
+id: 'life'
 slug: '/blog/post/life'
 date: '2020-12-28'
 category: 'Life'

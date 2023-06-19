@@ -28,6 +28,7 @@ const query = graphql`
         frontmatter {
           slug
           title
+          id
           date
           category
           timeToRead

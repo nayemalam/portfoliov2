@@ -3,7 +3,7 @@
   "private": true,
   "description": "Personal portfolio theme by Nayem Alam.",
   "version": "0.1.0",
-  "author": "Nayem Alam <nayem.alam@mail.mcgill.ca>",
+  "author": "Nayem Alam <nayem.dev@gmail.com>",
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.4.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -11,6 +11,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@lyket/react": "^2.1.0",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "aos": "^2.3.4",

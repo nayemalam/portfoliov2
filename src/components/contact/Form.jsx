@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Axios from 'axios';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import TelegramIcon from '@material-ui/icons/Telegram';
 import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import Axios from 'axios';
+import React, { Component } from 'react';
 
 class Form extends Component {
   constructor(props) {
@@ -91,7 +91,7 @@ class Form extends Component {
       .catch(error => {
         this.setState({
           validateSent:
-            'Oops an error occurred. Please contact me directly at: nayem.alam@mail.mcgill.ca',
+            'Oops an error occurred. Please contact me directly at: nayem.dev@gmail.com',
         });
         console.log('Message not sent.', error);
       });
