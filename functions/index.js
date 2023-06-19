@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors')({ origin: true });
 const gmailEmail = functions.config().gmail.email;
 const gmailPassword = functions.config().gmail.password;
-const mcgillEmail = 'nayem.alam@mail.mcgill.ca';
+const myEmail = 'nayem.dev@gmail.com';
 
 const mailTransport = nodemailer.createTransport({
   service: 'gmail',
@@ -24,7 +24,7 @@ exports.submit = functions.https.onRequest((req, res) => {
     const mailOptions = {
       from: `${req.body.name} <${req.body.email}>`,
       replyTo: req.body.email,
-      to: mcgillEmail,
+      to: myEmail,
       subject: req.body.subject,
       text: `${req.body.message}`,
       html: `
@@ -34,7 +34,7 @@ exports.submit = functions.https.onRequest((req, res) => {
     };
 
     return mailTransport.sendMail(mailOptions).then(() => {
-      console.log('New email sent to:', mcgillEmail);
+      console.log('New email sent to:', myEmail);
       res.status(200).send({ isEmailSend: true });
       return;
     });

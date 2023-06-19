@@ -27,7 +27,6 @@ import webscraperImg from '../images/work/webscraper.png';
 import xploreImg from '../images/work/xplore.png';
 import yulrealtorImg from '../images/work/yulrealtor.png';
 
-
 const portfolioItems = [
   {
     image: superheroImg,

@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         name: `email`,
-        url: `nayem.alam@mail.mcgill.ca`,
+        url: `nayem.dev@gmail.com`,
       },
     ],
     siteUrl: `https://nayemalam.com`,

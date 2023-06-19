@@ -1,5 +1,6 @@
 ---
 title: 'It’s okay not to be okay.'
+id: 'its-okay-not-to-be-okay'
 slug: '/blog/post/its-okay-not-to-be-okay'
 date: '2019-06-06'
 timeToRead: '4 min'

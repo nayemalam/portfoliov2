@@ -1,5 +1,6 @@
 ---
 title: 'I cooked for the first time!'
+id: 'i-cooked-for-the-first-time'
 slug: '/blog/post/i-cooked-for-the-first-time'
 date: '2019-07-02'
 timeToRead: '4 min'

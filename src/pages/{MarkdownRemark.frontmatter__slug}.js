@@ -1,12 +1,12 @@
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ClapButton } from '@lyket/react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import * as React from 'react';
 import Moment from 'react-moment';
 import PrevNextPost from '../components/blog/PrevNextPost';
-import ClapButton from '../components/clapbutton/ClapButton';
 import Layout from '../components/layout';
 import ShareButtons from '../components/sharebuttons/ShareButtons';
 
@@ -46,7 +46,10 @@ export default function BlogPostTemplate({ data: { markdownRemark } }) {
           <hr />
           <div className="footer">
             <div className="author-container">
-              <ClapButton slug={article.slug} />
+              {/* <ClapButton slug={article.slug} /> */}
+              <div className="clap-button">
+                <ClapButton id={`${article.id}`} namespace="post" />
+              </div>
               <div className="share-buttons">
                 <p>Like this post? Share it!</p>
                 <ShareButtons
@@ -83,6 +86,8 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        id
+        slug
         category
         timeToRead
         description

@@ -1,4 +1,5 @@
 /* external imports */
+import { Provider } from '@lyket/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PropTypes from 'prop-types';
@@ -46,7 +47,8 @@ const Layout = ({ children, seo }) => {
       {/* site elements */}
       <SEO seo={seo} />
       <NavigationBar />
-      {children}
+      {/* lyket api key */}
+      <Provider apiKey="6de95a71ac6b9604329e700ad8a531">{children}</Provider>
     </div>
   );
 };

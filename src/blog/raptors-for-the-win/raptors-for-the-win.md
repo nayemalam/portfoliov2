@@ -1,5 +1,6 @@
 ---
 title: 'Raptors for the win 🏆'
+id: 'raptors-for-the-win'
 slug: '/blog/post/raptors-for-the-win'
 date: '2019-06-24'
 timeToRead: '3 min'
