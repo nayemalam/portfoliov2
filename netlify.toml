@@ -1,11 +1,15 @@
 # example netlify.toml
 [context.production]
-  environment = { NODE_VERSION = '18.0.0' }
-  
+  environment = { NODE_VERSION = "18" }
+
 [build]
   command = "yarn build"
   functions = ""
   publish = "public/"
+
+  # Node 18 required for @netlify/plugin-lighthouse (requires >=14.15 <20)
+  [build.environment]
+    NODE_VERSION = "18"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
