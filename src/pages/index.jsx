@@ -20,11 +20,20 @@ class Home extends Component {
         <a className="skip-link" href="#main">
           Skip to main
         </a>
-
         <MetaTags title="Nayem Alam | Engineer, Slam Poet & Developer" />
-
         {/* <NotificationBar /> */}
         <TypeWriter words={featuredWords} />
+        <p style={{ textAlign: 'center', fontSize: '24px', color: 'gray' }}>
+          N.B. This website is not being updated anymore. Please view my latest
+          website at{' '}
+          <a
+            href="https://nayemalam.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            nayemalam.com
+          </a>
+        </p>
         <FeaturedCards />
         <MoreInfoButtons />
         <Socials />
