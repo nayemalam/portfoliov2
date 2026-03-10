@@ -19,17 +19,8 @@ class MainAvatar extends Component {
         </Link>
         <h2>Nayem Alam</h2>
         <p style={{ marginTop: '-10px' }}>
-          <FontAwesomeIcon icon={faCode} size="sm" className="hvr-icon" />{' '}
-          Software Engineer @{' '}
-          <a
-            className="linkWithNoDecoration"
-            href="https://pulley.com/"
-            target="_blank"
-            aria-label="link to ubisoft"
-            rel="noreferrer"
-          >
-            pulley
-          </a>
+          <FontAwesomeIcon icon={faCode} size="sm" className="hvr-icon" /> Sr.
+          Software Engineer
         </p>
       </div>
     );
